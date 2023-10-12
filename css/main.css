@@ -201,6 +201,14 @@ input:checked + label + .content {
   padding: 1rem;
 }
 
+.campus-pilestredet{
+  size: small;
+  size-adjust: 1rem;
+  align-items: left;
+  padding: 0rem;
+}
+
 .grid-9{
   display: grid;
+  align-items: left;
 }
