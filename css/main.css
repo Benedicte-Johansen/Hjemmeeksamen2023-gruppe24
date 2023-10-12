@@ -138,6 +138,12 @@ text-decoration: none;
 
 input {
   display: none;
+  
+}
+
+.checkbox {
+  margin: 30px auto;
+  row-gap: 30px;
 }
 
 label {
@@ -148,6 +154,7 @@ label {
   border-top: black;
   color: black;
   position: relative;
+  row-gap: 30px;
 }
 
 label:hover {
