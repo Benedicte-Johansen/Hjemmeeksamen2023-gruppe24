@@ -175,7 +175,7 @@ input + label + .content {
 }
 
 input:checked + label + .content {
-  display: block ;
+  display: block;
 }
 
 /* campus.html */
