@@ -196,5 +196,11 @@ input:checked + label + .content {
 }
 
 .grid-8{
-  
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
+}
+
+.grid-9{
+  display: grid;
 }
