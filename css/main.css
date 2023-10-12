@@ -194,3 +194,7 @@ input:checked + label + .content {
   padding: 1rem;
   line-height: 1.2;
 }
+
+.grid-8{
+  
+}
