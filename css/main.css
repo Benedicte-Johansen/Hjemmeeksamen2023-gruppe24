@@ -142,8 +142,8 @@ input {
 }
 
 .checkbox {
-  margin: 30px auto;
-  row-gap: 30px;
+  margin:10px auto;
+  
 }
 
 label {
@@ -158,8 +158,8 @@ label {
 }
 
 label:hover {
-  background: #f1dc6f;
-  transition: .15s;
+  
+  transition: .5s;
 }
 
 label::after {
