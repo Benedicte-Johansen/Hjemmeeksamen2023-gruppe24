@@ -159,7 +159,8 @@ input {
 }
 
 .checkbox {
-  margin:10px auto;
+  margin:20px auto;
+  row-gap: 15px;
   
 }
 
@@ -171,7 +172,7 @@ label {
   border-top: black;
   color: black;
   position: relative;
-  row-gap: 30px;
+  
 }
 
 label:hover {
@@ -185,13 +186,13 @@ label::after {
   font-weight: bold;
   position: absolute;
   right: 10px;
-  top: 2px;
+  top: 5px;
 }
 
 input:checked + label::after {
   content: '-';
   right: 14px;
-  top: 3px;
+  top: 5px;
 }
 
 input + label + .content {
