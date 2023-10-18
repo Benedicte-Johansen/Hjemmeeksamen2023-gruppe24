@@ -136,14 +136,15 @@ text-decoration: none;
   grid-template-columns: repeat(1,1fr);
 }
 
+/* Creating a custom checkbox */
 input {
   display: none;
-  
+  /* The checkbox is a checkmark, and this ensures the checkmark doesnt show up on the page */
 }
 
 .checkbox {
-  margin: 30px auto;
-  row-gap: 30px;
+  margin: 10px ;
+  
 }
 
 label {
@@ -154,16 +155,17 @@ label {
   border-top: black;
   color: black;
   position: relative;
-  row-gap: 30px;
+  
 }
 
 label:hover {
   background: #f1dc6f;
-  transition: .15s;
+  transition: .5s;
+  /* The yellow box changes to a lighter color when you hoover over it */
 }
 
 label::after {
-  content: '+';
+  content: '+';  /* When the box is 'closed' the symbol in the top right corner is a '+' */
   font-size: 22px;
   font-weight: bold;
   position: absolute;
@@ -172,13 +174,14 @@ label::after {
 }
 
 input:checked + label::after {
-  content: '-';
+  content: '-'; /* When the box is 'open' the symbol in the top right corner changes to a '-' */
   right: 14px;
   top: 3px;
 }
 
 input + label + .content {
   display: none;
+  /* This is the look of the box when it is 'closed' */
 }
 
 input:checked + label + .content {
