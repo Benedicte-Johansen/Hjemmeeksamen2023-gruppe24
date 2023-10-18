@@ -127,6 +127,14 @@ body {
   border-top: 1px solid black;
 }
 
+footer {
+  text-align: center;
+  padding: 8px;
+  background-color: #ffd500;
+  color: black;
+  margin-top: 20px;
+}
+
 /* topical.html */ 
 
 .emne {
