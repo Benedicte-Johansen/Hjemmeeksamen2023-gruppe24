@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>
       DATA1200 - Hjemmeeksamen høst 2023 - Gruppe 24
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/campus.css">
   </head>
   <body>
+
     <div class="banner">
       <div class="banner-content">
         <p>
@@ -16,34 +18,56 @@
         </p>
       </div>
     </div>
-    <div class="grid-5">
+
+    <div class="grid-7">
       <div class="main-heading">
         <h2>
           Våre studiesteder
         </h2>
       </div>
-      <div class = "grid-7">
+      <div class = "grid-8">
         <p class="info-om-begge-campus">
           OsloMet har studiesteder både i Oslo og på Kjeller ved Lillestrøm. Vår største campus ligger sentralt i Oslo 
           ved Bislett, og campusen på Kjeller er lett tilgjengelig med kollektivtransport fra Oslo sentrum og Oslo lufthavn. 
         </p>
       </div>
+    </div>
 
-      <div class="innledning-checkbox">
-        <input type="checkbox" id="title-4" />
-        <label for="title-4">
-        <div class = grid-8>
-          <div class="grid-9">
-          <img class="campus-pilestredet" src="/img/pilestredet-campus.jpeg" alt="OsloMet campus Pilestredet sett fra Frydenlund-området">
-          </div>
-          <h2 class="campusnavn">
-            Campus Pilestredet
-          </h2>
-          <p class="campus-info">
-            Universitetets største studiested ligger i Pilestredet sentralt i Oslo.
-          </p>
-        </div>
-        </label>
+        <div class="innledning-checkbox">
+          <input type="checkbox" id="title-4" />
+            <label for="title-4">
+
+                      <!---En nedtrekksmeny som skal vise litt om de ulike campusene til OsloMet-->
+        
+                <div class = "grid-campus-boxes">
+
+                      <!--Setter inn en klasse for å få lagt inn et bilde og tekst i nedtrekksmeny. 
+                        Bilde av campuset på venstre side i nedtrekksmenyen-->
+
+                <a href="https://www.oslomet.no/var/oslomet/storage/images/_aliases/xxlarge/8/1/8/1/1818-8-nor-NO/pilestredet.jpg" target="_blank">
+                  <div class="campus-bilde">
+                  <img class="bilde-pilestredet" src="/img/pilestredet-campus.jpeg" alt="OsloMet campus Pilestredet sett fra inngangen til gamle Frydenlundt">
+                  </div>
+                </a>
+
+                      <!--Setter inn litt kort informasjon om campuset ved siden av bildet-->
+              <div class="tekst-i-boks">
+                <div class="teksten">
+                  <h2 class="campusnavn">
+                    Campus Pilestredet
+                  </h2>
+                  <p class="kort-info">
+                    Universitetets største studiested ligger i Pilestredet sentralt i Oslo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </label>
+       
+        
+
+                      <!--Informasjonen om campuset som skal komme når du klikker i nedtrekksmenyen-->
+
         <div class="content">
           <p class="campus-info">
             En rekke av bygningene ligger i det tradisjonsrike Frydenlund-området ved Bislett. Der man tidligere 
@@ -73,37 +97,74 @@
 
       <div class="innledning-checkbox">
         <input type="checkbox" id="title-5" />
-        <label for="title-5">
-          <img class="campus-Kjeller" src="/img/kjeller-campus.jpeg" alt="OsloMet campus Kjeller">
-          <h2 class="campusnavn">
-            Campus Kjeller
-          </h2>
-          <p class="campus-info">
-            Studiested Kjeller befinner seg i landlige omgivelser ved Lillestrøm.
-          </p>
-        </label>
-        <div class="content">
-          <p class="info-om-campus">
-            Studiested Kjeller befinner seg i landlige omgivelser ved Lillestrøm. Byggets arkitektur gjenspeiler en 
-            moderne kunnskapsbedrift. Det er høyt under taket, og store vindusflater slipper lyset inn. 
-          </p>
-          <p class="info-om-campus">
-            I sentrum av bygget, på øverste plan, troner biblioteket som en høyborg av kunnskap. Derfra ser du rett ned 
-            i kaffebaren, der studenter og ansatte sitter på barkrakker og tar seg en velfortjent pust i bakken. Du ser 
-            også bokhandelen Akademika.
-          </p>
-          <p class="info-om-campus">
-            Området mellom Gardermoen og Oslo er regnet å være det største vekstområdet i 
-            landet når det gjelder bosetting og næringsliv. Lillestrøm ligger midt i smørøyet for utviklingen, og er 
-            sentralt plassert med rundt ti minutter reisetid fra Oslo lufthavn og Oslo sentrum
-          </p>
-          <h3 class="adresse">
-            Adresse
-          </h3>
-          <p class="adresse-universitetet">
-            Kunnskapsveien 55, 2007 Kjeller
-          </p>
+          <label for="title-5">
+
+                      <!---En nedtrekksmeny som skal vise litt om de ulike campusene til OsloMet-->
+        
+                <div class = "grid-campus-boxes">
+
+                      <!--Setter inn en klasse for å få lagt inn et bilde og tekst i nedtrekksmeny. 
+                        Bilde av campuset på venstre side i nedtrekksmenyen-->
+
+                <a href="https://www.oslomet.no/var/oslomet/storage/images/_aliases/medium/4/5/8/2/42854-2-nor-NO/kjeller.jpg" target="_blank">
+                  <div class="campus-bilde">
+                  <img class="bilde-kjeller" src="/img/kjeller-campus.jpeg" alt="OsloMet campus Kjeller">
+                  </div>
+                </a>
+
+                      <!--Setter inn litt kort informasjon om campuset ved siden av bildet-->
+              <div class="tekst-i-boks">
+                <div class="teksten">
+                  <h2 class="campusnavn">
+                    Campus Kjeller
+                  </h2>
+                  <p class="kort-info">
+                    Studiested Kjeller befinner seg i landlige omgivelser ved Lillestrøm.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+                    <!--Informasjonen om campuset som skal komme når du klikker i nedtrekksmenyen-->
+
+         <div class="content">
+            <p class="campus-info">
+              Studiested Kjeller befinner seg i landlige omgivelser ved Lillestrøm. Byggets arkitektur gjenspeiler en 
+              moderne kunnskapsbedrift. Det er høyt under taket, og store vindusflater slipper lyset inn. 
+              </p>
+              <p class="campus-info">
+              I sentrum av bygget, på øverste plan, troner biblioteket som en høyborg av kunnskap. Derfra ser du rett ned 
+              i kaffebaren, der studenter og ansatte sitter på barkrakker og tar seg en velfortjent pust i bakken. Du ser 
+              også bokhandelen Akademika.
+              </p>
+              <p class="campus-info">
+              Området mellom Gardermoen og Oslo er regnet å være det største vekstområdet i 
+              landet når det gjelder bosetting og næringsliv. Lillestrøm ligger midt i smørøyet for utviklingen, og er 
+              sentralt plassert med rundt ti minutter reisetid fra Oslo lufthavn og Oslo sentrum
+              </p>
+            <h3 class="adresse">
+              Adresse
+            </h3>
+            <p class="adresse-universitetet">
+              Kunnskapsveien 55, 2007 Kjeller
+            </p>
+          </div>
         </div>
+
+      <div class = "footer">  
+        <footer>
+          <p>
+            All informasjon på denne siden er hentet fra <a class= "kildelink" href="https://www.oslomet.no/om/studiesteder">OsloMet våre studiestader</a>.
+          </p>
+          <p class="forfattere">
+            Forfattere er: Iselin , Mads og Benedicte
+          </p>
+          <p class="eksamen">
+            Laget til eksamen, høsten 2023 i faget DATA1200 ved OsloMet.
+          </p>
+        </footer>
       </div>
+      
   </body>
 </html>
