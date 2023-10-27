@@ -1,13 +1,17 @@
 /* index.html */
+/* This targets all the pages, styling the font and the height between lines */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
+/* This styles the look of the banner at the top of each page */ 
 .banner-container {
+  /* The content within the banner is styled as a grid */
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
+  /* The yellow is copied to match the color of the OsloMet website */
   background-color: #ffd500;
   padding-top: 0;
   padding-right: 20px;
@@ -15,6 +19,7 @@ body {
   padding-bottom: 0;
 }
 
+/* This styles the " children" or the divs within the div named "banner-container" */
 .banner-container > div {
   text-align: left;
   padding: 10px 0;
@@ -22,8 +27,10 @@ body {
 }
 
 /* Dropdown Button */
+/* This targets the dropdown menu on each page of our website */
 .dropdown-button{
   display: grid;
+  /* The menu is styled to match the background color of the banner it lies within with black writing */
   background-color: #ffd500;;
   color: black;
   padding: 10px;
@@ -34,16 +41,24 @@ body {
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
+  /* This ensures that the content is placed right below the dropdown button */ 
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* The dropdown content is hidden (by default) */
+/* The menu opens up when you hover over it (by default, as well) */
 .dropdown-content {
+  /* The content is styled to match the banner */
   display: none;
   position: absolute;
-  background-color:#ffd500; ;
-  min-width: 160px;
+  background-color:#ffd500; 
+  /* This ensures that the content is as wide as the button */
+  min-width: 100%;
+  /* This makes it possible to scroll on smaller screens */
+  overflow: auto;
+  /* This makes the dropdown menu more visible when you hover over it, as it has a bit of a shadow behind it */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 /* Links inside the dropdown */
@@ -63,6 +78,7 @@ body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #d9b607;}
 
+/* This is the headings on the webpages*/
 .heading-container {
   display: grid;
   gap: 20px;
@@ -70,35 +86,43 @@ body {
   padding: 10px;
 }
 
+/* This targets the specific divs within the heading container */
 .heading-container > div {
   text-align: left;
   padding: 10px 0;
   font-size: 20px;
 }
 
+/* This targets the main heading */
 .heading {
   box-sizing: border-box;
   font-size: 40px;
   margin-left: 30px;
 }
 
+/* This targets the text right under the main heading */
 .sub-heading {
   box-sizing: border-box;
   font-weight: lighter;
   font-size: 30px;
 }
 
+/* This is the information underneath the image as well as the content underneath the statistics grid */
+/* This is put within a grid layout with gaps inbetween each grid element */
 .about-oslomet-container {
   display: grid;
+  /* This targets the layout of the grid elements and how much space they should take up on inside the grid */
   grid-template-columns: 1fr 2fr 1fr;
   gap: 30px;
 }
 
+/* This is the link to the original photo and this styles the text "Foto: Benjamin A. Ward" */
 .original-image {
   font-weight: lighter;
   text-decoration: none;
 }
 
+/* This styles the look of the link while you hover over it */
 .original-image:hover {
   font-weight: bolder;
   cursor: pointer;
@@ -106,12 +130,14 @@ body {
   text-decoration: none;
 }
 
+/* This styles how the link looks when you've clicked on it */
 .original-image:active,
 .original-image:visited {
   color: black;
   text-decoration: none;
 }
 
+/* This is the styling of the grid containing the statistics */
 .statistics-grid-container {
   display: grid;
   column-gap: 30px;
@@ -120,6 +146,7 @@ body {
   padding: 25px;
 }
 
+/* This puts a border over each of the grid elements within the statistics grid */
 .amount-students,
 .amount-studyplaces,
 .amount-bachelor-studies,
@@ -127,6 +154,7 @@ body {
   border-top: 1px solid black;
 }
 
+/* This styles the look of the footer which contains links and the names of the makers of the website */
 footer {
   text-align: center;
   padding: 8px;
