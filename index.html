@@ -4,31 +4,42 @@
       <title>
         DATA1200 Hjemmeeksamen 2023 - Gruppe 24
       </title>
+      <!-- This indicates the webpages' character encodiing-->
       <meta charset="utf-8">
+      <!-- Link to CSS stylesheet -->
       <link rel="stylesheet" type="text/css" href="./css/main.css"> 
     </head>
     <body>
+      <!-- This is the yellow banner at the top of the page -->
+      <!-- The code is placed into divs throughout to style our webpage more easily -->
       <div class="banner-container">
         <div class="oslomet-logo">
           <img src="./img/oslomet-logo-black.svg">
         </div>
+        <!-- This is a button styled to make it into a dropdown menu and placed inside a div -->
+        <!-- This dropdown menu links to the other pages on our website -->
         <div class="dropdown">
           <button class="dropdown-button">
             Meny
           </button>
           <div class="dropdown-content">
+            <!-- When you click this link it will take you to a page about the subject DAPE1400 -->
+            <!-- This tag makes the "link" clickable -->
             <a href="topical.html">
               Infoside: DAPE1400 Programmering
             </a>
+            <!-- When you click this link it will take you ti a page about the OsloMet campuses -->
             <a href="campus.html">
               OsloMet: Våre studiesteder
             </a>
-            <a href="#">
+            <!-- When you click this link it will take you to a page with information about the accessibility of our webpage -->
+            <a href="accessibility.html">
               Accessibility
             </a>
           </div>
         </div>
     </div>
+    <!-- This is the container for the heading and sub-heading -->
       <div class="heading-container">
         <div class="heading">
           <h1>
@@ -39,23 +50,32 @@
             Hos oss er det kort vei mellom utdanning og forskning.
           </p>
         </div>
+        <!-- This is an empty div made to better style the grid in which the headings are -->
         <div class="empty"></div>
       </div>
+      <!-- This is the image under the headings -->
+      <!-- The image is copied from: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet -->
       <div class="bilde-studiestart">
         <div class="bilde-studiestart">
+          <!-- The image is made to fill the div it lies within -->
           <img src="./img/studiestart-foto.jpg"
           alt="bilde-studiestart" style="width: 100%;">
         </div>
       </div>
+      <!-- This is a grid. It contains the link to the original source for the image as well as some text-->
       <div class="about-oslomet-container">
+        <!-- This is a link to the original image -->
         <div class="original-image-studiestart">
           <a class="original-image"
           href="https://www.oslomet.no/var/oslomet/storage/images/_aliases/xlarge/3/5/5/3/83553-1-nor-NO/Studiestart_foto_Benjamin_A_Ward_Cropped.jpg"
           target="_blank">
+          <!-- This is the photographer -->
             Foto: Benjamin A. Ward
           </a>
         </div>
+        <!-- This contains text -->
         <div class="about-oslomet">
+          <!-- The text is copied from: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet-->
           <p>
             OsloMet er en forkortelse for vårt internasjonale navn, Oslo Metropolitan University. Vårt hovedstudiested ligger nemlig midt i Oslo, 
             og har både storbyens puls og kort vei til arbeidslivet du senere skal bli en del av. I tillegg har vi et studiested på Kjeller, 
@@ -70,9 +90,13 @@
             utdanning. Og allerede i studietiden vil du merke at du kan gjøre en forskjell for andre mennesker.
           </p>
         </div>
+        <!-- An empty div made to style the grid -->
         <div class="empty"></div>
       </div>
+      <!-- This is a grid containing the statistics on the page -->
+      <!-- Information taken from: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet -->
         <div class="statistics-grid-container">
+          <!-- Each element within the grid is places within a separate div and each of these are divided into further divs -->
           <div class="grid-item">
             <div class="amount-students">
               <div class="students">
@@ -147,8 +171,12 @@
       </div>
     </div>
     <div class="about-oslomet-container">
+      <!-- An empty container made to style the grid -->
       <div class="empty"></div>
+      <!-- This contains more information about OsloMet -->
+      <!-- Text taken from https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet -->
       <div class="about-oslomet">
+        <!-- This is a sub-heading -->
         <h3>
           Utvikler smarte løsninger
         </h3>
@@ -157,6 +185,7 @@
           Hos oss er det kort vei mellom utdanning og forskning. Det du lærer er basert på det siste innenfor ditt fagfelt. Studenter 
           kan også bidra i forskningsprosjekter som kommer samfunnet til gode. Ny kunnskap gir ny praksis!
         </p>
+        <!-- Sub-heading -->
         <h3>
           Studere i utlandet?
         </h3>
@@ -168,6 +197,7 @@
           OsloMet samarbeider med universiteter og høgskoler over hele verden. Som student hos oss kan du derfor reise ut og få 
           verdifull kunnskap, unike opplevelser og erfaringer som du tar med deg videre i livet. 
         </p>
+        <!-- Sub-heading-->
         <h3>
           Velg utdanning med hjertet!
         </h3>
@@ -177,18 +207,23 @@
           deg til å benytte muligheten til å dra på utveksling - og gjøre maks ut av studietiden!
         </p>
       </div>
+      <!-- An empty div made to style the grid -->
       <div class="empty"></div>
     </div>
     <div class = "footer">  
       <footer>
         <p>
-          All informasjon på denne siden er hentet fra <a class= "kildelink" href="https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet">
+          All informasjon på denne siden er hentet fra 
+          <!-- This tag contains a hyperlink to the page where the original content on this webpage is gotten from -->
+          <a class= "kildelink" href="https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet">
             OsloMet: "Dette er OsloMet"
           </a>.
         </p>
+        <!-- This is a paragraph containing the makers of our webpage -->
         <p class="forfattere">
           Forfattere er: Iselin, Mads og Benedicte
         </p>
+        <!-- This discloses the reason for making the webpage -->
         <p class="eksamen">
           Laget til eksamen, høsten 2023 i faget DATA1200 ved OsloMet.
         </p>
