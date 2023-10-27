@@ -249,17 +249,17 @@ input:checked + label + .content {
 /* campus.html */
 
 .info-om-begge-campus{
-  font-size: 1.5rem;
+  font-size: large;
   text-align: auto;
   margin-top: .5px;
-  margin-bottom: 5px;
+  margin-bottom:2px;
   margin-top: 10px;
 }
 
 .grid-7{
   display: grid;
   column-gap: 5rem;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr;
   padding: 1rem;
   line-height: 1.2;
 }
@@ -275,6 +275,10 @@ input:checked + label + .content {
   size-adjust: 1rem;
   align-items: left;
   padding: 0rem;
+}
+
+.kort-info{
+  font-size: medium;
 }
 
 .grid-9{
