@@ -107,6 +107,11 @@ body {
   font-size: 30px;
 }
 
+.bilde-studiestart {
+  /* This is the gap underneath the image and above the text */
+  margin-bottom: 12px;
+}
+
 /* This is the information underneath the image as well as the content underneath the statistics grid */
 /* This is put within a grid layout with gaps inbetween each grid element */
 .about-oslomet-container {
@@ -120,6 +125,8 @@ body {
 .original-image {
   font-weight: lighter;
   text-decoration: none;
+  border-top: 1px solid black;
+  padding-top: 10px;
 }
 
 /* This styles the look of the link while you hover over it */
@@ -246,6 +253,7 @@ input:checked + label + .content {
   text-align: auto;
   margin-top: .5px;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .grid-7{
