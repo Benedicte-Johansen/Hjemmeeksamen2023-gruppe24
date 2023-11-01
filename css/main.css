@@ -189,10 +189,11 @@ input:checked + label + .content {
 
 /* This is the link to the original photo and this styles the text "Foto: Benjamin A. Ward" */
 .original-image {
+  font-size: 12px;
   font-weight: lighter;
   text-decoration: none;
-  border-top: 1px solid black;
   padding-top: 10px;
+  margin-left: 20px;
 }
 
 /* This styles the look of the link while you hover over it */
