@@ -312,7 +312,6 @@ input:checked + label::after {
 
 input:checked + label + .content {
   display: block;
-  background: #ffd500;
   /* This ensures that the information about the campuses are shown when the box/label is 'open' */
 }
 
