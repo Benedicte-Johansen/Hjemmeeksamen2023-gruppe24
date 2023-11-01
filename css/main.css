@@ -97,6 +97,7 @@ body {
   font-size: 20px;
 }
 
+
 /* This targets the main heading in all the pages, to have a coercive design through the webpage*/
 .main-heading {
   box-sizing: border-box;
@@ -104,13 +105,17 @@ body {
   margin-left: 30px;
 }
 
-/* This targets the text right under the main heading */
+/* This targets the text right under the main heading in all the pages, to have a coercive design*/
 .sub-heading {
   box-sizing: border-box;
   font-weight: lighter;
   font-size: 30px;
   margin-left: 20px;
 }
+
+
+
+
 
 .bilde-studiestart {
   /* This is the gap underneath the image and above the text */
@@ -166,14 +171,6 @@ body {
   border-top: 1px solid black;
 }
 
-/* This styles the look of the footer which contains links and the names of the makers of the website */
-footer {
-  text-align: center;
-  padding: 8px;
-  background-color: #ffd500;
-  color: black;
-  margin-top: 30px;
-}
 
 /* topical.html */ 
 
@@ -377,9 +374,10 @@ input:checked + label + .content {
 }
 
 /*accessibility.html*/
+
 .grid-9{
   /*Vi velger å bruke flex display på denne siden for å vise at dette også er et alternativ
-  når man styler en nettside med CSS. Flex gjør litt det samme som grid-verdigen, men ....*/
+  når man styler en nettside med CSS. Flex gjør litt det samme som grid-verdien, men ....*/
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -417,14 +415,15 @@ input:checked + label + .content {
   
 }
 
-/*Styling av footeren vi skal ha på alle sidene våre*/
+/*This styles the look of the footer which contains links to the sources used for the text on the page
+and the names of the makers of the website. We use the same footer in all the pages*/
 
 .footer{
-  background: #ffd500;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px; 
+  text-align: center;
+  padding: 8px;
+  background-color: #ffd500;
+  color: black;
+  margin-top: 30px
 }
 
 .kildelink{
