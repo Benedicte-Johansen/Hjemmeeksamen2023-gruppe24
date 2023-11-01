@@ -287,7 +287,7 @@ input:checked + label + .content {
   .grid-campus-boxes .tekst-i-boks .teksten{
     padding-left: 0;
   }
-  /*Media query that makes it so ...*/
+  /*Media query that takes away the padding on the left side when the page is smaller */
 }
 
 @media (max-width: 768px){
@@ -295,6 +295,7 @@ input:checked + label + .content {
     width: 90%;
     grid-template-columns: repeat(1fr);
   }
+  /*Media query that */
 }
 
 /*The classes below, .tekst-i-boks, .campusnavn & .kort-info along with the image styling below
