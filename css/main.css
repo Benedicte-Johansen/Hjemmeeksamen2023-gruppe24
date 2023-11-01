@@ -1,10 +1,12 @@
-/* index.html */
+
+/* Body */
 /* This targets all the pages, styling the font and the height between lines */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
+/* Banners */
 /* This styles the look of the banner at the top of each page */ 
 .banner-container {
   /* The content within the banner is styled as a grid */
@@ -19,7 +21,7 @@ body {
   padding-bottom: 0;
 }
 
-/* This styles the " children" or the divs within the div named "banner-container" */
+/* This styles the "children" or the divs within the div named "banner-container" */
 .banner-container > div {
   text-align: left;
   padding: 10px 0;
@@ -27,6 +29,7 @@ body {
 }
 
 /* Dropdown Button */
+
 /* This styles all the dropdown buttons (on all pages) */
 /* This targets the dropdown menu on each page of our website */
 .dropdown-button{
