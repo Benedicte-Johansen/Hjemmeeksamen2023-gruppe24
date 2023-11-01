@@ -27,6 +27,7 @@ body {
 }
 
 /* Dropdown Button */
+/* This styles all the dropdown buttons (on all pages) */
 /* This targets the dropdown menu on each page of our website */
 .dropdown-button{
   display: grid;
@@ -167,13 +168,18 @@ footer {
   padding: 8px;
   background-color: #ffd500;
   color: black;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* topical.html */ 
 
+.heading-topical {
+  font-size: 30px;
+  margin-left: 20px;
+}
 .emne {
   font-size: 30px;
+  margin-left: 20px;
 }
 
 .grid-6 {
@@ -244,6 +250,10 @@ input + label + .content {
 
 input:checked + label + .content {
   display: block;
+}
+
+.footer-topical {
+  margin-top: 40px;
 }
 
 /* campus.html */
