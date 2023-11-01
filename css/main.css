@@ -83,7 +83,9 @@ body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #d9b607;}
 
-/* This is the headings on the webpages*/
+/* This is the styling og the background behind the heading and sub-heading 
+on the index.html to make the background yellow and some extra styling to make the photo
+the right distance from the text.*/
 .heading-container {
   display: grid;
   gap: 20px;
@@ -114,9 +116,62 @@ body {
   margin-left: 20px;
 }
 
+/*In the campus.html and the topical.html we use checkboxes to create dropdown boxes that expand when you clik them. 
+They are styled the same in both pages*/
+/* This styles the checkboxes that are on display on the webpages */
+input {
+  display: none;
+}
+
+label {
+  display: block;
+  padding: 8px 22px;
+  /* When you hover over the box the cursor turns into a pointer */
+  cursor: pointer;
+  background: #ffd500;
+  color: black;
+  position: relative;
+  /*The background of the box is styled to match the rest of the webpage with yellow boxes with black text
+  We chose to position it relative so they would cover the whole page and be center*/
+}
+
+/* When you hover over each of the checkboxes they change color to a little bit darker yellow*/
+label:hover {
+  background: #e0bb01;
+  /* This ensures a smooth transition when you hover over the checkboxes */
+  transition: .5s;
+}
+
+/* This styles the '+' in the righthand corner of each checkbox */
+/* When the box is closed the '+' is displayed indicating that you can click the box to get more information */
+label::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+/* This styles the '+' to turn into a '-' when the box is open/checked and displaying the content */
+input:checked + label::after {
+  content: '-';
+  right: 14px;
+  top: 5px;
+}
+
+/* This hides the content when the checkbox is closed */
+input + label + .content {
+  display: none;
+}
+
+/* This shows the content when the checkbox is open */
+input:checked + label + .content {
+  display: block;
+}
 
 
-
+/*Index.html*/
 
 .bilde-studiestart {
   /* This is the gap underneath the image and above the text */
@@ -195,101 +250,16 @@ body {
   border-top: 1px solid black;
 }
 
-/* This styles the checkboxes that are on display on the webpage */
-label {
-  display: block;
-  padding: 8px 22px;
-  /* When you hover over the box the cursor turns into a pointer */
-  cursor: pointer;
-  background: #ffd500;
-  color: black;
-  position: relative;
-  
-}
-
-/* When you hover over each of the checkboxes they change color*/
-label:hover {
-  background: #e0bb01;
-  /* This ensures a smooth transition when you hover over the checkboxes */
-  transition: .5s;
-}
-
-/* This styles the '+' in the righthand corner of each checkbox */
-/* When the box is closed the '+' is displayed indicating that you can click the box to get more information */
-label::after {
-  content: '+';
-  font-size: 22px;
-  font-weight: bold;
-  position: absolute;
-  right: 10px;
-  top: 5px;
-}
-
-/* This styles the '+' to turn into a '-' when the box is open/checked and displaying the content */
-input:checked + label::after {
-  content: '-';
-  right: 14px;
-  top: 5px;
-}
-
-/* This hides the content when the checkbox is closed */
-input + label + .content {
-  display: none;
-}
-
-/* This shows the content when the checkbox is open */
-input:checked + label + .content {
-  display: block;
-}
 
 /* campus.html */
 
-input{
-  display: none;
-}
-
-label{
-  display: block;
-  padding: 8px 22px;
-  margin: 0 0 1px 0;
-  cursor: pointer;
-  background: #ffd500;
-  transition: ease .5s;
-  position: relative;
-}
-
-label::after {
-  content: '+';  /* When the box is 'closed' the symbol in the top right corner is a '+' */
-  font-size: 22px;
-  font-weight: bold;
-  position: absolute;
-  right: 10px;
-  top: 2px; 
-}
-
-input:checked + label::after {
-  content: '-';     /* When the box is 'open' the symbol in the top right corner changes to a '-' */
-  right: 14px;
-  top: 3px;
-}
-
-.input + label + content{
-  display: none;
-  background: #ffd500;
-  /*The look of the box when it's "closed"*/
-}
-
-input:checked + label + .content {
-  display: block;
-  /* This ensures that the information about the campuses are shown when the box/label is 'open' */
-}
-
+/*This is the div class that allows there to be both an image and text in the dropdown menu*/
 .grid-campus-boxes{
-    width: 80%;
-    max-width: 1170px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px 30px;
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px 30px;
 }
 
 .grid-campus-boxes .campus-bilde{
@@ -326,6 +296,8 @@ input:checked + label + .content {
   }
 }
 
+/*The classes below, .tekst-i-boks, .campusnavn & .kort-info along with the image styling below
+ styles the dropdown boxes content while it's not pressed.*/
 .tekst-i-boks{
   display: grid;
   grid-template-columns: repeat(2, 2fr);
@@ -333,16 +305,14 @@ input:checked + label + .content {
   align-items: center;
 }
 
-.campusnavn{
+.campusnavn .kort-info{
   border-bottom: 0.5px;
-}
-
-.kort-info{
   display: inline;
-  border-top: 0.5px;
 }
 
-  .bilde-pilestredet{
+/*Styled both the pictures in the dropdown boxes the same, so they would be on the same side,
+with the same distance from the text and have the same border around them.*/
+  .bilde-pilestredet, .bilde-kjeller{
     margin-top: 2px;
     margin-bottom: 0px;
     vertical-align: middle;
@@ -350,12 +320,9 @@ input:checked + label + .content {
     flex: 100%;
   }
 
-  .bilde-kjeller{
-    margin-top: 2px;
-    margin-bottom: 0px;
-    vertical-align: middle;
-    width: 100%;
-    flex: 100%;
+  .campus-info.adresse.adresse-universitetet{
+    margin: 10px;
+    /*Adds a little margin around the text when the dropdown box is pressed*/
   }
 
   .adresse{
@@ -366,13 +333,6 @@ input:checked + label + .content {
   .adresse-universitetet{
     font-size: smaller;
   }
-
-
-.grid-8{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 1rem;
-}
 
 /*accessibility.html*/
 
