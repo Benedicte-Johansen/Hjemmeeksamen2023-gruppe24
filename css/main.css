@@ -173,23 +173,31 @@ footer {
 
 /* topical.html */ 
 
+/* This is the heading underneath the banner */
 .heading-topical {
   font-size: 30px;
   margin-left: 20px;
 }
+
+/* This is the sub-heading right under the heading*/
 .emne {
   font-size: 30px;
   margin-left: 20px;
 }
 
+/* This is the grid for the course description */
 .grid-6 {
   display: grid;
+  /* This is the gap between each grid item */
   column-gap: 30px;
+  /* The information in the grid is styled horizontally */
+  /* Each of the grid items take up the same fraction of space on the page */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 25px;
   line-height: 1.2;
 }
 
+/* This styles each of the grid items with a border-top */ 
 .coursename-english,
 .studyprogram,
 .points,
@@ -197,38 +205,27 @@ footer {
   border-top: 1px solid black;
 }
 
-.list-learning-outcomes {
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-}
-
-input {
-  display: none;
-  
-}
-
-.checkbox {
-  margin:20px auto;
-  row-gap: 15px;
-  
-}
-
+/* This styles the checkboxes that are on display on the webpage */
 label {
   display: block;
   padding: 8px 22px;
+  /* When you hover over the box the cursor turns into a pointer */
   cursor: pointer;
   background: #ffd500;
-  border-top: black;
   color: black;
   position: relative;
   
 }
 
+/* When you hover over each of the checkboxes they change color*/
 label:hover {
-  
+  background: #e0bb01;
+  /* This ensures a smooth transition when you hover over the checkboxes */
   transition: .5s;
 }
 
+/* This styles the '+' in the righthand corner of each checkbox */
+/* When the box is closed the '+' is displayed indicating that you can click the box to get more information */
 label::after {
   content: '+';
   font-size: 22px;
@@ -238,22 +235,21 @@ label::after {
   top: 5px;
 }
 
+/* This styles the '+' to turn into a '-' when the box is open/checked and displaying the content */
 input:checked + label::after {
   content: '-';
   right: 14px;
   top: 5px;
 }
 
+/* This hides the content when the checkbox is closed */
 input + label + .content {
   display: none;
 }
 
+/* This shows the content when the checkbox is open */
 input:checked + label + .content {
   display: block;
-}
-
-.footer-topical {
-  margin-top: 40px;
 }
 
 /* campus.html */
