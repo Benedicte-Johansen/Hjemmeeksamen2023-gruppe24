@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
+    <!-- All of the information on this page is from https://student.oslomet.no/en/studier/-/studieinfo/emne/DAPE1400/2020/H%C3%98ST-->
     <!-- This is the yellow banner at the top of the page -->
     <!-- The code is placed into divs throughout to style our webpage more easily -->
     <div class="banner-container">
@@ -36,31 +37,44 @@
         </div>
       </div>
     </div>
+    <!-- This is the container for the heading -->
     <div class="grid-5">
-      <div class="main-heading">
-        <h2>
+      <!-- Each of the grid elements are placed in their own div -->
+      <div class="heading-topical">
+        <h1>
           DAPE1400 Programmering
-        </h2>
+        </h1>
       </div>
       <div>
-        <p class="emne">Emneplan</p>
+        <p class="emne">
+          Emneplan
+        </p>
       </div>
     </div>
+    <!-- This is a container for course description-->
     <div class="grid-6">
+      <!-- Each of the grid elements are placed in their own div -->
+      <!-- This is a grid with information placed horizontally-->
       <div class="grid-item">
         <div class="coursename-english">
           <div class="heading-coursename-english">
-            <h4>Engelsk emnenavn</h4>
+            <h4>
+              Engelsk emnenavn
+            </h4>
           </div>
           <div class="english-name">
-            <p>Programming</p>
+            <p>
+              Programming
+            </p>
           </div>
         </div>
       </div>
       <div class="grid-item">
         <div class="studyprogram">
           <div class="studieprogram">
-            <h4>Studieprogram</h4>
+            <h4>
+              Studieprogram
+            </h4>
           </div>
           <div>
             <p>
@@ -75,26 +89,40 @@
       <div class="grid-item">
         <div class="points">
           <div class="omfang">
-            <h4>Omfang</h4>
+            <h4>
+              Omfang
+            </h4>
           </div>
-          <div class="studypoints">10 stp.</div>
+          <div class="studypoints">
+            10 stp.
+          </div>
         </div>
       </div>
       <div class="grid-item">
         <div class="study-years">
           <div class="studieår">
-            <h4>Studieår</h4>
+            <h4>
+              Studieår
+            </h4>
           </div>
-          <div class="years">2023/2024</div>
+          <div class="years">
+            2023/2024
+          </div>
         </div>
       </div>
     </div>
-
+    <!-- The different information on the page is categorized and placed in checkboxes/toggle-boxes-->
     <div class="innledning-checkbox">
       <input type="checkbox" id="title-1" />
+      <!-- The label shows the title of the checkbox-->
       <label for="title-1">
-        <h2 class="innledning">Innledning</h2>
+        <!-- This heading is shown both when the checkbox is "open" and closed -->
+        <h2 class="innledning">
+          Innledning
+        </h2>
       </label>
+      <!-- This is the container of the content inside the "innledning"-checkbox -->
+      <!-- This is only shown when the checkbox is open -->
       <div class="content">
         <p>
           Dette emnet skal gi studenten grunnleggende forståelse og ferdigheter
@@ -103,25 +131,38 @@
         </p>
       </div>
     </div>
+    <!-- This is the second checkbox on the page -->
     <div class="checkbox">
       <input type="checkbox" id="title-2" />
-
+      <!-- The label contains the title of the checkbox -->
       <label for="title-2">
-        <h2 class="forkunnskap">Forkunnskapskrav</h2>
+        <!-- This heading is shown both when the checkbox is open and closed -->
+        <h2 class="forkunnskap">
+          Forkunnskapskrav
+        </h2>
       </label>
       <div class="content">
-        <p>Ingen ut over opptakskrav.</p>
+        <p>
+          Ingen ut over opptakskrav.
+        </p>
       </div>
     </div>
     <div>
+      <!-- This is the third checkbox-->
       <input type="checkbox" id="title-3" />
-
+      <!-- The label contains the title of the checkbox-->
       <label for="title-3">
-        <h2 class="Læringsutbytte">Læringsutbytte</h2>
+        <!-- This heading is showed both when the checkbox is open and closed -->
+        <h2 class="Læringsutbytte">
+          Læringsutbytte
+        </h2>
       </label>
+      <!-- This is the content of the checkbox and is only shown when the box is open -->
       <div class="content">
+        <!-- Each of the elements are placed within a div -->
         <div class="list-learning-outcomes">
           <div>
+            <!-- This is a paragraph is used as a sub-heading within the checkbox -->
             <p>
               Etter å ha gjennomført dette emne har studenten følgende
               læringsutbytte definert i kunnskap, ferdigheter og generell
@@ -129,8 +170,13 @@
             </p>
           </div>
           <div>
-            <h3>Kunnskap</h3>
+            <!-- This is a heading for the unordered list within the checkbox -->
+            <h3>
+              Kunnskap
+            </h3>
+            <!-- This is an unordered list which shows the content as bullet points -->
             <ul>
+              <!-- This is a list item (bullet point) within the unordered list  -->
               <li>
                 Studenten kjenner til grunnleggende konsepter innen
                 programmering, med fokus på prosedyre-orientert og
@@ -141,44 +187,82 @@
             </ul>
           </div>
           <div>
-            <h3>Ferdigheter</h3>
+            <!-- This is a heading for the unordered list within the checkbox -->
+            <h3>
+              Ferdigheter
+            </h3>
+            <!-- This is an unordered list (bullet points) showing the skills a student will learn in the subject -->
             <ul>
+              <!-- This is a paragraph used as a sub-heading for the bullet point list -->
               <p>
                 Studenten kan håndtere følgende programmeringskonstruksjoner i
                 Java:
               </p>
-              <li>Operatorer og typer</li>
-              <li>Kontrollstrukturer</li>
-              <li>Funksjoner (prodsedyrer) og metoder</li>
-              <li>Tabeller (arrayer)</li>
-              <li>Klasser, konstruktører, og referanser</li>
-              <li>Arv og polymorfisme</li>
-              <li>Enkle grafiske brukergrensesnitt</li>
+              <!-- These are the bullet points (list elements) -->
+              <li>
+                Operatorer og typer
+              </li>
+              <li>
+                Kontrollstrukturer
+              </li>
+              <li>
+                Funksjoner (prodsedyrer) og metoder
+              </li>
+              <li>
+                Tabeller (arrayer)
+              </li>
+              <li>
+                Klasser, konstruktører, og referanser
+              </li>
+              <li>
+                Arv og polymorfisme
+              </li>
+              <li>
+                Enkle grafiske brukergrensesnitt
+              </li>
             </ul>
           </div>
           <div>
-            <h3>Generell kompetanse</h3>
-            <p>Studenten kjenner til:</p>
+            <!-- This is the heading for the unordered list within the checkbox -->
+            <h3>
+              Generell kompetanse
+            </h3>
+            <!-- This paragraph is used as a sub-heading within the checkbox -->
+            <p>
+              Studenten kjenner til:
+            </p>
+            <!-- This is an unordered list ensuring that the list items show up as bullet points -->
             <ul>
-              <li>grunnleggende prinsipper for oppbygging av programmer</li>
+              <!-- These are the list items within the unordered list which will show up as bullet points -->
+              <li>
+                grunnleggende prinsipper for oppbygging av programmer
+              </li>
               <li>
                 sammenhengen mellom programmeringsspråk og programutvikling
               </li>
-              <li>konsepter relatert til kvalitet og lesbarhet av kode</li>
+              <li>
+                konsepter relatert til kvalitet og lesbarhet av kode
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+    <!-- This is the container for the footer -->
     <div class="footer">
-      <footer>
+      <footer class="footer-topical">
+        <!-- This paragraph discloses where we have gathered the information from -->
         <p>
           All informasjon på denne siden er hentet fra
-          <a class="kildelink" href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1400/2022/H%C3%98ST"
-            >Studieinfo emne DAPE1400 2022 Programmering</a
-          >
+          <a class="kildelink" href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1400/2022/H%C3%98ST">
+            Studieinfo emne DAPE1400 2022 Programmering
+            </a>
         </p>
-        <p class="forfattere">Forfattere er: Iselin , Mads og Benedicte</p>
+        <!-- This paragraph contains the names of the makers of the webpage-->
+        <p class="forfattere">
+          Forfattere er: Iselin og Benedicte
+        </p>
+        <!-- This discloses that the webpage is made in connection with the final exam of the subject DATA1200 -->
         <p class="eksamen">
           Laget til eksamen, høsten 2023 i faget DATA1200 ved OsloMet.
         </p>
