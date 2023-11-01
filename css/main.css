@@ -339,45 +339,7 @@ with the same distance from the text and have the same border around them.*/
 
 /*accessibility.html*/
 
-.grid-9{
-  /*Vi velger å bruke flex display på denne siden for å vise at dette også er et alternativ
-  når man styler en nettside med CSS. Flex gjør litt det samme som grid-verdien, men ....*/
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
-.accessibilitytest-tekst{
-  font-size: 20px;
-  padding-left: 20px;
-  order: 0;
-  flex: 50%;
-  width: 75%;
-  float: left;
-  text-align: left;
-}
-
-.accessibilitytest-bilde{
-  flex-basis: 70%;
-  order: 2;
-  flex: 80%;
-  width: 25%;
-  float: left;
-  align-items: left;
-}
-
-.accessibility-test-campus{
-  max-width: 50%;
-  
-}
-
-@media (max-width: 800px) {
-  .grid-9{
-    flex-direction: column;
-  }
-  
-}
 
 /*This styles the look of the footer which contains links to the sources used for the text on the page
 and the names of the makers of the website. We use the same footer in all the pages*/

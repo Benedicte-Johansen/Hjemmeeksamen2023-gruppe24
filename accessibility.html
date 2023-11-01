@@ -46,63 +46,91 @@
   </div>
   <div class="sub-heading">
     <p>
-      Vi har kjørt accessibility test gjennom lighthouse i google chrome.
+      Vi har kjørt accessibility test gjennom lighthouse i google chrome. Dette gjøres for å sjekke hvor
+      universelt utformet en nettside er. Likevel har denne testen begrensninger. Nedenfor er det derfor en 
+      liste over ting testen ikke beregner score ut fra, men som forbedrer universell utforming.
+      <ul>
+        <li>
+          Vi har ikke plassert tekst inne i bilder for å gjøre det enklere for folk med nedsatt syn
+        </li>
+        <li>
+          Vi har delt opp lengre paragrafer i flere, kortere paragrafer, slik at det blir lettere å lese
+        </li>
+        <li>
+          Det er lagt skygge/endret farge når man fører musepekeren over en chehcbox eller lignende.
+          Da blir det økt kontrast og det blir lettere å se.
+        </li>
+        <li>
+          Når det er klikkbare linker endres musepekeren fra standard "pil" til en peker/hånd.
+          Da blir dette lettere å forstå at det blir et klikkbart alternativ.
+        </li>
+      </ul>
     </p>
   </div>
 
-<div class = "grid-9">
-  <div class="accessibility-test">
-    <h2>
-      Accessibility test for campus.html
-    </h2>
-      <div class="accessibility-test-tekst">
+  <!-- The different information on the page is categorized and placed in checkboxes/toggle-boxes-->
+  <div class="innledning-checkbox">
+    <input type="checkbox" id="title-4" />
+    <!-- The label shows the title of the checkbox-->
+    <label for="title-4">
+      <!-- This heading is shown both when the checkbox is "open" and closed -->
+      <h2>
+        Accessibility test index.html
+      </h2>
+    </label>
+    <!-- This is the container of the content inside the "innledning"-checkbox -->
+    <!-- This is only shown when the checkbox is open -->
+    <div class="content">
+      <div class="accessibility-test-grid">
+        <img src="" alt="Accessibility test av index.html">
         <p>
-          Accessibility testen for siden campus.html ga oss resultatene performance: % og accessibility: %. 
-          <p>
-            Når vi trykker oss videre ser vi at årsaken til scoren er:
-          </p>
+          Da vi kjørte vår første accessibility test av siden index.html. Fikk vi 85% accessibility, og vi leste 
+          testen og så at OsloMet logoen i banneret manglet en alt tekst. Dette la vi på og accessibility scoren
+          endret seg fra 85% til 97%. 
         </p>
       </div>
-      <div class="accessibility-test-bilde">
-        <img class="accessibility-test-campus" src="" alt="Bilde av accessibility testen som ble kjørt på campus.html">
-      </div>
-    <h2>
-      Accessibility test for index.html
-    </h2>
-    <p>
-      <div class="venstre-kolonne">
-        <div class="accessibility-test-tekst">
-          <p>
-            Accessibility testen for siden index.html ga oss resultatene performance: % og accessibility: %. 
-            <p>
-              Når vi trykker oss videre ser vi at årsaken til scoren er:
-            </p>
-          </p>
-        </div>
-      </div>
-        <div class="accessibility-test-bilde">
-          <img class="" src="" alt="Bilde av accessibility testen som ble kjørt på index.html">
-        </div>
-    </p>
-    <h2>Accessibility test for topical.html</h2>
-    <p>
-      <div class="venstre-kolonne">
-        <div class="accessibility-test-tekst">
-          <p>
-            Accessibility testen for siden index.html ga oss resultatene performance: % og accessibility: %. 
-            <p>
-              Når vi trykker oss videre ser vi at årsaken til scoren er:
-            </p>
-          </p>
-        </div>
-      </div>
-      <div class="accessibility-test-bilde">
-        <img class="" src="" alt="Bilde av accessibility testen som ble kjørt på topical.html">
-      </div>
-    </p>
+    </div>
   </div>
-</div>
-
+  <!-- This is the second checkbox on the page -->
+  <div class="checkbox">
+    <input type="checkbox" id="title-5" />
+    <!-- The label contains the title of the checkbox -->
+    <label for="title-5">
+      <!-- This heading is shown both when the checkbox is open and closed -->
+      <h2>
+        Accessibility test topical.html
+      </h2>
+    </label>
+    <div class="content">
+      <div class="accessibility-test-grid">
+        <img src="" alt="Accessibility-test av topical.html">
+        <p>
+          Da vi kjørte accessibility test på siden topical.html hadde vi allerede lagt til en "alt" tekst på
+          OsloMet logoen og her fikk vi 97%.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <!-- This is the third checkbox-->
+    <input type="checkbox" id="title-6" />
+    <!-- The label contains the title of the checkbox-->
+    <label for="title-6">
+      <!-- This heading is showed both when the checkbox is open and closed -->
+      <h2 class>
+        Accessibility test campus.html
+      </h2>
+    </label>
+    <div class="content">
+      <div class="accessibility-test-grid">
+        <img src="" alt="Accessibility-test av campus.html">
+        <p>
+          Da vi kjørte accessibility test på siden campus.html hadde vi allerede lagt til en "alt" tekst på
+          OsloMet logoen og her fikk vi 99%.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <div class = "footer">  
     <footer>
