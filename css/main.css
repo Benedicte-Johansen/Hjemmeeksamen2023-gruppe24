@@ -338,21 +338,48 @@ with the same distance from the text and have the same border around them.*/
 
 
 /*accessibility.html*/
+
+div.accessibility-test-bildeslideshow{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.accessibility-test-bildeslideshow:hover{
+  border: 1px solid #777;
+}
+
+div.accessibility-test-bildeslideshow img {
+  width: 100%;
+  height: auto;
+}
+
+div.beskrivelse-av-bildet{
+  padding: 15px;
+  text-align: center;
+}
+
+.bilder-til-slideshow{
+  width: 600;
+  height: 400;
+}
+
 .accessibility.test.flex{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  resize: both;
+  overflow: auto;
 }
 
+.accessibility-test-bilde,
 .accessibility-test-tekst{
-  order: 2;
-  flex-grow: 2;
+ max-width: 50%;
+ flex: 1 1 50%;
+ word-break: break-word;
 }
 
-.accessibility-test-bilde{
-  order: 1;
-  flex-grow: 1;
-}
 
 
 /*This styles the look of the footer which contains links to the sources used for the text on the page
