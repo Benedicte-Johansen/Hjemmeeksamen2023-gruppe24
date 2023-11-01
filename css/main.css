@@ -256,10 +256,12 @@ input:checked + label + .content {
 
 .main-heading{
   font-size: 4vw;
+  font-size: 40px;
 }
 
 .info-om-begge-campus{
   font-size: 4vw;
+  font-size: 30px;
   text-align: auto;
   margin-top: .5px;
   margin-bottom: 30px;
