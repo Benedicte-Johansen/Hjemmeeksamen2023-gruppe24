@@ -260,7 +260,6 @@ input:checked + label + .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px 30px;
-  /**/
 }
 
 .grid-campus-boxes .campus-bilde{
@@ -288,6 +287,7 @@ input:checked + label + .content {
   .grid-campus-boxes .tekst-i-boks .teksten{
     padding-left: 0;
   }
+  /*Media query that makes it so ...*/
 }
 
 @media (max-width: 768px){
