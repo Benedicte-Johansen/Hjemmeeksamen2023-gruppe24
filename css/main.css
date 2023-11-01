@@ -94,8 +94,8 @@ body {
   font-size: 20px;
 }
 
-/* This targets the main heading */
-.heading {
+/* This targets the main heading in all the pages, to have a coercive design through the webpage*/
+.main-heading {
   box-sizing: border-box;
   font-size: 40px;
   margin-left: 30px;
@@ -253,18 +253,6 @@ input:checked + label + .content {
 }
 
 /* campus.html */
-
-.main-heading{
-  font-size: 40px;
-}
-
-.info-om-begge-campus{
-  font-size: 30px;
-  text-align: auto;
-  margin-top: .5px;
-  margin-bottom: 30px;
-  align-items: under;
-}
 
 .grid-7{
   display: grid;
