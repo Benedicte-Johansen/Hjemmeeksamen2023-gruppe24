@@ -40,6 +40,7 @@ body {
   padding: 10px;
   font-size: 20px;
   border: none;
+  /*The cursor tag changes the cursor from an arrow to a hand/pointer*/
   cursor: pointer;
 }
 
@@ -82,7 +83,9 @@ body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #d9b607;}
 
-/* This is the headings on the webpages*/
+/* This is the styling og the background behind the heading and sub-heading 
+on the index.html to make the background yellow and some extra styling to make the photo
+the right distance from the text.*/
 .heading-container {
   display: grid;
   gap: 20px;
@@ -97,6 +100,7 @@ body {
   font-size: 20px;
 }
 
+
 /* This targets the main heading in all the pages, to have a coercive design through the webpage*/
 .main-heading {
   box-sizing: border-box;
@@ -104,12 +108,70 @@ body {
   margin-left: 30px;
 }
 
-/* This targets the text right under the main heading */
+/* This targets the text right under the main heading in all the pages, to have a coercive design*/
 .sub-heading {
   box-sizing: border-box;
   font-weight: lighter;
   font-size: 30px;
+  margin-left: 20px;
 }
+
+/*In the campus.html and the topical.html we use checkboxes to create dropdown boxes that expand when you clik them. 
+They are styled the same in both pages*/
+/* This styles the checkboxes that are on display on the webpages */
+input {
+  display: none;
+}
+
+label {
+  display: block;
+  padding: 8px 22px;
+  /* When you hover over the box the cursor turns into a pointer */
+  cursor: pointer;
+  background: #ffd500;
+  color: black;
+  position: relative;
+  /*The background of the box is styled to match the rest of the webpage with yellow boxes with black text
+  We chose to position it relative so they would cover the whole page and be center*/
+}
+
+/* When you hover over each of the checkboxes they change color to a little bit darker yellow*/
+label:hover {
+  background: #e0bb01;
+  /* This ensures a smooth transition when you hover over the checkboxes */
+  transition: .5s;
+}
+
+/* This styles the '+' in the righthand corner of each checkbox */
+/* When the box is closed the '+' is displayed indicating that you can click the box to get more information */
+label::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+/* This styles the '+' to turn into a '-' when the box is open/checked and displaying the content */
+input:checked + label::after {
+  content: '-';
+  right: 14px;
+  top: 5px;
+}
+
+/* This hides the content when the checkbox is closed */
+input + label + .content {
+  display: none;
+}
+
+/* This shows the content when the checkbox is open */
+input:checked + label + .content {
+  display: block;
+}
+
+
+/*Index.html*/
 
 .bilde-studiestart {
   /* This is the gap underneath the image and above the text */
@@ -165,28 +227,8 @@ body {
   border-top: 1px solid black;
 }
 
-/* This styles the look of the footer which contains links and the names of the makers of the website */
-footer {
-  text-align: center;
-  padding: 8px;
-  background-color: #ffd500;
-  color: black;
-  margin-top: 30px;
-}
 
 /* topical.html */ 
-
-/* This is the heading underneath the banner */
-.heading-topical {
-  font-size: 30px;
-  margin-left: 20px;
-}
-
-/* This is the sub-heading right under the heading*/
-.emne {
-  font-size: 30px;
-  margin-left: 20px;
-}
 
 /* This is the grid for the course description */
 .grid-6 {
@@ -208,110 +250,16 @@ footer {
   border-top: 1px solid black;
 }
 
-/* This styles the checkboxes that are on display on the webpage */
-label {
-  display: block;
-  padding: 8px 22px;
-  /* When you hover over the box the cursor turns into a pointer */
-  cursor: pointer;
-  background: #ffd500;
-  color: black;
-  position: relative;
-  
-}
-
-/* When you hover over each of the checkboxes they change color*/
-label:hover {
-  background: #e0bb01;
-  /* This ensures a smooth transition when you hover over the checkboxes */
-  transition: .5s;
-}
-
-/* This styles the '+' in the righthand corner of each checkbox */
-/* When the box is closed the '+' is displayed indicating that you can click the box to get more information */
-label::after {
-  content: '+';
-  font-size: 22px;
-  font-weight: bold;
-  position: absolute;
-  right: 10px;
-  top: 5px;
-}
-
-/* This styles the '+' to turn into a '-' when the box is open/checked and displaying the content */
-input:checked + label::after {
-  content: '-';
-  right: 14px;
-  top: 5px;
-}
-
-/* This hides the content when the checkbox is closed */
-input + label + .content {
-  display: none;
-}
-
-/* This shows the content when the checkbox is open */
-input:checked + label + .content {
-  display: block;
-}
 
 /* campus.html */
 
-.grid-7{
-  display: grid;
-  column-gap: 5rem;
-  grid-template-columns: 3fr;
-  padding: 1rem;
-  line-height: 1.2;
-}
-
-
-input{
-  display: none;
-}
-
-label{
-  display: block;
-  padding: 8px 22px;
-  margin: 0 0 1px 0;
-  cursor: pointer;
-  background: #ffd500;
-  transition: ease .5s;
-  position: relative;
-}
-
-label::after {
-  content: '+';  /* When the box is 'closed' the symbol in the top right corner is a '+' */
-  font-size: 22px;
-  font-weight: bold;
-  position: absolute;
-  right: 10px;
-  top: 2px; 
-}
-
-input:checked + label::after {
-  content: '-';     /* When the box is 'open' the symbol in the top right corner changes to a '-' */
-  right: 14px;
-  top: 3px;
-}
-
-.input + label + content{
-  display: none;
-  background: #ffd500;
-  /*The look of the box when it's "closed"*/
-}
-
-input:checked + label + .content {
-  display: block;
-  /* This ensures that the information about the campuses are shown when the box/label is 'open' */
-}
-
+/*Below is the classes that allows there to be both an image and text in the dropdown menu*/
 .grid-campus-boxes{
-    width: 80%;
-    max-width: 1170px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px 30px;
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px 30px;
 }
 
 .grid-campus-boxes .campus-bilde{
@@ -339,6 +287,7 @@ input:checked + label + .content {
   .grid-campus-boxes .tekst-i-boks .teksten{
     padding-left: 0;
   }
+  /*Media query that takes away the padding on the left side when the page is smaller */
 }
 
 @media (max-width: 768px){
@@ -346,8 +295,11 @@ input:checked + label + .content {
     width: 90%;
     grid-template-columns: repeat(1fr);
   }
+  /*Media query that */
 }
 
+/*The classes below, .tekst-i-boks, .campusnavn & .kort-info along with the image styling below
+ styles the dropdown boxes content while it's not pressed.*/
 .tekst-i-boks{
   display: grid;
   grid-template-columns: repeat(2, 2fr);
@@ -355,16 +307,14 @@ input:checked + label + .content {
   align-items: center;
 }
 
-.campusnavn{
+.campusnavn .kort-info{
   border-bottom: 0.5px;
-}
-
-.kort-info{
   display: inline;
-  border-top: 0.5px;
 }
 
-  .bilde-pilestredet{
+/*Styled both the pictures in the dropdown boxes the same, so they would be on the same side,
+with the same distance from the text and have the same border around them.*/
+  .bilde-pilestredet, .bilde-kjeller{
     margin-top: 2px;
     margin-bottom: 0px;
     vertical-align: middle;
@@ -372,12 +322,9 @@ input:checked + label + .content {
     flex: 100%;
   }
 
-  .bilde-kjeller{
-    margin-top: 2px;
-    margin-bottom: 0px;
-    vertical-align: middle;
-    width: 100%;
-    flex: 100%;
+  .campus-info.adresse.adresse-universitetet{
+    margin: 10px;
+    /*Adds a little margin around the text when the dropdown box is pressed*/
   }
 
   .adresse{
@@ -390,16 +337,11 @@ input:checked + label + .content {
   }
 
 
-.grid-8{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 1rem;
-}
-
 /*accessibility.html*/
+
 .grid-9{
   /*Vi velger å bruke flex display på denne siden for å vise at dette også er et alternativ
-  når man styler en nettside med CSS. Flex gjør litt det samme som grid-verdigen, men ....*/
+  når man styler en nettside med CSS. Flex gjør litt det samme som grid-verdien, men ....*/
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -437,14 +379,15 @@ input:checked + label + .content {
   
 }
 
-/*Styling av footeren vi skal ha på alle sidene våre*/
+/*This styles the look of the footer which contains links to the sources used for the text on the page
+and the names of the makers of the website. We use the same footer in all the pages*/
 
 .footer{
-  background: #ffd500;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px; 
+  text-align: center;
+  padding: 8px;
+  background-color: #ffd500;
+  color: black;
+  margin-top: 30px
 }
 
 .kildelink{
