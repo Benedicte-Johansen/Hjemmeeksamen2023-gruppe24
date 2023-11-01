@@ -338,7 +338,21 @@ with the same distance from the text and have the same border around them.*/
 
 
 /*accessibility.html*/
+.accessibility.test.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.accessibility-test-tekst{
+  order: 2;
+  flex-grow: 2;
+}
+
+.accessibility-test-bilde{
+  order: 1;
+  flex-grow: 1;
+}
 
 
 /*This styles the look of the footer which contains links to the sources used for the text on the page

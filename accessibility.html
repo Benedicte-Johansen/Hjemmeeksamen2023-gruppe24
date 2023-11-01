@@ -64,6 +64,10 @@
           Når det er klikkbare linker endres musepekeren fra standard "pil" til en peker/hånd.
           Da blir dette lettere å forstå at det blir et klikkbart alternativ.
         </li>
+        <li>
+          I koden er det mange klasser, og vi har gitt de beskrivende navn slik at det er lettere å forstå
+          hva hver "styler".
+        </li>
       </ul>
     </p>
   </div>
@@ -81,7 +85,7 @@
     <!-- This is the container of the content inside the "innledning"-checkbox -->
     <!-- This is only shown when the checkbox is open -->
     <div class="content">
-      <div class="accessibility-test-grid">
+      <div class="accessibility-test-flex">
         <img src="" alt="Accessibility test av index.html">
         <p>
           Da vi kjørte vår første accessibility test av siden index.html. Fikk vi 85% accessibility, og vi leste 
@@ -102,12 +106,16 @@
       </h2>
     </label>
     <div class="content">
-      <div class="accessibility-test-grid">
-        <img src="" alt="Accessibility-test av topical.html">
-        <p>
-          Da vi kjørte accessibility test på siden topical.html hadde vi allerede lagt til en "alt" tekst på
-          OsloMet logoen og her fikk vi 97%.
-        </p>
+      <div class="accessibility-test-flex">
+        <div class="accessibility-test-bilde">
+          <img src="" alt="Accessibility-test av topical.html">
+        </div>
+        <div class="accessibility-test-tekst">
+          <p>
+            Da vi kjørte accessibility test på siden topical.html hadde vi allerede lagt til en "alt" tekst på
+            OsloMet logoen og her fikk vi 97%.
+         </p>
+        </div>
       </div>
     </div>
   </div>
@@ -122,7 +130,7 @@
       </h2>
     </label>
     <div class="content">
-      <div class="accessibility-test-grid">
+      <div class="accessibility-test-flex">
         <img src="" alt="Accessibility-test av campus.html">
         <p>
           Da vi kjørte accessibility test på siden campus.html hadde vi allerede lagt til en "alt" tekst på
