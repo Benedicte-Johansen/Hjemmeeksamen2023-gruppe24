@@ -253,13 +253,14 @@ input:checked + label + .content {
 
 /* campus.html */
 
-/*This is the div class that allows there to be both an image and text in the dropdown menu*/
+/*Below is the classes that allows there to be both an image and text in the dropdown menu*/
 .grid-campus-boxes{
   width: 80%;
   max-width: 1170px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px 30px;
+  /**/
 }
 
 .grid-campus-boxes .campus-bilde{
@@ -333,6 +334,7 @@ with the same distance from the text and have the same border around them.*/
   .adresse-universitetet{
     font-size: smaller;
   }
+
 
 /*accessibility.html*/
 
