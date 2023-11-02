@@ -1,35 +1,39 @@
 <!DOCTYPE html>
+<!-- Her indikeres språket på nettsiden -->
 <html lang="no">
   <head>
-    <!-- This title shows up in the tab in the browser the page has been opened in -->
+    <!-- Denne tittelen vises på fanen i nettleseren den åpnes i -->
     <title>
       DATA1200 - Hjemmeeksamen høst 2023 - Gruppe 24
     </title>
-    <!-- This indicates the webpages' character encoding -->
+    <!-- Dette indikerer nettsidens tegnkoding -->
     <meta charset="utf-8" />
-    <!-- This gives the browser instructions on how to control the page's dimensions and scaling. -->
+    <!-- Denne gir nettleseren instruksjoner om nettsidens dimensjoner og skalering -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- This links to the CSS stylesheet -->
+    <!-- Link til CSS -->
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
-    <!-- All of the information on this page is from https://student.oslomet.no/en/studier/-/studieinfo/emne/DAPE1400/2020/H%C3%98ST-->
-    <!-- This is the yellow banner at the top of the page -->
-    <!-- The code is placed into divs throughout to style our webpage more easily -->
+    <!-- All informasjon på denne siden er hentet fra: https://student.oslomet.no/en/studier/-/studieinfo/emne/DAPE1400/2020/H%C3%98ST-->
+    <!-- Denne div'en inneholder det gule banneret på toppen av siden -->
+    <!-- Koden er plassert i div'er gjennom hele nettsiden -->
     <div class="banner-container">
-      <!-- This logo is copied from: https://student.oslomet.no/o/oslomet-theme/images/oslomet-logo-black.svg-->
+      <!-- Logoen er kopiert fra: https://student.oslomet.no/o/oslomet-theme/images/oslomet-logo-black.svg-->
+      <!-- Vi har brukt denne samme logoen på alle sidene -->
       <div class="oslomet-logo">
-        <!-- Link to the copied logo which is located in our "img" folder -->
+        <!-- Dette er en link til den kopierte logoen som er plassert i img-mappen -->
+        <!-- Bildet er gitt en alternativ tekst hvis den ikke kan vises på siden -->
         <img src="./img/oslomet-logo-black.svg" alt="OsloMet sin logo">
       </div>
-      <!-- This is the container for the dropdown menu -->
-      <!-- We've used the same code for the dropdown menu for on all our pages -->
+      <!-- Denne div'en inneholder en nedtrekksmeny  -->
+      <!-- Nedtrekksmenyen inneholder linker til de øvrige sidene våre -->
       <div class="dropdown">
-        <!-- This dropdown menu contains links to the other pages on our website -->
-        <!-- The dropdown menu is a button which we have styled as a dropdown menu-->
+        <!-- Nedtrekksmenyen er en knapp som er stylet slik at den ser ut som en nedtrekksmeny -->
         <button class="dropdown-button">
           Meny
         </button>
+        <!-- Denne div'en inneholder linker til de andre sidene våre -->
+        <!-- Ved default åpnes disse i den fanen man befinner seg i -->
         <div class="dropdown-content">
           <a href="index.html"> 
             Dette er OsloMet 
@@ -43,8 +47,7 @@
         </div>
       </div>
     </div>
-    <!-- This is the container for the heading -->
-      <!-- Each of the grid elements are placed in their own div -->
+    <!-- Denne div'en inneholder heading og sub-heading -->
       <div class="main-heading">
         <h1>
           DAPE1400 Programmering
@@ -54,25 +57,29 @@
         </p>
       </div>
       <div class="programming">
-        <div class="Hello-world-image">
-          <!-- This links to the downloaded image in the image folder -->
+        <div class="informasjonsteknologi-image">
+          <!-- Her ligger bildet som man ser på nettsiden -->
+          <!-- Dersom netteleseren ikke kan laste inn bildet, vil det komme opp en alternativ tekst-->
+          <!-- Bildet tar opp 100% av div'en det er plassert i -->
           <img src="./img/informasjonsteknologi_bachelor.jpg" alt="Bilde programmering"
           style="width: 100%;">
         </div>
-        <!-- Link to the original image -->
+        <!-- Her ligger link til det originale bildet -->
         <div class="original-image-programmering">
+          <!-- Bildet er hentet fra: https://www.oslomet.no/studier/tkd/informasjonsteknologi-->
+          <!-- Det originale bildet vil åpnes i en ny fane -->
           <a class="original-image"
           href="https://www.oslomet.no/var/oslomet/storage/images/_aliases/xxxlarge/6/9/0/4/4096-11-nor-NO/informasjonsteknologi_bachelor.jpg"
           target="_blank">
-          <!-- This is the photographer of the original image -->
+          <!-- Her er fotografen av bildet -->
+          <!-- Dette er en klikkbar link som tar deg til det originale bildet -->
             Foto: Ukjen/hentet fra Oslomet
           </a>
         </div>
       </div>
-    <!-- This is a container for course description-->
+    <!-- Her har vi stylet et grid som inneholder informasjon om faget -->
     <div class="grid-6">
-      <!-- Each of the grid elements are placed in their own div -->
-      <!-- This is a grid with information placed horizontally-->
+      <!-- Hvert grid-element er plassert i sin egen div -->
       <div class="grid-item">
         <div class="coursename-english">
           <div class="heading-coursename-english">
@@ -91,7 +98,8 @@
         <div class="studyprogram">
           <div class="studieprogram">
             <h4>
-              <!-- This links to OsloMet study programms and courses -->
+              <!-- Denne tagen linker til studieoversikten på oslomet.no -->
+              <!-- Denne åpnes i en ny fane-->
               <a class="heading-grid" 
               href="https://www.oslomet.no/studier/studieoversikt"
               target="_blank">
@@ -139,24 +147,26 @@
         </div>
       </div>
     </div>
-    <!-- The different information on the page is categorized and placed in checkboxes/toggle-boxes-->
+    <!-- Informasjon om faget er plassert i checkboxer/toggle-boxes-->
+    <!-- Koden for disse checkboksene er den samme som vi laget for oblig2, imidlertid har vi her laget mer enn 1 checkboks -->
     <div class="innledning-checkbox">
       <input type="checkbox" id="title-1" />
-      <!-- Each id and for is given a unique name. This is necessary for the checkbox to work as intended -->
-      <!-- The label shows the title of the checkbox-->
+      <!-- Hvert 'id' og 'for' er gitt et unikt navn. Dette er nødvendig for at man skal kunne åpne checkboksen på riktig måte-->
+      <!-- Vi har brukt en label-tag for å lage hver checkboks-->
+      <!-- Headingen som er lagt inn i label-taggene synes hele tiden, altså både når boksen er åpen og lukket -->
       <label for="title-1">
-        <!-- This heading is shown both when the checkbox is "open" and closed -->
         <h2 class="innledning">
           Innledning
         </h2>
       </label>
-      <!-- This is the container of the content inside the "innledning"-checkbox -->
-      <!-- This is only shown when the checkbox is open -->
+      <!-- I denne div'en ligger informasjonen som ligger inne i checkboksen -->
+      <!-- Dette vises KUN når boksen er åpen -->
       <div class="content">
         <p>
           Dette emnet skal gi studenten grunnleggende forståelse og ferdigheter
           innen imperative programmeringsprinsipper og 
-          <!-- link via tekst til informasjon om objektorientert programmering: https://www.wikipendium.no/TDT4100_Objektorientert_Programmering/nb/-->
+          <!-- I teksten har vi linket til en infoside: https://www.wikipendium.no/TDT4100_Objektorientert_Programmering/nb/-->
+          <!-- Når du klikker på linken tas du til en ny fane -->
           <a class="programmeringsspråk" 
           href="https://www.wikipendium.no/TDT4100_Objektorientert_Programmering/nb/"
           target="_blank">
@@ -165,12 +175,12 @@
         </p>
       </div>
     </div>
-    <!-- This is the second checkbox on the page -->
+    <!-- Dette er checkboks nr. 2 -->
+    <!-- Alle checkboksene er laget på samme måte-->
     <div class="checkbox">
       <input type="checkbox" id="title-2" />
-      <!-- The label contains the title of the checkbox -->
+      <!-- Hvert 'id' og 'for' er gitt et unikt navn. Dette er nødvendig for at man skal kunne åpne checkboksen på riktig måte-->
       <label for="title-2">
-        <!-- This heading is shown both when the checkbox is open and closed -->
         <h2 class="forkunnskap">
           Forkunnskapskrav
         </h2>
@@ -188,21 +198,19 @@
       </div>
     </div>
     <div>
-      <!-- This is the third checkbox-->
+      <!-- Dette er checkboks nr. 3 -->
       <input type="checkbox" id="title-3" />
-      <!-- The label contains the title of the checkbox-->
+      <!-- Hvert 'id' og 'for' er gitt et unikt navn. Dette er nødvendig for at man skal kunne åpne checkboksen på riktig måte-->
       <label for="title-3">
-        <!-- This heading is showed both when the checkbox is open and closed -->
         <h2 class="Læringsutbytte">
           Læringsutbytte
         </h2>
       </label>
-      <!-- This is the content of the checkbox and is only shown when the box is open -->
       <div class="content">
-        <!-- Each of the elements are placed within a div -->
+        <!-- Denne koden er lik den vi lagde i oblig 2 -->
         <div class="list-learning-outcomes">
           <div>
-            <!-- This is a paragraph is used as a sub-heading within the checkbox -->
+            <!-- Her har vi lagt inn en paragraph-tag som en slags sub-heading inne i checkboksen-->
             <p>
               Etter å ha gjennomført dette emne har studenten følgende
               læringsutbytte definert i kunnskap, ferdigheter og generell
@@ -210,13 +218,13 @@
             </p>
           </div>
           <div>
-            <!-- This is a heading for the unordered list within the checkbox -->
+            <!-- Her har vi laget en 'unordered list' som igjen inneholder flere list-tags -->
             <h3>
               Kunnskap
             </h3>
-            <!-- This is an unordered list which shows the content as bullet points -->
+            <!-- En 'unordered list' viser liste elementene i 'bullet points' -->
             <ul>
-              <!-- This is a list item (bullet point) within the unordered list  -->
+              <!-- liste element-->
               <li>
                 Studenten kjenner til grunnleggende konsepter innen
                 programmering, med fokus på prosedyre-orientert og
@@ -240,18 +248,17 @@
             </ul>
           </div>
           <div>
-            <!-- This is a heading for the unordered list within the checkbox -->
+            <!-- 'Unordered list med heading og flere liste-elementer '-->
             <h3>
               Ferdigheter
             </h3>
-            <!-- This is an unordered list (bullet points) showing the skills a student will learn in the subject -->
             <ul>
-              <!-- This is a paragraph used as a sub-heading for the bullet point list -->
+              <!-- En paragraph-tag brukt som en sub-heading -->
               <p>
                 Studenten kan håndtere følgende programmeringskonstruksjoner i
                 Java:
               </p>
-              <!-- These are the bullet points (list elements) -->
+              <!-- Liste-elementer vises som 'bullet points' -->
               <li>
                 Operatorer og typer
               </li>
@@ -276,17 +283,14 @@
             </ul>
           </div>
           <div>
-            <!-- This is the heading for the unordered list within the checkbox -->
+            <!-- 'Unordered list' -->
             <h3>
               Generell kompetanse
             </h3>
-            <!-- This paragraph is used as a sub-heading within the checkbox -->
             <p>
               Studenten kjenner til:
             </p>
-            <!-- This is an unordered list ensuring that the list items show up as bullet points -->
             <ul>
-              <!-- These are the list items within the unordered list which will show up as bullet points -->
               <li>
                 grunnleggende prinsipper for oppbygging av programmer
               </li>
@@ -301,21 +305,21 @@
         </div>
       </div>
     </div>
-    <!-- This is the container for the footer -->
+    <!-- Footer plassert i div-->
     <div class="footer">
       <footer>
-        <!-- This paragraph discloses where we have gathered the information from -->
+        <!-- Link til kilden vi har hentet tekst og bilde fra  -->
         <p>
           All informasjon på denne siden er hentet fra
           <a class="kildelink" href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1400/2022/H%C3%98ST">
             Studieinfo emne DAPE1400 2022 Programmering
             </a>
         </p>
-        <!-- This paragraph contains the names of the makers of the webpage-->
+        <!-- Vi som har laget siden -->
         <p class="forfattere">
           Forfattere er: Iselin og Benedicte
         </p>
-        <!-- This discloses that the webpage is made in connection with the final exam of the subject DATA1200 -->
+        <!-- Hvorfor vi har laget siden -->
         <p class="eksamen">
           Laget til eksamen, høsten 2023 i faget DATA1200 ved OsloMet.
         </p>
