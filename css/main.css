@@ -6,6 +6,21 @@ body {
   line-height: 1.6;
 }
 
+/* We add a little bit of a margin to the headings and the paragraphs to make it look nicer */
+h1, 
+h2,
+h3,
+h4,
+p {
+  margin-left: 20px;
+}
+
+/* This is styled with a different margin size to the other paragraphs */
+/* This lies inside an 'unordered list', and we need to style it individually to make sure it looks ok */
+.sub-heading-learning-outcomes {
+  margin-left: 5px;
+}
+
 /* Banners */
 /* This styles the look of the banner at the top of each page */ 
 .banner-container {
