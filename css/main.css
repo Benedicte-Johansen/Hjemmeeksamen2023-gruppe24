@@ -260,8 +260,9 @@ input:checked + label + .content {
 /* Dette styler linkene som er lagt inn i teksten som ligger inne statistikkgridet og i checkboksene */
 
 /* Dette sørger for et lite mellomrom mellom bildet og banneret på denne siden */
+
 .informasjonsteknologi-image {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 .heading-grid,
 .opptakskrav,
