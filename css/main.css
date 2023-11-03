@@ -258,6 +258,11 @@ input:checked + label + .content {
 
 /* topical.html: dette styler elementer som er spesifikke for denne siden */
 /* Dette styler linkene som er lagt inn i teksten som ligger inne statistikkgridet og i checkboksene */
+
+/* Dette sørger for et lite mellomrom mellom bildet og banneret på denne siden */
+.informasjonsteknologi-image {
+  margin-top: 10px;
+}
 .heading-grid,
 .opptakskrav,
 .java,
@@ -302,7 +307,7 @@ input:checked + label + .content {
   line-height: 1.2;
 }
 
-/* Dette styler hvert element i gridet med en kant */ 
+/* Dette styler hvert element i gridet med en kant  */ 
 .coursename-english,
 .studyprogram,
 .points,
