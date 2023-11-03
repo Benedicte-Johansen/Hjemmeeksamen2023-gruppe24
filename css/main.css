@@ -1,11 +1,11 @@
 /* Body */
-/* This targets all the pages, styling the font and the height between lines */
+/* Dette styler all skrift og linjehøyde på nettsiden, med mindre annet er spesifisert i egen klasse  */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
-/* We add a little bit of a margin to the headings and the paragraphs to make it look nicer */
+/* Legg til marg på venstre side av headings og paragraph tags */
 h1, 
 h2,
 h3,
@@ -14,7 +14,7 @@ p {
   margin-left: 20px;
 }
 
-/* This styles the attribute tags */ 
+/* Dette styler alle <a>-tags på nettside, med mindre annet er spesifisert i egen klasse */
 a {
   text-decoration: none;
   color: black;
@@ -22,13 +22,14 @@ a {
 }
 
 /* Banners */
-/* This styles the look of the banner at the top of each page */ 
+/* Dette styler banneret på alle sidene våre */
 .banner-container {
-  /* The content within the banner is styled as a grid */
+  /* Innholdet i banneret er lagt i et grid */
   display: grid;
+  /* Dette styler hvor stor andel av skjermen som skal tas opp av hvert element i banneret horisontalt */
   grid-template-columns: 3fr 1fr;
   gap: 20px;
-  /* The yellow is copied to match the color of the OsloMet website */
+  /* Vi har kopiert denne gule fargen fra OsloMet.no */
   background-color: #ffd500;
   padding-top: 0;
   padding-right: 20px;
@@ -36,7 +37,7 @@ a {
   padding-bottom: 0;
 }
 
-/* This styles the "children" or the divs within the div named "banner-container" */
+/* Her styles "barna" (div'ene) som ligger inne i banner div'en */
 .banner-container > div {
   text-align: left;
   padding: 10px 0;
@@ -45,43 +46,44 @@ a {
 
 /* Dropdown Button */
 
-/* This styles all the dropdown buttons (on all pages) */
-/* This targets the dropdown menu on each page of our website */
+/* Her styles alle nedtrekksmenyene på hele nettsiden vår */
 .dropdown-button{
   display: grid;
-  /* The menu is styled to match the background color of the banner it lies within with black writing */
+  /* Nedtrekksmenyen er stylet slik at den matcher fargen på banneret den ligger inne i */
   background-color: #ffd500;;
   color: black;
   padding: 10px;
   font-size: 20px;
   border: none;
-  /*The cursor tag changes the cursor from an arrow to a hand/pointer*/
+  /* Musepekeren er endret fra standart pil til en hånd */
   cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* Her styles posisjonen til nedtrekksmenyen på siden */
 .dropdown {
   /* This ensures that the content is placed right below the dropdown button */ 
   position: relative;
   display: inline-block;
 }
 
-/* The dropdown content is hidden (by default) */
-/* The menu opens up when you hover over it (by default, as well) */
+/* Ved default er inneholdet i nedtrekksmenyen gjemt (det trenger derfor ikke styles) */
+/* Menyen åpnes når man holder musepekeren over menyen (dette er også en default) */
+
 .dropdown-content {
-  /* The content is styled to match the banner */
+  /* Her styles innholdet i nedtrekksmenyen */
   display: none;
   position: absolute;
   background-color:#ffd500; 
-  /* This ensures that the content is as wide as the button */
+  /* Dette sørger for at innholder er like bredt som knappen*/
   min-width: 100%;
-  /* This makes it possible to scroll on smaller screens */
+  /* Dette gjør det mulig å scrolle i menyen på mindre skjermer */
   overflow: auto;
-  /* This makes the dropdown menu more visible when you hover over it, as it has a bit of a shadow behind it */
+  /* Det er lagt til en skygge bak menyen slik at den skal være bedre synlig på siden*/
+  /* a i rgba sørger for at skyggen er mer blurry */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/* Links inside the dropdown */
+/* Linkene inne i nedtrekksmenyen */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -89,18 +91,25 @@ a {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #d9b607;}
+/* Endrer fargen når man fører musepekeren over hver av linkene */
+.dropdown-content a:hover {
+  background-color: #d9b607;
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+/* Når innholdet i nedtrekksmenyen vises */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
+/* Endre bakgrunnsfargen på knappen når nedtrekksmenyens innhold vises*/
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #d9b607;}
+.dropdown:hover .dropbtn 
+{
+  background-color: #d9b607;
+}
 
-/* This is the styling og the background behind the heading and sub-heading 
-on the index.html to make the background yellow and some extra styling to make the photo
-the right distance from the text.*/
+/* Dette styler bakgrunnen bak sub-headingen på index.html */
+/* Padding er lagt til for å lage avstand mellom tekst og bildet */
 .heading-container {
   display: grid;
   gap: 20px;
@@ -108,21 +117,21 @@ the right distance from the text.*/
   padding: 10px;
 }
 
-/* This targets the specific divs within the heading container */
+/* Dette styler div'ene som ligger inne i heading div'en */
 .heading-container > div {
   text-align: left;
   padding: 10px 0;
   font-size: 20px;
 }
 
-/* This targets the main heading in all the pages, to have a coercive design through the webpage*/
+/* Dette styler main-heading på alle sidene, for å sørge for en gjennomgående look */
 .main-heading {
   box-sizing: border-box;
   font-size: 40px;
   margin-left: 30px;
 }
 
-/* This targets the text right under the main heading in all the pages, to have a coercive design*/
+/* Dette styler teksten rett under main-heading på alle sidene, igje for å sørge for en gjennomgående look */
 .sub-heading {
   box-sizing: border-box;
   font-weight: lighter;
@@ -130,9 +139,8 @@ the right distance from the text.*/
   margin-left: 20px;
 }
 
-/*In the campus.html and the topical.html we use checkboxes to create dropdown boxes that expand when you clik them. 
-They are styled the same in both pages*/
-/* This styles the checkboxes that are on display on the webpages */
+/* På campus.html og topical.html bruker vi checkbokser for å lage en nedtrekksmeny. 
+Disse er stylet likt på begge sidene */
 input {
   display: none;
 }
@@ -141,25 +149,26 @@ label {
   border: .5px solid #dab914;
   display: block;
   padding: 8px 22px;
-  /* When you hover over the box the cursor turns into a pointer */
+  /* Når du fører musen over checkboksene endres musepekeren fra pil til hånd */
   cursor: pointer;
+  /* Vi har gitt chekboksene samme farge som banneret og statistikk gridene på de øvrige sidene våre 
+  for å sørge for en gjennomgående look på nettsiden */
   background: #ffd500;
   color: black;
+  /* Posisjonen er satt slik at checkboksene dekker hele siden */
   position: relative;
   margin-bottom: 5px;
-  /*The background of the box is styled to match the rest of the webpage with yellow boxes with black text
-  We chose to position it relative so they would cover the whole page and be center*/
 }
 
-/* When you hover over each of the checkboxes they change color to a little bit darker yellow*/
+/* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
 label:hover {
   background: #e0bb01;
-  /* This ensures a smooth transition when you hover over the checkboxes */
+  /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
   transition: .5s;
 }
 
-/* This styles the '+' in the righthand corner of each checkbox */
-/* When the box is closed the '+' is displayed indicating that you can click the box to get more information */
+/* Her styles '+'-tegnet i høyre hjørnet av hver checkboks */
+/* Når boksen er lukket vises et plusstegn for å indikere at man kan klikke på boksen for mer informasjon */
 label::after {
   content: '+';
   font-size: 22px;
@@ -169,64 +178,86 @@ label::after {
   top: 5px;
 }
 
-/* This styles the '+' to turn into a '-' when the box is open/checked and displaying the content */
+/* Her styles tegnet slik at det går fra + til - når boksen er åpen */
 input:checked + label::after {
   content: '-';
   right: 14px;
   top: 5px;
 }
 
-/* This hides the content when the checkbox is closed */
+/* Når boksen er lukket */
 input + label + .content {
   display: none;
 }
 
-/* This shows the content when the checkbox is open */
+/* Når boksen er åpen*/
 input:checked + label + .content {
   display: block;
 }
 
-/*Index.html*/
+/*Index.html: Her finner man styling for elementer spesifikt for denne siden */
 
 .bilde-studiestart {
-  /* This is the gap underneath the image and above the text */
+  /* Dette sørger for at det er et mellomrom mellom bildet og teksten */
   margin-bottom: 12px;
 }
 
-/* This is the information underneath the image as well as the content underneath the statistics grid */
-/* This is put within a grid layout with gaps inbetween each grid element */
+/* Fotograf og tekst under bildet er stylet i et grid */
 .about-oslomet-container {
   display: grid;
-  /* This targets the layout of the grid elements and how much space they should take up on inside the grid */
+  /* Her styles hvor stor del hvert element i gridet tar opp på siden */ 
   grid-template-columns: 1fr 2fr 1fr;
+  /* Mellomrom mellom hvert grid element */
   gap: 30px;
 }
 
-/* This is the link to the original photo and this styles the text "Foto: Benjamin A. Ward" */
+/* Styler teksten som er en link til original foto: "Foto: Benjamin A. Ward" */
 .original-image {
   font-size: 12px;
   font-weight: lighter;
+  /* for å unngå at det er en strek under teksten må det styles slik */
   text-decoration: none;
   padding-top: 10px;
   margin-left: 20px;
 }
 
-/* This styles the look of the link while you hover over it */
+/* Dette styler hvordan linken ser ut når du har musepekeren på den */
 .original-image:hover {
   font-weight: bolder;
   cursor: pointer;
+  /* For å unngå default innstilling hvor teksten blir lilla, må den styles slik */
   color: black;
   text-decoration: none;
 }
 
-/* This styles how the link looks when you've clicked on it */
+/* Dette styler hvordan linken ser ut når og etter du har klikket på den */
 .original-image:active,
 .original-image:visited {
   color: black;
   text-decoration: none;
 }
 
-/* This is the link to the original photo and this styles the text "Foto: Benjamin A. Ward" */
+/* Dette styler gridet som inneholder statistikken om OsloMet */
+.statistics-grid-container {
+  display: grid;
+  column-gap: 30px;
+  /* Her styles hvilken andel hvert grid-element skal ta opp horisontalt på skjermen */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* Gridet er gitt den samme bakgrunnsfargen som de andre elementene på nettstedet vårt */
+  background-color: #ffd500;
+  padding: 25px;
+}
+
+/* Her er det lagt inn en bord over hvert av grid-elementene */
+.amount-students,
+.amount-studyplaces,
+.amount-bachelor-studies,
+.amount-master-studies {
+  border-top: 1px solid black;
+}
+
+/* topical.html: dette styler elementer som er spesifikke for denne siden */
+/* Dette styler linkene som er lagt inn i teksten som ligger inne statistikkgridet og i checkboksene */
 .heading-grid,
 .opptakskrav,
 .java,
@@ -236,7 +267,7 @@ input:checked + label + .content {
   padding-top: 10px;
 }
 
-/* This styles the look of the link while you hover over it */
+/* Dette styler linkene når man holder musepekeren over dem */
 .heading-grid:hover,
 .opptakskrav:hover,
 .java:hover,
@@ -247,7 +278,7 @@ input:checked + label + .content {
   text-decoration: underline;
 }
 
-/* This styles how the link looks when you've clicked on it */
+/* Dette styler hvordan linkene ser ut når du klikker på dem og etter du har klikket på linken */
 .heading-grid:active,
 .heading-grid:visited, 
 .opptakskrav:active,
@@ -259,38 +290,19 @@ input:checked + label + .content {
   color: black;
   text-decoration: underline;
 }
-/* This is the styling of the grid containing the statistics */
-.statistics-grid-container {
-  display: grid;
-  column-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: #ffd500;
-  padding: 25px;
-}
 
-/* This puts a border over each of the grid elements within the statistics grid */
-.amount-students,
-.amount-studyplaces,
-.amount-bachelor-studies,
-.amount-master-studies {
-  border-top: 1px solid black;
-}
-
-/* topical.html */ 
-
-/* This is the grid for the course description */
+/* Dette gridet inneholder statistikken om Programmeringsfaget  */
 .grid-6 {
   display: grid;
-  /* This is the gap between each grid item */
+  /* Dette er mellomrommet mellom grid-elementene */
   column-gap: 30px;
-  /* The information in the grid is styled horizontally */
-  /* Each of the grid items take up the same fraction of space on the page */
+  /* Hvert grid element tar opp en lik andel av skjermen horisontalt */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 25px;
   line-height: 1.2;
 }
 
-/* This styles each of the grid items with a border-top */ 
+/* Dette styler hvert element i gridet med et bord */ 
 .coursename-english,
 .studyprogram,
 .points,
@@ -298,34 +310,33 @@ input:checked + label + .content {
   border-top: 1px solid black;
 }
 
-/* This is a button */
+/* Dette er en knapp som er lagt inn i teksten i en av checkboksene */
 .arrays-button {
   background-color: #ffd500;
+  /* Knappen har fått en bord som er litt mørkere i fargen for å gjøre den litt mer synlig */
   border-color: #a38f2e;
   border: 2px;
-  /* This rounds the edges of the button */
+  /* Dette runder kantene på knappen */
   border-radius: 15px;
   color: black;
   height: 30px;
   width: 80px;
   cursor: pointer;
   font-weight: bold;
+  /* Knappen er gitt en skygge */ 
   box-shadow: 8px 3px 10px rgba(0,0,0,0.2);
 }
 
 .arrays-button:hover {
+  /* Knappen får en litt mørkere farge når man fører musepekeren over den */
   background-color: #a38f2e;
+  /* Fargen blir litt "svakere" */
   opacity: 0.8;
 }
 
-.arrays-button:active,
-.arrays-button:visited {
-  background-color: #ffd500;
-}
+/* campus.html: Dette styler elementer som er spesifikke for denne siden */
 
-/* campus.html */
-
-/*Below is the classes that allows there to be both an image and text in the dropdown menu*/
+/* Boksene er stylet slik at den kan inneholde både tekst og bilder */
 .grid-campus-boxes{
   width: 80%;
   max-width: 1170px;
@@ -359,7 +370,7 @@ input:checked + label + .content {
   .grid-campus-boxes .tekst-i-boks .teksten{
     padding-left: 0;
   }
-  /*Media query that takes away the padding on the left side when the page is smaller */
+  /* Dette fjerner padding på venstre side når skjermen er mindre */
 }
 
 @media (max-width: 768px){
@@ -370,8 +381,8 @@ input:checked + label + .content {
   /*Media query that */
 }
 
-/*The classes below, .tekst-i-boks, .campusnavn & .kort-info along with the image styling below
- styles the dropdown boxes content while it's not pressed.*/
+/* Klassene under, .tekst-i-boks, .campusnavn & .kort-info i tillegg til bilde styling, styler nedtrekksmenyenes innhold
+når de er lukket */
 .tekst-i-boks{
   display: grid;
   grid-template-columns: repeat(2, 2fr);
@@ -384,8 +395,8 @@ input:checked + label + .content {
   display: inline;
 }
 
-/*Styled both the pictures in the dropdown boxes the same, so they would be on the same side,
-with the same distance from the text and have the same border around them.*/
+/* Begge bildene inne i checkboksene er stylet lik, slik at de gir siden en sammenhengende look */
+/* De er stylet med samme avstand mellom tekst og kanten rundt dem */
   .bilde-pilestredet, .bilde-kjeller{
     margin-top: 2px;
     margin-bottom: 0px;
@@ -396,7 +407,8 @@ with the same distance from the text and have the same border around them.*/
 
   .campus-info.adresse.adresse-universitetet{
     margin: 10px;
-    /*Adds a little margin around the text when the dropdown box is pressed*/
+    /* Legger til litt marg rundt teksten slik at innholdet i nedtrekksmenyen ser ut som den 
+    ligger mer inne i boksen */
   }
 
   .adresse{
@@ -408,7 +420,7 @@ with the same distance from the text and have the same border around them.*/
     font-size: smaller;
   }
 
-/*accessibility.html*/
+/* accessibility.html: Her styles de spesifikke elementene for denne siden */
 
 div.accessibility-test-bildeslideshow{
   margin: 5px;
@@ -451,13 +463,12 @@ div.beskrivelse-av-bildet{
  word-break: break-word;
 }
 
-
-/*This styles the look of the footer which contains links to the sources used for the text on the page
-and the names of the makers of the website. We use the same footer in all the pages*/
+/* Footer: Her styles footerene på alle sidene slik at siden får en sammenhengende look */
 
 .footer{
   text-align: center;
   padding: 8px;
+  /* Fargen er kopiert fra OsloMet.no */ 
   background-color: #ffd500;
   color: black;
   margin-top: 30px
