@@ -302,7 +302,7 @@ input:checked + label + .content {
   line-height: 1.2;
 }
 
-/* Dette styler hvert element i gridet med et bord */ 
+/* Dette styler hvert element i gridet med en kant */ 
 .coursename-english,
 .studyprogram,
 .points,
