@@ -9,7 +9,7 @@ body {
   padding-bottom: 100px;
 }
 
-/* Legg til marg på venstre side av headings og paragraph tags */
+/* Legg til marg på venstre side av headings og paragraph tags, med mindre annet er spesifisert i egen klasse */
 h1, 
 h2,
 h3,
@@ -18,7 +18,7 @@ p {
   margin-left: 20px;
 }
 
-/* Dette styler alle <a>-tags på nettside, med mindre annet er spesifisert i egen klasse */
+/* Dette styler alle <a>-tags på nettsiden, med mindre annet er spesifisert i egen klasse */
 a {
   text-decoration: none;
   color: black;
@@ -29,13 +29,13 @@ a {
 /* Dette styler banneret på alle sidene våre */
 
 .banner-container {
-  /* Innholdet i banneret er lagt i et grid */
+  /* Innholdet i banneret er lagt i en flexbox */
   display: flex;
   flex-direction: row;
   position: fixed;
-  /* Checkbokser er ved default satt med verdi z-index: 1; 
+  /* I relasjon til checkboksene på siden: Disse er ved default satt med verdi z-index: 1; 
   For å unngå at checkboksene skal overlappe banneret når man scroller
-  har vi satt z-index for bannerene */
+  har vi satt z-index: 1; for bannerene */
   z-index: 1;
   top: 0;
   left: 0;
@@ -46,11 +46,12 @@ a {
   background-color: #ffd500;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  /* Banneret har fått en liten marg på bunnen, som er litt mørkere enn bakgrunnsfargen */
   border-bottom-color: #ecc70f;
-  padding-top: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .oslomet-logo {
@@ -68,7 +69,7 @@ a {
   font-size: 20px;
 }
 
-/* Dropdown Button */
+/* Dropdown Knapp */
 
 /* Her styles alle nedtrekksmenyene på hele nettsiden vår */
 .dropdown-button{
@@ -129,8 +130,7 @@ a {
 
 /* Endre bakgrunnsfargen på knappen når nedtrekksmenyens innhold vises*/
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn 
-{
+.dropdown:hover .dropdown-button {
   background-color: #d9b607;
 }
 
@@ -352,15 +352,13 @@ input:checked + label + .content {
   width: 80px;
   cursor: pointer;
   font-weight: bold;
-  /* Knappen er gitt en skygge */ 
-  box-shadow: 8px 3px 10px rgba(0,0,0,0.2);
 }
 
 .arrays-button:hover {
-  /* Knappen får en litt mørkere farge når man fører musepekeren over den */
-  background-color: #a38f2e;
   /* Fargen blir litt "svakere" */
   opacity: 0.8;
+  /* Knappen er gitt en skygge */ 
+  box-shadow: 8px 3px 10px rgba(0,0,0,0.2);
 }
 
 /* campus.html: Dette styler elementer som er spesifikke for denne siden */
@@ -449,47 +447,105 @@ når de er lukket */
     font-size: smaller;
   }
 
-/* accessibility.html: Her styles de spesifikke elementene for denne siden */
+  /* Accessibility: Dette styler alt som er spesifikt for denne siden  */
 
-div.accessibility-test-bildeslideshow{
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.accessibility-test-bildeslideshow:hover{
-  border: 1px solid #777;
-}
-
-div.accessibility-test-bildeslideshow img {
-  width: 100%;
-  height: auto;
-}
-
-div.beskrivelse-av-bildet{
-  padding: 15px;
-  text-align: center;
-}
-
-.bilder-til-slideshow{
-  width: 600;
-  height: 400;
-}
-
-.accessibility.test.flex{
+/* Ettersom denne checkboksen inneholder flere bokser enn de to andre, 
+må den styles litt mer */ 
+.accessibility-container {
+  /* Setter minimum høyde for elementene */
+  min-height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  resize: both;
-  overflow: auto;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  /* flex-direction: row; Dette er en default når man bruker flex */
 }
 
-.accessibility-test-bilde,
-.accessibility-test-tekst{
- max-width: 50%;
- flex: 1 1 50%;
- word-break: break-word;
+.accessibility-container > div {
+  display: flex;
+  /* Hver boks' andel av skjermen tar opp av skjermen */
+  flex-basis: calc(50% - 35px);
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/* Dette gjelder spesifikt div'ene som ligger inne i accessibility-containeren */
+.accessibility-container > div > div {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-direction: row; dette er en default setting for flex */
+}
+
+/* Dette er hvordan alle boksene ser ut*/
+.box {
+  padding: 10px;
+  background-color: #ffd500;
+  border: 1px solid #e0be11;
+}
+
+/* Styler id'et - det sørger for at boksen ikke blir for stor */
+#accessibility-container {
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+/* Hvordan bildet ligger inne i containeren */
+#accessibility-container > img {
+  float: left;
+  width: 45%;
+  margin: 1.66%;
+}
+
+
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6 {
+  position: relative;
+  width: 50%;
+}
+
+
+/* Dette er 'masken' som legger seg over hver av boksene når man holder musepekeren over den */
+.overlay {
+  position: absolute;
+  /* Sørger for at den gule boksen ligger likt som boksen 'under'
+  (at den ikke flyter utover kantene) */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  /* Sørger for at masken ikke dekker bildet når du ikke har musepekeren over den */ 
+  opacity: 0;
+  /* Vi plasserer denne her slik at vi transition også er der når man flytter musepekeren 
+  Ikke bare ved hover-funksjonen */
+  transition: 1.5s ease;
+  background-color: #ffd500;
+}
+
+.box-1:hover .overlay,
+.box-2:hover .overlay,
+.box-3:hover .overlay,
+.box-4:hover .overlay,
+.box-5:hover .overlay,
+.box-6:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  font-size: 20px;
+  position: absolute;
+  /* Plassering av teksten i boksen */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Footer: Her styles footerene på alle sidene slik at siden får en sammenhengende look */
