@@ -221,7 +221,11 @@ input:checked + label + .content {
   display: block;
 }
 
-/* Index.html: Her finner man styling for elementer spesifikt for denne siden */
+
+
+
+/* ----------INDEX----------
+Her finner man styling for elementer spesifikt for denne siden */
 
 .bilde-studiestart {
   /* Dette sørger for at det er et mellomrom mellom bildet og teksten */
@@ -282,7 +286,12 @@ input:checked + label + .content {
   border-top: 1px solid black;
 }
 
-/* topical.html: dette styler elementer som er spesifikke for denne siden */
+
+
+
+
+/* ----------TOPICAL----------
+Dette styler elementer som er spesifikke for denne siden */
 /* Dette styler linkene som er lagt inn i teksten som ligger inne statistikkgridet og i checkboksene */
 
 /* Styling av linkene som ligger i teksten */
@@ -360,7 +369,11 @@ input:checked + label + .content {
   box-shadow: 8px 3px 10px rgba(0,0,0,0.2);
 }
 
-/* campus.html: Dette styler elementer som er spesifikke for denne siden */
+
+
+
+/* ----------CAMPUS---------- 
+Dette styler elementer som er spesifikke for denne siden */
 
 /* Boksene er stylet slik at den kan inneholde både tekst og bilder */
 .grid-campus-boxes{
@@ -456,7 +469,10 @@ style disse sammen*/
     font-size: smaller;
   }
 
-  /* Accessibility: Dette styler alt som er spesifikt for denne siden  */
+
+
+  /* ----------ACCESSIBILITY----------
+  Dette styler alt som er spesifikt for denne siden  */
 
 /* Ettersom denne checkboksen inneholder flere bokser enn de to andre, 
 må den styles litt mer */ 
@@ -526,7 +542,6 @@ må den styles litt mer */
   /* Denne stylingen gjør slik at det kommer tekst over bildene via overlay nedenfor */
 }
 
-
 /* Dette er 'masken' som legger seg over hver av boksene når man holder musepekeren over den */
 .overlay {
   position: absolute;
@@ -569,7 +584,10 @@ må den styles litt mer */
   text-align: center;
 }
 
-/* Footer: Her styles footerene på alle sidene slik at siden får en sammenhengende look */
+
+
+/* ------------- FOOTER ---------------------- 
+Her styles footerene på alle sidene slik at siden får en sammenhengende look */
 
 .footer{
   text-align: center;
