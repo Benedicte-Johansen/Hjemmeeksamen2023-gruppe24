@@ -450,7 +450,8 @@ når de er lukket */
 
 /* Ettersom denne checkboksen inneholder flere bokser enn de to andre, 
 må den styles litt mer */ 
-.accessibility-container {
+.accessibility-container,
+.accessibility-container-2 {
   /* Setter minimum høyde for elementene */
   min-height: 100%;
   display: flex;
@@ -462,16 +463,24 @@ må den styles litt mer */
 .accessibility-container > div {
   display: flex;
   /* Hver boks' andel av skjermen tar opp av skjermen */
-  flex-basis: calc(50% - 35px);
+  flex-basis: calc(33.3333333% - 35px);
   justify-content: space-evenly;
   flex-direction: column;
 }
 
 /* Dette gjelder spesifikt div'ene som ligger inne i accessibility-containeren */
-.accessibility-container > div > div {
+.accessibility-container, .accessibility-container-2 > div > div {
   display: flex;
   justify-content: space-evenly;
   /* flex-direction: row; dette er en default setting for flex */
+}
+
+.accessibility-container-2 > div{
+  display: flex;
+  /* Hver boks' andel av skjermen tar opp av skjermen */
+  flex-basis: calc(50% - 35px);
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 /* Dette er hvordan alle boksene ser ut*/
@@ -481,6 +490,7 @@ må den styles litt mer */
   border: 1px solid #e0be11;
   /* Runder kantene på boksen */
   border-radius: 15px;
+  margin-right: 10px;
 }
 .img {
   /* Runder kantene på bildet */
@@ -542,7 +552,7 @@ må den styles litt mer */
 }
 
 .text {
-  font-size: 20px;
+  font-size: 85%;
   position: absolute;
   /* Plassering av teksten i boksen */
   top: 50%;
