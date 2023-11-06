@@ -9,7 +9,7 @@ body {
   padding-bottom: 100px;
 }
 
-/* Legg til marg på venstre side av headings og paragraph tags */
+/* Legg til marg på venstre side av headings og paragraph tags, med mindre annet er spesifisert i egen klasse */
 h1, 
 h2,
 h3,
@@ -18,7 +18,7 @@ p {
   margin-left: 20px;
 }
 
-/* Dette styler alle <a>-tags på nettside, med mindre annet er spesifisert i egen klasse */
+/* Dette styler alle <a>-tags på nettsiden, med mindre annet er spesifisert i egen klasse */
 a {
   text-decoration: none;
   color: black;
@@ -29,13 +29,13 @@ a {
 /* Dette styler banneret på alle sidene våre */
 
 .banner-container {
-  /* Innholdet i banneret er lagt i et grid */
+  /* Innholdet i banneret er lagt i en flexbox */
   display: flex;
   flex-direction: row;
   position: fixed;
-  /* Checkbokser er ved default satt med verdi z-index: 1; 
+  /* I relasjon til checkboksene på siden: Disse er ved default satt med verdi z-index: 1; 
   For å unngå at checkboksene skal overlappe banneret når man scroller
-  har vi satt z-index for bannerene */
+  har vi satt z-index: 1; for bannerene */
   z-index: 1;
   top: 0;
   left: 0;
@@ -46,11 +46,12 @@ a {
   background-color: #ffd500;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  /* Banneret har fått en liten marg på bunnen, som er litt mørkere enn bakgrunnsfargen */
   border-bottom-color: #ecc70f;
-  padding-top: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .oslomet-logo {
@@ -68,7 +69,7 @@ a {
   font-size: 20px;
 }
 
-/* Dropdown Button */
+/* Dropdown Knapp */
 
 /* Her styles alle nedtrekksmenyene på hele nettsiden vår */
 .dropdown-button{
@@ -129,8 +130,7 @@ a {
 
 /* Endre bakgrunnsfargen på knappen når nedtrekksmenyens innhold vises*/
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn 
-{
+.dropdown:hover .dropdown-button {
   background-color: #d9b607;
 }
 
@@ -352,15 +352,13 @@ input:checked + label + .content {
   width: 80px;
   cursor: pointer;
   font-weight: bold;
-  /* Knappen er gitt en skygge */ 
-  box-shadow: 8px 3px 10px rgba(0,0,0,0.2);
 }
 
 .arrays-button:hover {
-  /* Knappen får en litt mørkere farge når man fører musepekeren over den */
-  background-color: #a38f2e;
   /* Fargen blir litt "svakere" */
   opacity: 0.8;
+  /* Knappen er gitt en skygge */ 
+  box-shadow: 8px 3px 10px rgba(0,0,0,0.2);
 }
 
 /* campus.html: Dette styler elementer som er spesifikke for denne siden */
