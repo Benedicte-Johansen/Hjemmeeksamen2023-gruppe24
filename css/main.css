@@ -447,47 +447,105 @@ når de er lukket */
     font-size: smaller;
   }
 
-/* accessibility.html: Her styles de spesifikke elementene for denne siden */
+  /* Accessibility: Dette styler alt som er spesifikt for denne siden  */
 
-div.accessibility-test-bildeslideshow{
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.accessibility-test-bildeslideshow:hover{
-  border: 1px solid #777;
-}
-
-div.accessibility-test-bildeslideshow img {
-  width: 100%;
-  height: auto;
-}
-
-div.beskrivelse-av-bildet{
-  padding: 15px;
-  text-align: center;
-}
-
-.bilder-til-slideshow{
-  width: 600;
-  height: 400;
-}
-
-.accessibility.test.flex{
+/* Ettersom denne checkboksen inneholder flere bokser enn de to andre, 
+må den styles litt mer */ 
+.accessibility-container {
+  /* Setter minimum høyde for elementene */
+  min-height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  resize: both;
-  overflow: auto;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  /* flex-direction: row; Dette er en default når man bruker flex */
 }
 
-.accessibility-test-bilde,
-.accessibility-test-tekst{
- max-width: 50%;
- flex: 1 1 50%;
- word-break: break-word;
+.accessibility-container > div {
+  display: flex;
+  /* Hver boks' andel av skjermen tar opp av skjermen */
+  flex-basis: calc(50% - 35px);
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/* Dette gjelder spesifikt div'ene som ligger inne i accessibility-containeren */
+.accessibility-container > div > div {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-direction: row; dette er en default setting for flex */
+}
+
+/* Dette er hvordan alle boksene ser ut*/
+.box {
+  padding: 10px;
+  background-color: #ffd500;
+  border: 1px solid #e0be11;
+}
+
+/* Styler id'et - det sørger for at boksen ikke blir for stor */
+#accessibility-container {
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+/* Hvordan bildet ligger inne i containeren */
+#accessibility-container > img {
+  float: left;
+  width: 45%;
+  margin: 1.66%;
+}
+
+
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6 {
+  position: relative;
+  width: 50%;
+}
+
+
+/* Dette er 'masken' som legger seg over hver av boksene når man holder musepekeren over den */
+.overlay {
+  position: absolute;
+  /* Sørger for at den gule boksen ligger likt som boksen 'under'
+  (at den ikke flyter utover kantene) */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  /* Sørger for at masken ikke dekker bildet når du ikke har musepekeren over den */ 
+  opacity: 0;
+  /* Vi plasserer denne her slik at vi transition også er der når man flytter musepekeren 
+  Ikke bare ved hover-funksjonen */
+  transition: 1.5s ease;
+  background-color: #ffd500;
+}
+
+.box-1:hover .overlay,
+.box-2:hover .overlay,
+.box-3:hover .overlay,
+.box-4:hover .overlay,
+.box-5:hover .overlay,
+.box-6:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  font-size: 20px;
+  position: absolute;
+  /* Plassering av teksten i boksen */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Footer: Her styles footerene på alle sidene slik at siden får en sammenhengende look */
