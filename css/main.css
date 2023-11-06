@@ -198,7 +198,7 @@ label {
 
 /* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
 label:hover {
-  background-image: linear-gradient(-90deg, rgb(228, 195, 135), rgb(248, 199, 248));
+  background-image: linear-gradient(-90deg, rgb(229, 188, 133), rgb(248, 199, 248));
   /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
   transition: .5s;
 }
