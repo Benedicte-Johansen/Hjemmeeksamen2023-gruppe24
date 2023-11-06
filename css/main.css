@@ -6,10 +6,12 @@ body {
   /* Dette sørger for at sidens innhold ikke dekkes av banneret */
   padding-top: 50px;
   font-size: larger;
+  /* Bakgrunnsfarge som ligger "bak" koden */
+  background-color: rgb(249, 224, 228);
 }
 
 /* Legg til marg på venstre side av headings og paragraph tags, med mindre annet er spesifisert i egen klasse */
-h1, 
+h1,  
 h2,
 h3,
 p {
@@ -38,18 +40,17 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 70px;
   /* Dette styler hvor stor andel av skjermen som skal tas opp av hvert element i banneret horisontalt */
-  /* Vi har kopiert denne gule fargen fra OsloMet.no */
-  background-color: #ffd500;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  /* En gradering av farge fra rosa til fiolett  */
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
   /* Banneret har fått en liten marg på bunnen, som er litt mørkere enn bakgrunnsfargen */
-  border-bottom-color: #ecc70f;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 30px;
   padding-left: 30px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .oslomet-logo {
@@ -72,13 +73,16 @@ a {
 .dropdown-button{
   display: grid;
   /* Nedtrekksmenyen er stylet slik at den matcher fargen på banneret den ligger inne i */
-  background-color: #ffd500;;
+  background-color: rgb(248, 218, 223);
   color: black;
   padding: 10px;
   font-size: 20px;
   border: none;
+  /* Rundede kanter */
+  border-radius: 20px;
   /* Musepekeren er endret fra standart pil til en hånd */
   cursor: pointer;
+  box-shadow: 8px 3px 10px rgba(0, 0, 0, 0.4)
 }
 
 /* Her styles posisjonen til nedtrekksmenyen på siden */
@@ -97,7 +101,7 @@ a {
   /* Her styles innholdet i nedtrekksmenyen */
   display: none;
   position: absolute;
-  background-color:#ffd500; 
+  background-color: rgb(248, 218, 223); 
   /* Dette sørger for at innholder er like bredt som knappen*/
   min-width: 100%;
   /* Dette gjør det mulig å scrolle i menyen på mindre skjermer */
@@ -105,6 +109,7 @@ a {
   /* Det er lagt til en skygge bak menyen slik at den skal være bedre synlig på siden*/
   /* a i rgba sørger for at skyggen er mer blurry */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 20px;
   width: 20rem;
   text-align: right;
 }
@@ -119,8 +124,9 @@ a {
 
 /* Endrer fargen når man fører musepekeren over hver av linkene */
 .dropdown-content a:hover {
-  background-color: #d9b607;
+  background-color: rgb(230, 201, 205);
 }
+
 
 /* Når innholdet i nedtrekksmenyen vises */
 .dropdown:hover .dropdown-content {
@@ -130,7 +136,7 @@ a {
 /* Endre bakgrunnsfargen på knappen når nedtrekksmenyens innhold vises*/
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropdown-button {
-  background-color: #d9b607;
+  background-color: rgb(230, 201, 205);
 }
 
 /* Dette styler bakgrunnen bak sub-headingen på index.html */
@@ -138,7 +144,7 @@ a {
 .heading-container {
   display: grid;
   gap: 20px;
-  background-color: #ffd500;
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
   padding: 10px;
 }
 
@@ -172,14 +178,18 @@ input {
 
 /* Styling for alle checkboksene */
 label {
-  border: .5px solid #dab914;
+  border: .5px solid rgb(224, 187, 224);
+  border-radius: 20px;
   display: flex;
   padding: 8px 22px;
+  border-style: solid;
+  border-color: rgb(224, 187, 224);
+  border-width: 0.5px;
   /* Når du fører musen over checkboksene endres musepekeren fra pil til hånd */
   cursor: pointer;
   /* Vi har gitt chekboksene samme farge som banneret og statistikk gridene på de øvrige sidene våre 
   for å sørge for en gjennomgående look på nettsiden */
-  background: #ffd500;
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
   color: black;
   /* Posisjonen er satt slik at checkboksene dekker hele siden */
   position: relative;
@@ -188,7 +198,7 @@ label {
 
 /* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
 label:hover {
-  background: #e0bb01;
+  background-image: linear-gradient(-90deg, rgb(228, 195, 135), rgb(248, 199, 248));
   /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
   transition: .5s;
 }
@@ -276,7 +286,7 @@ Her finner man styling for elementer spesifikt for denne siden */
   wrappes når siden manipuleres */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* Gridet er gitt den samme bakgrunnsfargen som de andre elementene på nettstedet vårt */
-  background-color: #ffd500;
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
   padding: 25px;
   gap: 10px;
 }
@@ -351,9 +361,9 @@ Dette styler elementer som er spesifikke for denne siden */
 
 /* Dette er en knapp som er lagt inn i teksten i en av checkboksene */
 .arrays-button {
-  background-color: #ffd500;
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
   /* Knappen har fått en bord som er litt mørkere i fargen for å gjøre den litt mer synlig */
-  border-color: #a38f2e;
+  border-color: pink;
   border: 2px;
   /* Dette runder kantene på knappen */
   border-radius: 15px;
@@ -366,9 +376,9 @@ Dette styler elementer som er spesifikke for denne siden */
 
 .arrays-button:hover {
   /* Fargen blir litt "svakere" */
-  opacity: 0.8;
+  opacity: 0.9;
   /* Knappen er gitt en skygge */ 
-  box-shadow: 8px 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 8px 3px 10px rgba(0,0,0,0.4);
 }
 
 
@@ -507,10 +517,10 @@ må den styles litt mer */
 /* Dette er hvordan alle boksene ser ut*/
 .box {
   padding: 10px;
-  background-color: #ffd500;
-  border: 1px solid #e0be11;
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  border: 1px solid rgb(248, 199, 248);
   /* Runder kantene på boksen */
-  border-radius: 15px;
+  border-radius: 20px;
   margin-right: 10px;
 }
 .img {
@@ -560,7 +570,7 @@ må den styles litt mer */
   /* Vi plasserer denne her slik at vi transition også er der når man flytter musepekeren 
   Ikke bare ved hover-funksjonen */
   transition: 1.5s ease;
-  background-color: #ffd500;
+  background-color: rgb(248, 199, 248);
   border-radius: 20px;
 }
 
@@ -596,7 +606,7 @@ Her styles footerene på alle sidene slik at siden får en sammenhengende look *
   /*Vi ønsket å ha teksten i midten av footeren*/
   padding: 8px;
   /* Fargen er kopiert fra OsloMet.no */ 
-  background-color: #ffd500;
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
   color: black;
   margin-top: 30px
 }
