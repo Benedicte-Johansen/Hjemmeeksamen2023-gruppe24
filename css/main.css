@@ -6,7 +6,6 @@ body {
   /* Dette sørger for at sidens innhold ikke dekkes av banneret */
   padding-top: 50px;
   /* Sørger for litt avstand mellom footer og bunnen av siden */
-  padding-bottom: 100px;
 }
 
 /* Legg til marg på venstre side av headings og paragraph tags, med mindre annet er spesifisert i egen klasse */
