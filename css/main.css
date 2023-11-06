@@ -3,6 +3,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  /* Dette sørger for at sidens innhold ikke dekkes av banneret */
+  padding-top: 50px;
+  /* Sørger for litt avstand mellom footer og bunnen av siden */
+  padding-bottom: 100px;
 }
 
 /* Legg til marg på venstre side av headings og paragraph tags */
@@ -23,19 +27,40 @@ a {
 
 /* Banners */
 /* Dette styler banneret på alle sidene våre */
+
 .banner-container {
   /* Innholdet i banneret er lagt i et grid */
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  /* Checkbokser er ved default satt med verdi z-index: 1; 
+  For å unngå at checkboksene skal overlappe banneret når man scroller
+  har vi satt z-index for bannerene */
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
   /* Dette styler hvor stor andel av skjermen som skal tas opp av hvert element i banneret horisontalt */
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
   /* Vi har kopiert denne gule fargen fra OsloMet.no */
   background-color: #ffd500;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ecc70f;
   padding-top: 0;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 0;
 }
+
+/* Området hvert av elementene i banneret dekker av skjermen */
+.oslomet-logo {
+  flex: 1;
+ }
+ 
+ .dropdown {
+   flex: 1;
+ }
 
 /* Her styles "barna" (div'ene) som ligger inne i banner div'en */
 .banner-container > div {
@@ -61,9 +86,11 @@ a {
 
 /* Her styles posisjonen til nedtrekksmenyen på siden */
 .dropdown {
-  /* This ensures that the content is placed right below the dropdown button */ 
+   /* Dette sørger for at menyen åpnes under meny-knappen */ 
   position: relative;
   display: inline-block;
+  /* Dette sørger for at menyen åpnes mot venstre*/
+  direction: rtl;
 }
 
 /* Ved default er inneholdet i nedtrekksmenyen gjemt (det trenger derfor ikke styles) */
@@ -103,8 +130,7 @@ a {
 
 /* Endre bakgrunnsfargen på knappen når nedtrekksmenyens innhold vises*/
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn 
-{
+.dropdown:hover .dropdown-button {
   background-color: #d9b607;
 }
 
@@ -145,6 +171,7 @@ input {
   display: none;
 }
 
+/* Styling for alle checkboksene */
 label {
   border: .5px solid #dab914;
   display: block;
