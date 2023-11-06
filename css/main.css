@@ -479,6 +479,12 @@ må den styles litt mer */
   padding: 10px;
   background-color: #ffd500;
   border: 1px solid #e0be11;
+  /* Runder kantene på boksen */
+  border-radius: 15px;
+}
+.img {
+  /* Runder kantene på bildet */
+  border-radius: 15px;
 }
 
 /* Styler id'et - det sørger for at boksen ikke blir for stor */
@@ -494,7 +500,6 @@ må den styles litt mer */
   width: 45%;
   margin: 1.66%;
 }
-
 
 .box-1,
 .box-2,
@@ -524,6 +529,7 @@ må den styles litt mer */
   Ikke bare ved hover-funksjonen */
   transition: 1.5s ease;
   background-color: #ffd500;
+  border-radius: 20px;
 }
 
 .box-1:hover .overlay,
