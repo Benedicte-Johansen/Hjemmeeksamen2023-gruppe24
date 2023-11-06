@@ -463,13 +463,8 @@ må den styles litt mer */
 .accessibility-container > div {
   display: flex;
   /* Hver boks' andel av skjermen tar opp av skjermen */
-<<<<<<< HEAD
-  flex-basis: calc(50% - 35px);
-  justify-content: space-around;
-=======
   flex-basis: calc(33.3333333% - 35px);
-  justify-content: space-evenly;
->>>>>>> 010aa8d639408734175e95787ded97dc33c6c297
+  justify-content: space-around;
   flex-direction: column;
   margin-bottom: 10px;
 }
