@@ -53,14 +53,13 @@ a {
   padding-bottom: 0;
 }
 
-/* Området hvert av elementene i banneret dekker av skjermen */
 .oslomet-logo {
+ flex: 1;
+}
+
+.dropdown {
   flex: 1;
- }
- 
- .dropdown {
-   flex: 1;
- }
+}
 
 /* Her styles "barna" (div'ene) som ligger inne i banner div'en */
 .banner-container > div {
@@ -130,7 +129,8 @@ a {
 
 /* Endre bakgrunnsfargen på knappen når nedtrekksmenyens innhold vises*/
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropdown-button {
+.dropdown:hover .dropbtn 
+{
   background-color: #d9b607;
 }
 
@@ -150,14 +150,14 @@ a {
   font-size: 20px;
 }
 
-/* Dette styler main-heading på alle sidene, for å sørge for en gjennomgående look */
+/* Dette styler main-heading på alle sidene for å sørge for en gjennomgående look */
 .main-heading {
   box-sizing: border-box;
   font-size: 40px;
   margin-left: 30px;
 }
 
-/* Dette styler teksten rett under main-heading på alle sidene, igje for å sørge for en gjennomgående look */
+/* Dette styler teksten rett under main-heading på alle sidene igjen, for å sørge for en gjennomgående look */
 .sub-heading {
   box-sizing: border-box;
   font-weight: lighter;
@@ -174,7 +174,7 @@ input {
 /* Styling for alle checkboksene */
 label {
   border: .5px solid #dab914;
-  display: block;
+  display: flex;
   padding: 8px 22px;
   /* Når du fører musen over checkboksene endres musepekeren fra pil til hånd */
   cursor: pointer;
@@ -222,14 +222,14 @@ input:checked + label + .content {
   display: block;
 }
 
-/*Index.html: Her finner man styling for elementer spesifikt for denne siden */
+/* Index.html: Her finner man styling for elementer spesifikt for denne siden */
 
 .bilde-studiestart {
   /* Dette sørger for at det er et mellomrom mellom bildet og teksten */
   margin-bottom: 12px;
 }
 
-/* Fotograf og tekst under bildet er stylet i et grid */
+/* Fotograf-kilde og tekst under bildet er stylet i et grid */
 .about-oslomet-container {
   display: grid;
   /* Her styles hvor stor del hvert element i gridet tar opp på siden */ 
@@ -248,7 +248,7 @@ input:checked + label + .content {
   margin-left: 20px;
 }
 
-/* Dette styler hvordan linken ser ut når du har musepekeren på den */
+/* Dette styler hvordan bildelinken ser ut når du har musepekeren på den */
 .original-image:hover {
   font-weight: bolder;
   cursor: pointer;
@@ -257,7 +257,7 @@ input:checked + label + .content {
   text-decoration: none;
 }
 
-/* Dette styler hvordan linken ser ut når og etter du har klikket på den */
+/* Dette styler hvordan linken ser ut når du klikker på den, og etter du har klikket på den */
 .original-image:active,
 .original-image:visited {
   color: black;
@@ -286,11 +286,7 @@ input:checked + label + .content {
 /* topical.html: dette styler elementer som er spesifikke for denne siden */
 /* Dette styler linkene som er lagt inn i teksten som ligger inne statistikkgridet og i checkboksene */
 
-/* Dette sørger for et lite mellomrom mellom bildet og banneret på denne siden */
-
-.informasjonsteknologi-image {
-  margin-top: 25px;
-}
+/* Styling av linkene som ligger i teksten */
 .heading-grid,
 .opptakskrav,
 .java,
@@ -329,13 +325,13 @@ input:checked + label + .content {
   display: grid;
   /* Dette er mellomrommet mellom grid-elementene */
   column-gap: 30px;
-  /* Hvert grid element tar opp en lik andel av skjermen horisontalt */
+  /* Hvert gridelement tar opp en lik andel av skjermen horisontalt */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 25px;
   line-height: 1.2;
 }
 
-/* Dette styler hvert element i gridet med en kant  */ 
+/* Dette styler hvert element i gridet med en kant øverst  */ 
 .coursename-english,
 .studyprogram,
 .points,
@@ -399,7 +395,7 @@ input:checked + label + .content {
  padding-bottom: 15px;
 }
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
   .grid-campus-boxes .tekst-i-boks .teksten{
     padding-left: 0;
   }
@@ -428,7 +424,7 @@ når de er lukket */
   display: inline;
 }
 
-/* Begge bildene inne i checkboksene er stylet lik, slik at de gir siden en sammenhengende look */
+/* Begge bildene inne i checkboksene er stylet likt, slik at de gir siden en sammenhengende look */
 /* De er stylet med samme avstand mellom tekst og kanten rundt dem */
   .bilde-pilestredet, .bilde-kjeller{
     margin-top: 2px;
