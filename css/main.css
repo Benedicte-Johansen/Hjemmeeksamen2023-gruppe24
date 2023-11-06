@@ -184,6 +184,7 @@ label {
   /* Posisjonen er satt slik at checkboksene dekker hele siden */
   position: relative;
   margin-bottom: 5px;
+  z-index: 2;
 }
 
 /* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
@@ -404,7 +405,7 @@ input:checked + label + .content {
     width: 90%;
     grid-template-columns: repeat(1fr);
   }
-  /*Media query that */
+  /*Media queryer som scaler boksene sammen med nettsiden slik at bildet og teksen er ved siden av hverandre uansett.*/
 }
 
 /* Klassene under, .tekst-i-boks, .campusnavn & .kort-info i tillegg til bilde styling, styler nedtrekksmenyenes innhold
@@ -419,6 +420,16 @@ når de er lukket */
 .campusnavn .kort-info{
   border-bottom: 0.5px;
   display: inline;
+}
+
+/*Endrer størrelsen på teksten i checkboxene hver for seg fordi campusnavn er h2 og kort info er p, så det fungerte ikke å 
+style disse sammen*/
+.campusnavn{
+  font-size: 150%;
+}
+
+.kort-info{
+  font-size: 150%;
 }
 
 /* Begge bildene inne i checkboksene er stylet likt, slik at de gir siden en sammenhengende look */
@@ -463,7 +474,7 @@ må den styles litt mer */
 .accessibility-container > div {
   display: flex;
   /* Hver boks' andel av skjermen tar opp av skjermen */
-  flex-basis: calc(33.3333333% - 35px);
+  flex-basis: calc(50% - 35px);
   justify-content: space-around;
   flex-direction: column;
   margin-bottom: 10px;
@@ -474,14 +485,6 @@ må den styles litt mer */
   display: flex;
   justify-content: space-around;
   /* flex-direction: row; dette er en default setting for flex */
-}
-
-.accessibility-container-2 > div{
-  display: flex;
-  /* Hver boks' andel av skjermen tar opp av skjermen */
-  flex-basis: calc(50% - 35px);
-  justify-content: space-evenly;
-  flex-direction: column;
 }
 
 /* Dette er hvordan alle boksene ser ut*/
@@ -501,7 +504,7 @@ må den styles litt mer */
 /* Styler id'et - det sørger for at boksen ikke blir for stor */
 #accessibility-container {
   width: 800px;
-  height: 800px;
+  min-height: 100%;
   margin: 0 auto;
 }
 
@@ -519,7 +522,7 @@ må den styles litt mer */
 .box-5,
 .box-6 {
   position: relative;
-  width: 50%;
+  /* Denne stylingen gjør slik at det kommer tekst over bildene via overlay nedenfor */
 }
 
 
@@ -554,7 +557,7 @@ må den styles litt mer */
 }
 
 .text {
-  font-size: 85%;
+  font-size: 110%;
   position: absolute;
   /* Plassering av teksten i boksen */
   top: 50%;
