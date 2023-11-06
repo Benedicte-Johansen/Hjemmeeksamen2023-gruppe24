@@ -337,8 +337,7 @@ Dette styler elementer som er spesifikke for denne siden */
   /* Dette er mellomrommet mellom grid-elementene */
   column-gap: 30px;
   /* Hvert gridelement tar opp en lik andel av skjermen horisontalt */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   line-height: 1.2;
 }
 
