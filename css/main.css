@@ -269,13 +269,16 @@ Her finner man styling for elementer spesifikt for denne siden */
 
 /* Dette styler gridet som inneholder statistikken om OsloMet */
 .statistics-grid-container {
+  border-radius: 3px;
   display: grid;
   column-gap: 30px;
-  /* Her styles hvilken andel hvert grid-element skal ta opp horisontalt på skjermen */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* Her styles hvilken andel hvert grid-element skal ta opp horisontalt på skjermen og 
+  wrappes når siden manipuleres */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* Gridet er gitt den samme bakgrunnsfargen som de andre elementene på nettstedet vårt */
   background-color: #ffd500;
   padding: 25px;
+  gap: 10px;
 }
 
 /* Her er det lagt inn en bord over hvert av grid-elementene */
