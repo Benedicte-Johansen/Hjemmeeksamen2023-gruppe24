@@ -455,7 +455,7 @@ må den styles litt mer */
   min-height: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-evenly;
+  align-content: space-around;
   /* flex-direction: row; Dette er en default når man bruker flex */
 }
 
@@ -463,14 +463,15 @@ må den styles litt mer */
   display: flex;
   /* Hver boks' andel av skjermen tar opp av skjermen */
   flex-basis: calc(50% - 35px);
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 /* Dette gjelder spesifikt div'ene som ligger inne i accessibility-containeren */
 .accessibility-container > div > div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   /* flex-direction: row; dette er en default setting for flex */
 }
 
@@ -481,6 +482,7 @@ må den styles litt mer */
   border: 1px solid #e0be11;
   /* Runder kantene på boksen */
   border-radius: 15px;
+  margin-right: 10px;
 }
 .img {
   /* Runder kantene på bildet */
@@ -538,6 +540,7 @@ må den styles litt mer */
 .box-4:hover .overlay,
 .box-5:hover .overlay,
 .box-6:hover .overlay {
+  /* Overlay blir heldekkende når man fører musepekeren over boksen */
   opacity: 1;
 }
 
