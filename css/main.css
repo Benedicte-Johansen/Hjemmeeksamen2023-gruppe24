@@ -184,7 +184,6 @@ label {
   /* Posisjonen er satt slik at checkboksene dekker hele siden */
   position: relative;
   margin-bottom: 5px;
-  z-index: 2;
 }
 
 /* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
