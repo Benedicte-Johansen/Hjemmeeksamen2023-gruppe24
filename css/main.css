@@ -504,7 +504,9 @@ må den styles litt mer */
 /* Styler id'et - det sørger for at boksen ikke blir for stor */
 #accessibility-container {
   width: 800px;
+  /*Setter widthen til en fast bredde slik at bildene ikke scaler seg for små når man scaler ned siden*/
   min-height: 100%;
+  /*Velger å ha minimum høyde 100% slik at alt contentet får plass*/
   margin: 0 auto;
 }
 
