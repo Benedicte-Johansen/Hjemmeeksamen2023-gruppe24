@@ -573,6 +573,7 @@ må den styles litt mer */
 
 .footer{
   text-align: center;
+  /*Vi ønsket å ha teksten i midten av footeren*/
   padding: 8px;
   /* Fargen er kopiert fra OsloMet.no */ 
   background-color: #ffd500;
