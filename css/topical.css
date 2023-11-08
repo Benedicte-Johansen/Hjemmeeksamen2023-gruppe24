@@ -1,0 +1,407 @@
+body {
+  background-color: rgb(234, 218, 230);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin-left: 20px;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(85, 15, 81, 0.7),rgba(79, 15, 76, 0.7)),
+  url("../img/Bilde-3.webp");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a{
+  color: rgb(227, 196, 201);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(227, 196, 201);
+  display: block;
+  margin: auto;
+  transition: .5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: rgb(227, 196, 201);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* sørger for plassering i midten av denne div'en */
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.text-box h1{
+  font-size: 70px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 18px;
+  color: rgb(227, 196, 201);
+}
+
+.emne-button {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(227, 196, 201);
+  border: 1px solid rgb(227, 196, 201);
+  padding: 18px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.emne-button:hover {
+  border: 1px solid rgb(227, 196, 201);
+  color: rgb(104, 103, 103);
+  font-weight: bold;
+  background-color: rgb(227, 196, 201);
+  transition: 1s;
+}
+
+/* -------- Statistikk --------- */
+
+.statistics {
+  width: 90%;
+  /* Plasseres midt på skjermen*/
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px
+}
+
+.statistics h1 {
+  color: rgb(89, 88, 89);
+  line-height: 1.6;
+}
+
+.row {
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 10px;
+  border-top: 1px solid rgb(89, 88, 89);
+}
+
+.stat-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-col img {
+  width: 100%;
+  display: block;
+}
+
+.overlay-stat {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .5s;
+}
+
+.overlay-stat:hover {
+  background: rgba(212, 157, 194, 0.7);
+  color: rgb(10, 9, 9);
+}
+
+.overlay-stat h3 {
+  width: 100%;
+  color: black;
+  font-size: 180%;
+  line-height: 1.6;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: .5s;
+}
+
+.overlay-stat:hover h3{
+  bottom: 48%;
+  opacity: 1;
+}
+
+/* ------- Styling av linker ------- */
+
+.original-image,
+.programmeringsspråk,
+.java {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: lighter;
+  /* for å unngå at det er en strek under teksten må det styles slik */
+  text-decoration: none;
+  padding-top: 10px;
+  margin-left: 20px;
+  border-bottom: 1px solid rgb(89, 88, 89);
+}
+
+.original-image:hover,
+.programmeringsspråk:hover,
+.java:hover {
+  font-weight: bolder;
+  cursor: pointer;
+  /* For å unngå default innstilling hvor teksten blir lilla, må den styles slik */
+  color: rgb(89, 88, 89);
+  text-decoration: none;
+}
+
+.original-image:active,
+.original-image:visited,
+.programmeringsspråk:active,
+.programmeringsspråk:visited,
+.java:active,
+.java:visited {
+  color: rgb(89, 88, 89);
+  text-decoration: none;
+}
+
+/* ------- Checkboks --------- */
+
+/* På campus.html og topical.html bruker vi checkbokser for å lage en nedtrekksmeny. 
+Disse er stylet likt på begge sidene */
+input {
+  display: none;
+}
+
+label {
+  height: 50px;
+  border: .5px solid rgb(224, 187, 224);
+  border-radius: 20px;
+  display: flex;
+  padding: 8px 22px;
+  border-style: solid;
+  border-color: rgb(224, 187, 224);
+  border-width: 0.5px;
+  /* Når du fører musen over checkboksene endres musepekeren fra pil til hånd */
+  cursor: pointer;
+  /* Vi har gitt chekboksene samme farge som banneret og statistikk gridene på de øvrige sidene våre 
+  for å sørge for en gjennomgående look på nettsiden */
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  color: black;
+  /* Posisjonen er satt slik at checkboksene dekker hele siden */
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
+label:hover {
+  background-image: linear-gradient(-90deg, rgb(229, 188, 133), rgb(248, 199, 248));
+  /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
+  transition: .5s;
+}
+
+/* Her styles '+'-tegnet i høyre hjørnet av hver checkboks */
+/* Når boksen er lukket vises et plusstegn for å indikere at man kan klikke på boksen for mer informasjon */
+label::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+/* Her styles tegnet slik at det går fra + til - når boksen er åpen */
+input:checked + label::after {
+  content: '-';
+  right: 14px;
+  top: 5px;
+}
+
+/* Når boksen er lukket */
+input + label + .content-learning-outcomes {
+  display: none;
+}
+
+/* Når boksen er åpen*/
+input:checked + label + .content-learning-outcomes {
+  display: block;
+}
+
+.content-learning-outcomes > div h3 {
+  text-align: left;
+  margin: 20px;
+}
+.content-learning-outcomes > div p {
+  margin: 20px;
+}
+
+.content-learning-outcomes ul li {
+  margin: 40px;
+  line-height: 1.5;
+}
+
+/* Dette er en knapp som er lagt inn i teksten i en av checkboksene */
+.arrays-button {
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  /* Knappen har fått en bord som er litt mørkere i fargen for å gjøre den litt mer synlig */
+  border-color: pink;
+  border: 2px;
+  /* Dette runder kantene på knappen */
+  border-radius: 15px;
+  color: black;
+  height: 30px;
+  width: 80px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.arrays-button:hover {
+  /* Fargen blir litt "svakere" */
+  opacity: 0.9;
+  /* Knappen er gitt en skygge */ 
+  box-shadow: 8px 3px 10px rgba(0,0,0,0.4);
+}
+
+/* -------- Beskrivelse -------- */
+
+.course {
+  width: 90%;
+  /* Plasseres midt på skjermen*/
+  margin: auto;
+  text-align: center;
+}
+
+.course-column {
+  flex-basis: 25%;
+  background: rgb(227, 196, 201);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: .5s;
+}
+
+.course-column:hover {
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+/* For mindre skjerm*/
+@media(max-width: 700px) {
+  .row{
+    flex-direction: column;
+  }  
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(89, 88, 89);
+}
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+  color: rgb(89, 88, 89);
+  line-height: 25px;
+}
+
+p {
+  color: rgb(89, 88, 89);
+  font-size: 14px;
+  font-weight: light;
+  line-height: 25px;
+  padding: 10px;
+}
+
+li {
+  color: rgb(89, 88, 89);
+  font-size: 14px;
+  font-weight: light;
+  line-height: 25px;
+}
+
+/* ------------- FOOTER ---------------------- 
+Her styles footerene på alle sidene slik at siden får en sammenhengende look */
+
+.footer{
+  text-align: center;
+  /*Vi ønsket å ha teksten i midten av footeren*/
+  padding: 8px;
+  /* Fargen er kopiert fra OsloMet.no */ 
+  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  color: black;
+  margin-top: 30px
+}
+
+.kildelink{
+  color: black;
+  text-decoration: none;
+}
+
+.kildelink:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.kildelink:active{
+  color: black;
+  text-decoration: none;
+}
+
+.eksamen{
+  font-size: xx-small;
+  font-weight: lighter;
+}
