@@ -122,7 +122,7 @@ nav img {
 }
 
 .row {
-  margin: 5%;
+  margin: 2%;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -131,7 +131,7 @@ nav img {
 }
 
 .stat-col {
-  flex-basis: 31%;
+  flex-basis: 40%;
   border-radius: 10px;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -221,7 +221,7 @@ input {
 }
 
 label {
-  height: 50px;
+  height: 60px;
   border: .5px solid rgb(224, 187, 224);
   border-radius: 20px;
   display: flex;
@@ -290,6 +290,12 @@ input:checked + label + .content-learning-outcomes {
   line-height: 1.5;
 }
 
+.content-learning-outcomes {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+
 /* Dette er en knapp som er lagt inn i teksten i en av checkboksene */
 .arrays-button {
   background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
@@ -319,6 +325,8 @@ input:checked + label + .content-learning-outcomes {
   /* Plasseres midt på skjermen*/
   margin: auto;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px
 }
 
 .course-column {
@@ -370,7 +378,7 @@ li {
   color: rgb(89, 88, 89);
   font-size: 14px;
   font-weight: light;
-  line-height: 25px;
+  margin-bottom: 5px 0;
 }
 
 /* ------------- FOOTER ---------------------- 
