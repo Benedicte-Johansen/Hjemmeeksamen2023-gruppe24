@@ -134,7 +134,7 @@ nav img {
 
 /* Her styles looken av bildeboksene som inneholder statistikk om emnet */
 .statistics {
-  width: 90%;
+  width: 70%;
   /* Plasseres midt på skjermen*/
   margin: auto;
   text-align: center;
@@ -333,6 +333,17 @@ input:checked + label + .content-learning-outcomes {
   margin: auto;
   width: 70%;
   padding: 10px;
+}
+
+.list-learning-outcomes li,
+.list-learning-outcomes p {
+  font-size: large;
+  margin: 5px;
+}
+
+.list-learning-outcomes h3 {
+  font-size: x-large;
+  border-bottom: 1px solid gray;
 }
 
 

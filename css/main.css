@@ -181,6 +181,7 @@ img {
 
 /* Dette styler bakgrunnen bak sub-headingen på index.html */
 /* Padding er lagt til for å lage avstand mellom tekst og bildet */
+
 .heading-container {
   height: 100vh;
   width: 100%;
@@ -307,7 +308,7 @@ Her finner man styling for elementer spesifikt for denne siden */
 
 
 .image-index{
-  height: 75%;
+  height: 80%;
   width: auto;
   position: absolute;
   bottom: 0;
@@ -319,6 +320,8 @@ Her finner man styling for elementer spesifikt for denne siden */
 .image-study img {
   border-radius: 50% 20% / 10% 40%;
 }
+
+/* For en mindre skjermstørrelse */
 
 @media (min-width: 700px){
   .image-index {
@@ -335,13 +338,14 @@ Her finner man styling for elementer spesifikt for denne siden */
 .about-oslomet-container {
   display: grid;
   /* Her styles hvor stor del hvert element i gridet tar opp på siden */ 
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   /* Mellomrom mellom hvert grid element */
   gap: 30px;
 }
 
 /* Styler teksten som er en link til original foto: "Foto: Benjamin A. Ward" */
-.original-image {
+.original-image,
+.original-image-header {
   font-size: 12px;
   font-weight: lighter;
   /* for å unngå at det er en strek under teksten må det styles slik */
@@ -351,7 +355,8 @@ Her finner man styling for elementer spesifikt for denne siden */
 }
 
 /* Dette styler hvordan bildelinken ser ut når du har musepekeren på den */
-.original-image:hover {
+.original-image:hover,
+.original-image-header:hover {
   font-weight: bolder;
   cursor: pointer;
   /* For å unngå default innstilling hvor teksten blir lilla, må den styles slik */
@@ -361,7 +366,9 @@ Her finner man styling for elementer spesifikt for denne siden */
 
 /* Dette styler hvordan linken ser ut når du klikker på den, og etter du har klikket på den */
 .original-image:active,
-.original-image:visited {
+.original-image:visited,
+.original-image-header:active,
+.original-image-header:visited {
   color: black;
   text-decoration: none;
 }
