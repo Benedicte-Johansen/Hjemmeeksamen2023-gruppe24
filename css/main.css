@@ -6,8 +6,28 @@ body {
   /* Dette sørger for at sidens innhold ikke dekkes av banneret */
   padding-top: 50px;
   font-size: larger;
-  /* Bakgrunnsfarge som ligger "bak" koden */
+  /* Bakgrunnsfarge som ligger "bak" innholdet*/
   background-color: rgb(249, 224, 228);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for mindre skjerm */
+@media (max-width: 700px) {
+  body {
+    background-color: rgb(249, 224, 228);
+  }
+}
+
+/* Sørger for at bildene scaler når man er i mindre skjermmodus*/
+@media (max-width: 700px) {
+  .image-index {
+     float: left;
+     display: none;
+  }
 }
 
 /* Legg til marg på venstre side av headings og paragraph tags, med mindre annet er spesifisert i egen klasse */
@@ -16,6 +36,8 @@ h2,
 h3,
 p {
   margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* Dette styler alle <a>-tags på nettsiden, med mindre annet er spesifisert i egen klasse */
@@ -25,32 +47,37 @@ a {
   transition: 0.15s;
 }
 
-/* Banners */
+/* Sørger for at bildene endrer størrelse med skjermen */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------ BANNER ---------- */
+
 /* Dette styler banneret på alle sidene våre */
 
 .banner-container {
-  /* Innholdet i banneret er lagt i en flexbox */
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  /* I relasjon til checkboksene på siden: Disse er ved default satt med verdi z-index: 1; 
-  For å unngå at checkboksene skal overlappe banneret når man scroller
-  har vi satt z-index: 1; for bannerene */
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  /* Dette styler hvor stor andel av skjermen som skal tas opp av hvert element i banneret horisontalt */
-  /* En gradering av farge fra rosa til fiolett  */
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
-  /* Banneret har fått en liten marg på bunnen, som er litt mørkere enn bakgrunnsfargen */
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-left: 8px;
-  margin-right: 8px;
+   /* Innholdet i banneret er lagt i en flexbox */
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   /* I relasjon til checkboksene på siden: Disse er ved default satt med verdi z-index: 1; 
+   For å unngå at checkboksene skal overlappe banneret når man scroller
+   har vi satt z-index: 1; for bannerene */
+   z-index: 1;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 80px;
+   /* Dette styler hvor stor andel av skjermen som skal tas opp av hvert element i banneret horisontalt */
+   /* En gradering av farge fra rosa til fiolett  */
+   background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
+   /* Banneret har fått en liten marg på bunnen, som er litt mørkere enn bakgrunnsfargen */
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-right: 30px;
+   padding-left: 30px;
 }
 
 .oslomet-logo {
@@ -68,8 +95,17 @@ a {
   font-size: 20px;
 }
 
-/* Dropdown Knapp */
+.banner-container img {
+  width: 100px;
+}
+
+
+
+/* -------- DROPDOWN MENY -------- */
+
+
 /* Her styles alle nedtrekksmenyene på hele nettsiden vår */
+
 .dropdown-button{
   display: grid;
   /* Nedtrekksmenyen er stylet slik at den matcher fargen på banneret den ligger inne i */
@@ -139,36 +175,68 @@ a {
   background-color: rgb(230, 201, 205);
 }
 
+
+/* ------------ HEADING ------------ */
+
+
 /* Dette styler bakgrunnen bak sub-headingen på index.html */
 /* Padding er lagt til for å lage avstand mellom tekst og bildet */
 .heading-container {
-  display: grid;
-  gap: 20px;
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
-  padding: 10px;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/background-1.webp);
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
-/* Dette styler div'ene som ligger inne i heading div'en */
-.heading-container > div {
-  text-align: left;
-  padding: 10px 0;
-  font-size: 20px;
+.heading-container h1 {
+  font-size: 45px;
+  font-weight: 100;
+  padding-top: 50px;
+  margin-bottom: 18px;
+  animation: moveright 1s linear 1;
+  animation-delay: .5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
-/* Dette styler main-heading på alle sidene for å sørge for en gjennomgående look */
-.main-heading {
-  box-sizing: border-box;
-  font-size: 40px;
-  margin-left: 30px;
-}
-
-/* Dette styler teksten rett under main-heading på alle sidene igjen, for å sørge for en gjennomgående look */
-.sub-heading {
-  box-sizing: border-box;
-  font-weight: lighter;
+.heading-container p {
   font-size: 30px;
-  margin-left: 20px;
+  animation: moveright 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  padding-top: 10px;
+  line-height: 1.4;
+  color: black;
 }
+
+.main-heading {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: left;
+}
+
+@keyframes moveright {
+  0%{
+    transform: translateX(-100px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+
+
+/* --------- CHECKBOXER ---------- */
+
+
 
 /* På campus.html og topical.html bruker vi checkbokser for å lage en nedtrekksmeny. 
 Disse er stylet likt på begge sidene */
@@ -189,16 +257,18 @@ label {
   cursor: pointer;
   /* Vi har gitt chekboksene samme farge som banneret og statistikk gridene på de øvrige sidene våre 
   for å sørge for en gjennomgående look på nettsiden */
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
+  background-size: cover;
   color: black;
   /* Posisjonen er satt slik at checkboksene dekker hele siden */
   position: relative;
   margin-bottom: 5px;
+  margin-top: 50px;
 }
 
 /* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
 label:hover {
-  background-image: linear-gradient(-90deg, rgb(229, 188, 133), rgb(248, 199, 248));
+  background: rgb(242, 189, 202);
   /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
   transition: .5s;
 }
@@ -232,14 +302,33 @@ input:checked + label + .content {
 }
 
 
-
-
 /* ----------INDEX----------
 Her finner man styling for elementer spesifikt for denne siden */
 
-.bilde-studiestart {
-  /* Dette sørger for at det er et mellomrom mellom bildet og teksten */
-  margin-bottom: 12px;
+
+.image-index{
+  height: 75%;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 800px;
+  align-items: right;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+.image-study img {
+  border-radius: 50% 20% / 10% 40%;
+}
+
+@media (min-width: 700px){
+  .image-index {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .image-study img {
+    left:auto; /* reset left value */
+    right:3%;
+  }
 }
 
 /* Fotograf-kilde og tekst under bildet er stylet i et grid */
@@ -286,9 +375,11 @@ Her finner man styling for elementer spesifikt for denne siden */
   wrappes når siden manipuleres */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* Gridet er gitt den samme bakgrunnsfargen som de andre elementene på nettstedet vårt */
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
   padding: 25px;
   gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* Her er det lagt inn en bord over hvert av grid-elementene */
@@ -298,90 +389,6 @@ Her finner man styling for elementer spesifikt for denne siden */
 .amount-master-studies {
   border-top: 1px solid black;
 }
-
-
-
-
-
-/* ----------TOPICAL----------
-Dette styler elementer som er spesifikke for denne siden */
-/* Dette styler linkene som er lagt inn i teksten som ligger inne statistikkgridet og i checkboksene */
-
-/* Styling av linkene som ligger i teksten */
-.heading-grid,
-.opptakskrav,
-.java,
-.programmeringsspråk {
-  font-weight: bolder;
-  text-decoration: underline;
-  padding-top: 10px;
-}
-
-/* Dette styler linkene når man holder musepekeren over dem */
-.heading-grid:hover,
-.opptakskrav:hover,
-.java:hover,
-.programmeringsspråk:hover {
-  font-weight: bolder;
-  cursor: pointer;
-  color: black;
-  text-decoration: underline;
-}
-
-/* Dette styler hvordan linkene ser ut når du klikker på dem og etter du har klikket på linken */
-.heading-grid:active,
-.heading-grid:visited, 
-.opptakskrav:active,
-.opptakskrav:visited,
-.java:active,
-.java:visited,
-.programmeringsspråk:active,
-.programmeringsspråk:visited {
-  color: black;
-  text-decoration: underline;
-}
-
-/* Dette gridet inneholder statistikken om Programmeringsfaget  */
-.grid-6 {
-  display: grid;
-  /* Dette er mellomrommet mellom grid-elementene */
-  column-gap: 30px;
-  /* Hvert gridelement tar opp en lik andel av skjermen horisontalt */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  line-height: 1.2;
-}
-
-/* Dette styler hvert element i gridet med en kant øverst  */ 
-.coursename-english,
-.studyprogram,
-.points,
-.study-years {
-  border-top: 1px solid black;
-}
-
-/* Dette er en knapp som er lagt inn i teksten i en av checkboksene */
-.arrays-button {
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
-  /* Knappen har fått en bord som er litt mørkere i fargen for å gjøre den litt mer synlig */
-  border-color: pink;
-  border: 2px;
-  /* Dette runder kantene på knappen */
-  border-radius: 15px;
-  color: black;
-  height: 30px;
-  width: 80px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.arrays-button:hover {
-  /* Fargen blir litt "svakere" */
-  opacity: 0.9;
-  /* Knappen er gitt en skygge */ 
-  box-shadow: 8px 3px 10px rgba(0,0,0,0.4);
-}
-
-
 
 
 /* ----------CAMPUS---------- 
@@ -483,11 +490,15 @@ style disse sammen*/
 
 
 
-  /* ----------ACCESSIBILITY----------
-  Dette styler alt som er spesifikt for denne siden  */
+/* ----------ACCESSIBILITY----------
+Dette styler alt som er spesifikt for denne siden  */
 
 /* Ettersom denne checkboksen inneholder flere bokser enn de to andre, 
 må den styles litt mer */ 
+
+.list-accessibility {
+  margin: 50px;
+}
 .accessibility-container,
 .accessibility-container-2 {
   /* Setter minimum høyde for elementene */
@@ -517,8 +528,8 @@ må den styles litt mer */
 /* Dette er hvordan alle boksene ser ut*/
 .box {
   padding: 10px;
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
-  border: 1px solid rgb(248, 199, 248);
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
+  border: 1px solid rgb(141, 222, 230);
   /* Runder kantene på boksen */
   border-radius: 20px;
   margin-right: 10px;
@@ -570,7 +581,7 @@ må den styles litt mer */
   /* Vi plasserer denne her slik at vi transition også er der når man flytter musepekeren 
   Ikke bare ved hover-funksjonen */
   transition: 1.5s ease;
-  background-color: rgb(248, 199, 248);
+  background-color: rgb(141, 222, 230);
   border-radius: 20px;
 }
 
@@ -597,7 +608,6 @@ må den styles litt mer */
 }
 
 
-
 /* ------------- FOOTER ---------------------- 
 Her styles footerene på alle sidene slik at siden får en sammenhengende look */
 
@@ -606,7 +616,7 @@ Her styles footerene på alle sidene slik at siden får en sammenhengende look *
   /*Vi ønsket å ha teksten i midten av footeren*/
   padding: 8px;
   /* Fargen er kopiert fra OsloMet.no */ 
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
   color: black;
   margin-top: 30px
 }

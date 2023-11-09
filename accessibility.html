@@ -50,18 +50,23 @@
       </div>
     </header>
   <!-- Overskriften på siden -->
+  <div class="heading-container">
     <div class="main-heading">
       <h1>
         Accessibility-side
       </h1>
-    </div>
     <!-- Dette er teksten under overskriften, brukt som en slags underoverskrift-->
-  <div class="sub-heading">
     <p>
-      Vi har kjørt accessibility test gjennom lighthouse i google chrome. Dette gjøres for å sjekke hvor
-      universelt utformet en nettside er. Likevel har denne testen begrensninger. Nedenfor er det derfor en 
-      liste over ting testen ikke beregner score ut fra, men som vi har gjort, som forbedrer universell utforming.
+      Vi har kjørt accessibility test gjennom lighthouse i Google Chrome.  
+      Dette gjøres for å sjekke hvor universelt utformet en nettside er. 
+      Likevel har denne testen begrensninger. Nedenfor er det derfor en 
+      liste over ting testen ikke beregner score ut fra, men som vi har gjort,  
+      som forbedrer universell utforming.
+    </p>
+  </div>
+  </div>
       <!-- En 'unordered list' som sørger for at listeelementene vises som bullet points på siden -->
+     <div class="list-accessibility">
       <ul>
         <li>
           Vi har ikke plassert tekst inne i bilder for å gjøre det enklere for folk med nedsatt syn
@@ -82,7 +87,7 @@
           hva hver "styler".
         </li>
       </ul>
-    </p>
+     </div>
   </div>
   <!-- Accessibility testen for hver av sidene våre er lagt i checkbokser -->
   <!-- Koden for checkboksene er lik som koden for checkboksene på de andre sidene og styles likt i CSS'en -->
@@ -184,13 +189,13 @@
             </div>
           </div>
           <div class="box box-4">
-            <img class="img" src="/img/index-100 .webp" alt="accessibility test etter at performancen er forbedret"
+            <img class="img" src="/img/Accessibility_nytt_design_index.webp" alt="accessibility test etter nytt design"
             style="width: 100%;">
             <div class="overlay">
               <div class="text">
-                <a href="/img/campus-100 .webp" target="_blank">
+                <a href="/img/Accessibility_nytt_design_index.webp" target="_blank">
                   <p>
-                    Testen etter at vi har endret bildene på siden fra .jpeg eller .png til .webp viser at accessibilityen og performancen er bedret.
+                    Testen viser accessibility etter at vi endret designet på siden.
                   </p>
                   <h3>
                     <i>
@@ -203,11 +208,12 @@
           </div>
           <div class="forklaring">
             <h2>
-              Vi så at performancen scoret litt lavt, og da foreslo lighthouse at vi skulle endre bildene til webp. 
+              Accessibility ble bedre etter endring av design. 
             </h2>
           </div>
         </div>
       </div>
+
       <!-- Dette er checkboks 2 -->
     <div class="innledning-checkbox">
       <input type="checkbox" id="title-5" />
@@ -246,13 +252,14 @@
               </div>
             </div>
             <div class="box box-5">
-              <img class="img" src="/img/Topical-100  (1).webp" alt="accessibility test etter at performancen er forbedret"
+              <img class="img" src="/img/Accessibility_nytt_design_topical.webp" alt="accessibility test etter endring av design"
               style="width: 100%;">
               <div class="overlay">
                 <div class="text">
-                  <a href="/img/Topical-100  (1).webp" target="_blank">
+                  <a href="/img/Accessibility_nytt_design_topical.webp" target="_blank">
                     <p>
-                      Testen etter at vi har endret bildene på siden fra .jpeg eller .png til .webp og vi ser at performancen er litt dårligere, men accessibilityen er bedret.
+                      Designet på denne siden er ikke det samme som på 
+                      de øvrige sidene våre, og accessibilitien er dårligere på dette designet.
                     </p>
                     <h3>
                       <i>
@@ -265,7 +272,8 @@
             </div>
             <div class="forklaring">
               <h2>
-                Vi endret også bildet fra jpeg til webp på denne siden, men her endret det performancen fra 100% til 96% 
+                Vi endret designet til et annet enn de andre sidene. Dette designet scorer ikke like høyt på accessibility, 
+                men vi er akkurat innenfor grensen. Score: 90.
               </h2>
             </div>
           </div>
@@ -305,13 +313,13 @@
               </div>
             </div>
             <div class="box box-6">
-              <img class="img" src="/img/campus-100 .webp" alt="bilde av accessibility-testen av campus.html etter at vi har forbedret den"
+              <img class="img" src="/img/Accessibility_nytt_design_campus.webp" alt="bilde av accessibility-testen etter endring av design"
               style="width: 100%;">
               <div class="overlay">
                 <div class="text">
-                  <a href="/img/campus-100 .webp" target="_blank">
+                  <a href="/img/Accessibility_nytt_design_campus.webp" target="_blank">
                     <p>
-                      Testen etter at vi har endret bildene på siden fra .jpeg eller .png til .webp viser at accessibilityen og performancen er bedret.
+                      Testen etter at vi endret designet viser samme accessibility score som før endringen.
                     </p>
                     <h3>
                       <i>
@@ -324,7 +332,8 @@
             </div>
             <div class="forklaring">
               <h2>
-                Vi så at performancen scoret litt lavt, og da foreslo lighthouse at vi skulle endre bildene til webp. 
+               Performance scoren er enda dårligere etter endring av design. Vi har valgt å ikke endre på dette, 
+               da siden ser ut til å kjøre greit. 
               </h2>
             </div>
           </div>

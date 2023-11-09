@@ -1,33 +1,47 @@
+/* ------ ETTERSOM DENNE SIDEN HAR ET ANNET DESIGN EN DE ØVRIGE SIDENE VÅRE
+HAR VI ET EGET CSS-SHEET FOR DENNE ------- */
+
+/* ------- Dette styler siden med en bakgrunnsfarge ------- */
 body {
   background-color: rgb(234, 218, 230);
 }
 
+/* Default margin på sider er 10px, vi setter dem derfor til 0 */
 * {
   margin: 0;
   padding: 0;
+  /* Skrifttype for hele siden */
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Gir paragrah taggene en marg på venstre side */
 p {
   margin-left: 20px;
 }
 
+/* ---------- HEADER ------------ */
+
 .header {
+  /* Sørger for minimum høyde av elementet til 100% av viewport */
   min-height: 100vh;
   width: 100%;
+  /* Bakgrunnsbilde i header, med et farge overlay*/
   background-image: linear-gradient(rgba(85, 15, 81, 0.7),rgba(79, 15, 76, 0.7)),
   url("../img/Bilde-3.webp");
+  /* Posisjonering av bakgrunnsbildet */
   background-position: center;
   background-size: cover;
   position: relative;
 }
 
+/* styler linkene og logoen inne i headeren*/
 nav {
   display: flex;
   padding: 2% 6%;
   justify-content: space-between;
 }
 
+/* Styler størrelsen på logoen */
 nav img {
   width: 150px;
 }
@@ -37,8 +51,11 @@ nav img {
   text-align: right;
 }
 
+/* Linkene er lagt i en uordnet liste som listeelementer */
 .nav-links ul li {
+  /* Sørger for at linkene ikke blir bullet points */ 
   list-style: none;
+  /* Legger listeelementene etter hverandre i horisontal linje */
   display: inline-block;
   padding: 8px 12px;
   position: relative;
@@ -50,6 +67,7 @@ nav img {
   font-size: 13px;
 }
 
+/* Looken til linkene med en linje under når man holder musepekeren over dem */
 .nav-links ul li::after {
   content: '';
   width: 0%;
@@ -57,13 +75,16 @@ nav img {
   background: rgb(227, 196, 201);
   display: block;
   margin: auto;
+  /* Tiden det tar for linjen under linkene til å fylle lengden av hver link */
   transition: .5s;
 }
 
+/* Linjen fyller hele lengden av linkene */
 .nav-links ul li:hover::after {
   width: 100%;
 }
 
+/* Styler overskriften */
 .text-box {
   width: 90%;
   color: rgb(227, 196, 201);
@@ -75,16 +96,19 @@ nav img {
   text-align: center;
 }
 
+/* Størrelsen på h1-taggen inne i headeren */
 .text-box h1{
   font-size: 70px;
 }
 
-.text-box p {
-  margin: 10px 0 40px;
-  font-size: 18px;
-  color: rgb(227, 196, 201);
+/* For mindre skjermstørrelse */
+@media(max-width: 400px) {
+  .text-box h1{
+    font-size: 20px;
+  }
 }
 
+/* Styler linken til full besrivelse av emnet slik at den ser ut som en knapp */
 .emne-button {
   display: inline-block;
   text-decoration: none;
@@ -97,6 +121,7 @@ nav img {
   margin-top: 50px;
 }
 
+/* Styler hvordan knappen ser ut når du holder musepekeren over den */
 .emne-button:hover {
   border: 1px solid rgb(227, 196, 201);
   color: rgb(104, 103, 103);
@@ -105,8 +130,9 @@ nav img {
   transition: 1s;
 }
 
-/* -------- Statistikk --------- */
+/* -------- STATISTIKK --------- */
 
+/* Her styles looken av bildeboksene som inneholder statistikk om emnet */
 .statistics {
   width: 90%;
   /* Plasseres midt på skjermen*/
@@ -139,12 +165,15 @@ nav img {
   overflow: hidden;
 }
 
+/* Styler bildet inne i boksene */
 .stat-col img {
   width: 100%;
   display: block;
 }
 
+/* Når man holder musepekeren over bildet kommer et farget overlay */
 .overlay-stat {
+  /* Dette sørger for at overlayet ikke er synlig når man ikke holder musepekeren over boksen */
   background: transparent;
   height: 100%;
   width: 100%;
@@ -155,13 +184,14 @@ nav img {
 }
 
 .overlay-stat:hover {
-  background: rgba(212, 157, 194, 0.7);
-  color: rgb(10, 9, 9);
+  /* Fargen av overlayet når man holder musepekeren over boksene */
+  background: rgba(222, 183, 209, 0.7);
 }
 
+/* Styler overskriften i statistikken inne i boksene s*/
 .overlay-stat h3 {
   width: 100%;
-  color: black;
+  color: rgb(71, 64, 64);
   font-size: 100%;
   line-height: 1.6;
   top: 0;
@@ -172,18 +202,17 @@ nav img {
   transition: .5s;
 }
 
+/* Når man holder musepekeren over boksen */
 .overlay-stat:hover h3{
   bottom: 48%;
   opacity: 1;
 }
 
-/* ------- Styling av linker ------- */
+/* ------- STYLING AV LINKER ------- */
 
-.original-image,
-.programmeringsspråk,
-.java {
+.original-image {
   margin-top: 0;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: lighter;
   /* for å unngå at det er en strek under teksten må det styles slik */
   text-decoration: none;
@@ -192,9 +221,7 @@ nav img {
   border-bottom: 1px solid rgb(89, 88, 89);
 }
 
-.original-image:hover,
-.programmeringsspråk:hover,
-.java:hover {
+.original-image:hover {
   font-weight: bolder;
   cursor: pointer;
   /* For å unngå default innstilling hvor teksten blir lilla, må den styles slik */
@@ -203,16 +230,27 @@ nav img {
 }
 
 .original-image:active,
-.original-image:visited,
-.programmeringsspråk:active,
-.programmeringsspråk:visited,
-.java:active,
-.java:visited {
+.original-image:visited {
   color: rgb(89, 88, 89);
   text-decoration: none;
 }
 
-/* ------- Checkboks --------- */
+/* -------- BILDE -------- */
+
+/* Styler bildet som ligger over checkboxen */
+
+.illustration-topical img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* Når man holder musepekeren over bildet så blir det speilvendt */
+.illustration-topical:hover img {
+    transform: scaleX(-1);
+}
+
+/* ------- CHECKBOX --------- */
 
 /* På campus.html og topical.html bruker vi checkbokser for å lage en nedtrekksmeny. 
 Disse er stylet likt på begge sidene */
@@ -225,7 +263,8 @@ label {
   border: .5px solid rgb(224, 187, 224);
   border-radius: 20px;
   display: flex;
-  padding: 8px 22px;
+  padding-top: 20px;
+  padding-left: 50px;
   border-style: solid;
   border-color: rgb(224, 187, 224);
   border-width: 0.5px;
@@ -233,18 +272,17 @@ label {
   cursor: pointer;
   /* Vi har gitt chekboksene samme farge som banneret og statistikk gridene på de øvrige sidene våre 
   for å sørge for en gjennomgående look på nettsiden */
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
   color: black;
   /* Posisjonen er satt slik at checkboksene dekker hele siden */
   position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
   margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 /* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
 label:hover {
-  background-image: linear-gradient(-90deg, rgb(229, 188, 133), rgb(248, 199, 248));
+  background: rgb(227, 196, 201);
   /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
   transition: .5s;
 }
@@ -296,30 +334,40 @@ input:checked + label + .content-learning-outcomes {
   padding: 10px;
 }
 
+
 /* Dette er en knapp som er lagt inn i teksten i en av checkboksene */
-.arrays-button {
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+.arrays-button,
+.programmeringsspråk,
+.java {
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
   /* Knappen har fått en bord som er litt mørkere i fargen for å gjøre den litt mer synlig */
   border-color: pink;
   border: 2px;
   /* Dette runder kantene på knappen */
   border-radius: 15px;
+  border: 1px solid rgb(141, 222, 230);
+  padding: 5px;
   color: black;
   height: 30px;
   width: 80px;
   cursor: pointer;
   font-weight: bold;
+  text-decoration: none;
 }
 
-.arrays-button:hover {
+.arrays-button:hover,
+.programmeringsspråk:hover,
+.java:hover {
   /* Fargen blir litt "svakere" */
   opacity: 0.9;
   /* Knappen er gitt en skygge */ 
   box-shadow: 8px 3px 10px rgba(0,0,0,0.4);
 }
 
-/* -------- Beskrivelse -------- */
 
+/* -------- BESKRIVELSE -------- */
+
+/* Styler de rosa boksene med informasjon om faget */
 .course {
   width: 90%;
   /* Plasseres midt på skjermen*/
@@ -329,6 +377,7 @@ input:checked + label + .content-learning-outcomes {
   margin-bottom: 50px
 }
 
+/* Hver boks styling */
 .course-column {
   flex-basis: 25%;
   background: rgb(227, 196, 201);
@@ -337,16 +386,19 @@ input:checked + label + .content-learning-outcomes {
   margin-top: 5%;
   padding: 30px;
   box-sizing: border-box;
+  /* Overgang for box-shadow */
   transition: .5s;
 }
 
+/* Styling når man holder musepekeren over boksene */
 .course-column:hover {
   box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
   cursor: pointer;
 }
 
+/* Bokser flytter seg under hverandre når skjermen blir mindre */
 /* For mindre skjerm*/
-@media(max-width: 700px) {
+@media(max-width: 1050px) {
   .row{
     flex-direction: column;
   }  
@@ -359,6 +411,7 @@ h2 {
 }
 
 h3 {
+  font-size: 100%;
   text-align: center;
   font-weight: bold;
   margin: 10px 0;
@@ -374,12 +427,20 @@ p {
   padding: 10px;
 }
 
+/* styler listeelementene med hul sirkel i stedet for svart prikk */
+ul {
+  list-style: circle;
+  list-style-position: inside;
+}
+
 li {
   color: rgb(89, 88, 89);
   font-size: 14px;
   font-weight: light;
   margin-bottom: 5px 0;
 }
+
+
 
 /* ------------- FOOTER ---------------------- 
 Her styles footerene på alle sidene slik at siden får en sammenhengende look */
@@ -389,7 +450,7 @@ Her styles footerene på alle sidene slik at siden får en sammenhengende look *
   /*Vi ønsket å ha teksten i midten av footeren*/
   padding: 8px;
   /* Fargen er kopiert fra OsloMet.no */ 
-  background-image: linear-gradient(-90deg, rgb(228, 191, 197), rgb(248, 199, 248));
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
   color: black;
   margin-top: 30px
 }
