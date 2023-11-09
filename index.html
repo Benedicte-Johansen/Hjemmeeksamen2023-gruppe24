@@ -1,263 +1,261 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-      <!-- Denne tittelen vises på fanen i nettleseren den åpnes i -->
-      <title>
-        DATA1200 Hjemmeeksamen 2023 - Gruppe 24
-      </title>
-      <!-- Denne gir nettleseren instruksjoner om nettsidens dimensjoner og skalering -->
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <!-- Dette indikerer nettsidens tegnkoding -->
-      <meta charset="utf-8">
-      <!-- Linker html filen til CSS filen vår  -->
-      <link rel="stylesheet" type="text/css" href="./css/main.css"> 
-    </head>
-    <body>
-      <!-- Dette er det gule banneret på toppen av siden -->
-      <!-- Koden er plassert i div'er gjennomgående. Dette er for å style koden lettere -->
-      <header class="banner-container">
-        <!-- Denne diven inneholder logoen som vises øverst på venstre side av nettsiden vår -->
-        <div class="oslomet-logo">
-          <!-- Dette er en link til den kopierte logoen som er plassert i img-mappen -->
-          <!-- Bildet er gitt en alternativ tekst hvis den ikke kan vises på siden -->
-          <!-- Når du klikker på logoen tas du til oslomet.no -->
-          <a class="oslomet-logo" href="https://www.oslomet.no/"
-          target="_blank">
-            <img src="./img/oslomet-logo-black.svg" alt="OsloMet sin logo">
-          </a>
-        </div>
-        <!-- Denne knappen er stylet slik at den gjøres om til den nettrekksmeny -->
-        <!-- Nedtrekksmenyen inneholder linker til de øvrige sidene på nettstedet vårt -->
-        <div class="dropdown">
-          <button class="dropdown-button">
-            Meny
-          </button>
-          <div class="dropdown-content">
-            <!-- Når man klikker på denne linken blir man tatt til infoside om faget Programmering -->
-            <!-- Denne tagen gjør linken klikkbar -->
-            <a href="topical.html">
-              Infoside: DAPE1400 Programmering
-            </a>
-            <!-- Denne linken tar det til infoside om OsloMets campus lokasjoner -->
-            <a href="campus.html">
-              OsloMet: Våre studiesteder
-            </a>
-            <!-- Denne linken tar deg til side om Accessibility tester vi har gjort på nettstedet vårt -->
-            <a href="accessibility.html">
-              Accessibility
-            </a>
+    <head>
+            <!-- Denne tittelen vises på fanen i nettleseren den åpnes i -->
+            <title>
+              DATA1200 Hjemmeeksamen 2023 - Gruppe 24
+            </title>
+            <!-- Denne gir nettleseren instruksjoner om nettsidens dimensjoner og skalering -->
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!-- Dette indikerer nettsidens tegnkoding -->
+            <meta charset="utf-8">
+            <!-- Linker html filen til CSS filen vår  -->
+            <link rel="stylesheet" type="text/css" href="./css/main.css"> 
+      </head>
+      <body>
+            <!-- Dette er det gule banneret på toppen av siden -->
+            <!-- Koden er plassert i div'er gjennomgående. Dette er for å style koden lettere -->
+            <header class="banner-container">
+                <!-- Denne diven inneholder logoen som vises øverst på venstre side av nettsiden vår -->
+              <div class="oslomet-logo">
+                  <!-- Dette er en link til den kopierte logoen som er plassert i img-mappen -->
+                  <!-- Bildet er gitt en alternativ tekst hvis den ikke kan vises på siden -->
+                  <!-- Når du klikker på logoen tas du til oslomet.no -->
+                  <a class="oslomet-logo" href="https://www.oslomet.no/" target="_blank">
+                    <img src="./img/oslomet-logo-black.svg" alt="OsloMet sin logo">
+                  </a>
+              </div>
+                  <!-- Denne knappen er stylet slik at den gjøres om til den nettrekksmeny -->
+                  <!-- Nedtrekksmenyen inneholder linker til de øvrige sidene på nettstedet vårt -->
+              <div class="dropdown">
+                  <button class="dropdown-button">
+                    Meny
+                  </button>
+                <div class="dropdown-content">
+                    <!-- Når man klikker på denne linken blir man tatt til infoside om faget Programmering -->
+                    <!-- Denne tagen gjør linken klikkbar -->
+                  <a href="topical.html">
+                    Infoside: DAPE1400 Programmering
+                  </a>
+                    <!-- Denne linken tar det til infoside om OsloMets campus lokasjoner -->
+                  <a href="campus.html">
+                    OsloMet: Våre studiesteder
+                  </a>
+                    <!-- Denne linken tar deg til side om Accessibility tester vi har gjort på nettstedet vårt -->
+                  <a href="accessibility.html">
+                    Accessibility
+                  </a>
+                </div>
+            </div>
+        </header>
+      <!-- Denne div'en inneholder heading og sub-heading -->
+      <!-- Div'en er laget for å style bakgrunnen til begge headingene -->
+            <div class="content-index">
+              <div class="heading-container">
+                <div class="main-heading">
+                  <div>
+                    <h1>
+                      Dette er OsloMet <br>
+                    </h1>
+                    <p>
+                      Visste du at OsloMet er Norges <br>
+                      tredje største universitet? <br>
+                      Hos oss er det kort vei mellom <br> 
+                      utdanning og forskning.
+                    </p>
+                  </div>
+                </div>
+            <div class="content-index-image">
+              <img src="./img/Dette er OsloMet.webp" class="image-index" alt="illustrasjon_av_student">
+            </div>
           </div>
         </div>
-      </header>
-    <!-- Denne div'en inneholder heading og sub-heading -->
-    <!-- Div'en er laget for å style bakgrunnen til begge headingene -->
-    <div class="content-index">
-      <div class="heading-container">
-        <div class="main-heading">
-          <div>
-              <h1>
-              Dette er OsloMet <br>
-            </h1>
-            <p>
-              Visste du at OsloMet er Norges <br>
-              tredje største universitet? <br>
-              Hos oss er det kort vei mellom <br> 
-              utdanning og forskning.
-            </p>
-          </div>
-        </div>
-        <div class="content-index-image">
-          <img src="./img/Dette er OsloMet.webp" class="image-index"
-          alt="illustrasjon_av_student">
-        </div>
-      </div>
-    </div>
-    <div class="about-oslomet-container">
-      <!-- Denne linker til det originale bildet -->
-      <!-- "target=_blank" taggen sørger for at linken åpnes i en ny fane. -->
-      <div class="original-image-studiestart">
-        <a class="original-image"
-        href="https://images.pexels.com/photos/18988561/pexels-photo-18988561/free-photo-of-pink-paper-surface.jpeg"
-        target="_blank">
-        <!-- Kilde hvor bildet er hentet fra  -->
-          Bakgrunn: Hentet fra Images.Pexels.com
-        </a>
-      </div>
-        <div class="about-oslomet">
-          <!-- Denne testen er kopiert fra: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet-->
-          <p>
-            OsloMet er en forkortelse for vårt internasjonale navn, Oslo Metropolitan University. Vårt hovedstudiested ligger nemlig midt i Oslo, 
-            og har både storbyens puls og kort vei til arbeidslivet du senere skal bli en del av. I tillegg har vi et studiested på Kjeller, 
-            som tilbyr flere populære studier. OsloMet er dessuten Norges tredje største universitet!
-          </p>
-          <div class="image-study">
-            <img src="./img/Bilde-13.avif" alt="illustrasjon av student">
-          </div>
-          <a class="original-image-header"
-          href="https://img.freepik.com/free-vector/education-learning-concept-love-reading-people-reading-students-studying-preparing-examination-library-book-lovers-readers-modern-literature-flat-cartoon-vector-illustration_1150-60938.jpg?w=2000&t=st=1699527130~exp=1699527730~hmac=a82b69f54aafdea42eef912392691eb3622ae00b1d0dd4cddbafb3dd53338eea"
-          target="_blank">
-          Illustrasjon: Hentet fra Img.Freepik.com
-          </a>
-          <h2>
-            Bli noe som betyr noe
-          </h2>
-          <p>
-            Et viktig kjennetegn ved OsloMet, er at vi tilbyr utdanninger til yrker som det er behov for i samfunnet. Som student hos 
-            oss får du prøve deg i arbeidslivet gjennom en eller flere praksisperioder. Det gir deg unik innsikt og viser deg mulighetene etter endt 
-            utdanning. Og allerede i studietiden vil du merke at du kan gjøre en forskjell for andre mennesker.
-          </p>
-        </div>
-        <!-- Link til originalt bilde  -->
-        <div class="original-image-studiestart">
-            <a class="original-image"
-              href="https://media.istockphoto.com/id/1341812465/vector/young-creator-working-at-home-and-relax.jpg?s=1024x1024&w=is&k=20&c=bsnlUnwaTogVwo73GCDVgiOXcxA-E1eImI0YVOwuIjQ="
+          <div class="about-oslomet-container">
+            <!-- Denne linker til det originale bildet -->
+            <!-- "target=_blank" taggen sørger for at linken åpnes i en ny fane. -->
+            <div class="original-image-studiestart">
+              <a class="original-image"
+              href="https://images.pexels.com/photos/18988561/pexels-photo-18988561/free-photo-of-pink-paper-surface.jpeg"
               target="_blank">
-              <!-- This is the photographer of the original image -->
-                Illustrasjon: Hentet fra Media.Istockphoto.com
+            <!-- Kilde hvor bildet er hentet fra  -->
+                Bakgrunn: Hentet fra Images.Pexels.com
               </a>
-          </div>
-        </div>
-      </div>
-      <!-- Dette er et grid som inneholder statistikk -->
-      <!-- Informasjonen er hentet fra: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet -->
-        <div class="statistics-grid-container">
-          <!-- Hvert element i grid'et er plassert i hver sin div, som så er fordelt på enda flere div-"barn" -->
-          <div class="grid-item">
-            <div class="amount-students">
-              <div class="students">
-                <h2>
-                  Studenter
-                </h2>
-              </div>
-              <div class="amount">
-                <h3>
-                  21 950
-                </h3>
-              </div>
-              <div class="explanation">
-                <p>
-                  Fordelt på bachelor, master, årsstudium, videreutdanning og doktorgrad.
-                </p>
-              </div>
             </div>
-          </div>
-          <div class="grid-item">
-            <div class="amount-studyplaces">
-              <div class="studyplaces">
-                <h2>
-                  Studiesteder
-                </h2>
-              </div>
-              <div class="amount">
-                <h3>
-                  2
-                </h3>
-              </div>
-              <div class="explanation">
-                <p>
-                  Hovedstudiestedet ligger i Oslo sentrum, i tillegg har vi et studiested på Kjeller.
-                </p>
-              </div>
+          <div class="about-oslomet">
+            <!-- Denne testen er kopiert fra: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet-->
+              <p>
+                OsloMet er en forkortelse for vårt internasjonale navn, Oslo Metropolitan University. Vårt hovedstudiested ligger nemlig midt i Oslo, 
+                og har både storbyens puls og kort vei til arbeidslivet du senere skal bli en del av. I tillegg har vi et studiested på Kjeller, 
+                som tilbyr flere populære studier. OsloMet er dessuten Norges tredje største universitet!
+              </p>
+            <div class="image-study">
+              <img src="./img/Bilde-13.avif" alt="illustrasjon av student">
             </div>
-          </div>
-          <div class="grid-item">
-            <div class="amount-bachelor-studies">
-              <div class="bachelor-studies">
-                <h2>
-                  Bachelorstudier
-                </h2>
-              </div>
-              <div class="amount">
-                <h3>
-                  37
-                </h3>
-              </div>
-              <div class="explanation">
-                Tar du bachelor ved OsloMet, utdanner du deg til et yrke.
-              </div>
-            </div>
-          </div>
-          <div class="grid-item">
-            <div class="amount-master-studies">
-              <div class="master-studies">
+              <a class="original-image-header"
+              href="https://img.freepik.com/free-vector/education-learning-concept-love-reading-people-reading-students-studying-preparing-examination-library-book-lovers-readers-modern-literature-flat-cartoon-vector-illustration_1150-60938.jpg?w=2000&t=st=1699527130~exp=1699527730~hmac=a82b69f54aafdea42eef912392691eb3622ae00b1d0dd4cddbafb3dd53338eea"
+              target="_blank">
+                Illustrasjon: Hentet fra Img.Freepik.com
+              </a>
               <h2>
-                Masterstudier
+                Bli noe som betyr noe
               </h2>
-            <div class="amount">
-              <h3>
-                67
-              </h3>
+              <p>
+                Et viktig kjennetegn ved OsloMet, er at vi tilbyr utdanninger til yrker som det er behov for i samfunnet. Som student hos 
+                oss får du prøve deg i arbeidslivet gjennom en eller flere praksisperioder. Det gir deg unik innsikt og viser deg mulighetene etter endt 
+                utdanning. Og allerede i studietiden vil du merke at du kan gjøre en forskjell for andre mennesker.
+              </p>
+          </div>
+          <!-- Link til originalt bilde  -->
+          <div class="original-image-studiestart">
+              <a class="original-image"
+                href="https://media.istockphoto.com/id/1341812465/vector/young-creator-working-at-home-and-relax.jpg?s=1024x1024&w=is&k=20&c=bsnlUnwaTogVwo73GCDVgiOXcxA-E1eImI0YVOwuIjQ="
+                target="_blank">
+                <!-- This is the photographer of the original image -->
+                  Illustrasjon: Hentet fra Media.Istockphoto.com
+                </a>
+              </div>
             </div>
-            <div class="explanation">
-              Etter en bachelor kan du gå rett videre til en master, eller ta noen år i arbeidslivet før du bygger på utdanningen.
+          </div>
+          <!-- Dette er et grid som inneholder statistikk -->
+          <!-- Informasjonen er hentet fra: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet -->
+          <div class="statistics-grid-container">
+            <!-- Hvert element i grid'et er plassert i hver sin div, som så er fordelt på enda flere div-"barn" -->
+            <div class="grid-item">
+              <div class="amount-students">
+                <div class="students">
+                  <h2>
+                    Studenter
+                  </h2>
+                </div>
+                  <div class="amount">
+                    <h3>
+                      21 950
+                    </h3>
+                  </div>
+                  <div class="explanation">
+                    <p>
+                      Fordelt på bachelor, master, årsstudium, videreutdanning og doktorgrad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="amount-studyplaces">
+                  <div class="studyplaces">
+                    <h2>
+                      Studiesteder
+                    </h2>
+                  </div>
+                <div class="amount">
+                    <h3>
+                      2
+                    </h3>
+                </div>
+                <div class="explanation">
+                    <p>
+                      Hovedstudiestedet ligger i Oslo sentrum, i tillegg har vi et studiested på Kjeller.
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="amount-bachelor-studies">
+                <div class="bachelor-studies">
+                  <h2>
+                    Bachelorstudier
+                  </h2>
+                </div>
+                <div class="amount">
+                  <h3>
+                    37
+                  </h3>
+                </div>
+                <div class="explanation">
+                  Tar du bachelor ved OsloMet, utdanner du deg til et yrke.
+                </div>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="amount-master-studies">
+                <div class="master-studies">
+                  <h2>
+                    Masterstudier
+                  </h2>
+                <div class="amount">
+                  <h3>
+                    67
+                  </h3>
+                </div>
+                <div class="explanation">
+                  Etter en bachelor kan du gå rett videre til en master, eller ta noen år i arbeidslivet før du bygger på utdanningen.
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="about-oslomet-container">
-      <!-- En tom div for å style plasseringen av tekst på siden -->
-      <div class="empty"></div>
-      <!-- Tekst hentet fra: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet -->
-      <div class="about-oslomet">
-        <!-- Dette er en sub-heading -->
-        <h3>
-          Utvikler smarte løsninger
-        </h3>
-        <p>
-          En viktig styrke ved OsloMet er at vi har samlet utdanninger som lærer, sykepleier, økonom og ingeniør under ett tak. 
-          Hos oss er det kort vei mellom utdanning og forskning. Det du lærer er basert på det siste innenfor ditt fagfelt. Studenter 
-          kan også bidra i forskningsprosjekter som kommer samfunnet til gode. Ny kunnskap gir ny praksis!
-        </p>
-        <!-- Sub-heading -->
-        <h3>
-          Studere i utlandet?
-        </h3>
-        <div class="image-study">
-          <img src="./img/study-abroad.webp" alt="illustrasjon studere i utlandet">
-        </div>
-        <a class="original-image"
-        href="https://www.123rf.com/photo_215008857_traveling-around-the-world-concept-cartoon-vector-illustration-of-travel-around-the-world.html"
-        target="_blank">
-        Illustrasjon: Hentet fra 123rf.com
-        </a>
-        <p>
-          Hva med å ta et semester i Amsterdam eller København? Eller hvorfor ikke hoppe i det, og reise til Chile, Sør-Afrika 
-          eller Hawaii? 
-        </p>
-        <p>
-          OsloMet samarbeider med universiteter og høgskoler over hele verden. Som student hos oss kan du derfor reise ut og få 
-          verdifull kunnskap, unike opplevelser og erfaringer som du tar med deg videre i livet. 
-        </p>
-        <!-- Sub-heading-->
-        <h3>
-          Velg utdanning med hjertet!
-        </h3>
-        <p>
-          Å velge utdanning kan være vanskelig, særlig når det er mye å velge mellom og mange fag du synes er spennende. 
-          Vi råder deg til å tenke deg godt om og velge det du selv synes er mest interessant. Ikke minst vil vi utfordre 
-          deg til å benytte muligheten til å dra på utveksling - og gjøre maks ut av studietiden!
-        </p>
-      </div>
-      <!-- En tom div - for å style plasseringen av tekst på siden -->
-      <div class="empty"></div>
-    </div>
-    <!-- Denne div'en inneholder footeren -->
-    <div class = "footer">  
-      <!-- Footeren inneholder informasjon om hvor vi har hentet tekst og annen info på siden fra, i tillegg til forfattere av siden -->
-      <footer>
-        <p>
-          All informasjon på denne siden er hentet fra 
-          <!-- Her er det en link til siden som er "kopiert", og hvor tekst og bilde er tatt fra. -->
-          <a class= "kildelink" href="https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet" alt ="link til siden hvor teksten på siden er hentet fra">
-            OsloMet: "Dette er OsloMet"
-          </a>.
-        </p>
-        <!-- Info -->
-        <p class="eksamen">
-          Laget til eksamen, høsten 2023 i faget DATA1200 ved OsloMet.
-        </p>
-      </footer>
-    </div>
-  </body>
-</html>
+          <div class="about-oslomet-container">
+            <!-- En tom div for å style plasseringen av tekst på siden -->
+          <div class="empty"></div>
+            <!-- Tekst hentet fra: https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet -->
+          <div class="about-oslomet">
+            <!-- Dette er en sub-heading -->
+              <h3>
+                Utvikler smarte løsninger
+              </h3>
+              <p>
+                En viktig styrke ved OsloMet er at vi har samlet utdanninger som lærer, sykepleier, økonom og ingeniør under ett tak. 
+                Hos oss er det kort vei mellom utdanning og forskning. Det du lærer er basert på det siste innenfor ditt fagfelt. Studenter 
+                kan også bidra i forskningsprosjekter som kommer samfunnet til gode. Ny kunnskap gir ny praksis!
+              </p>
+          <!-- Sub-heading -->
+              <h3>
+                Studere i utlandet?
+              </h3>
+            <div class="image-study">
+                <img src="./img/study-abroad.webp" alt="illustrasjon studere i utlandet">
+            </div>
+                <a class="original-image"
+                href="https://www.123rf.com/photo_215008857_traveling-around-the-world-concept-cartoon-vector-illustration-of-travel-around-the-world.html"
+                target="_blank">
+                Illustrasjon: Hentet fra 123rf.com
+                </a>
+              <p>
+                Hva med å ta et semester i Amsterdam eller København? Eller hvorfor ikke hoppe i det, og reise til Chile, Sør-Afrika 
+                eller Hawaii? 
+              </p>
+              <p>
+                OsloMet samarbeider med universiteter og høgskoler over hele verden. Som student hos oss kan du derfor reise ut og få 
+                verdifull kunnskap, unike opplevelser og erfaringer som du tar med deg videre i livet. 
+              </p>
+          <!-- Sub-heading-->
+              <h3>
+                Velg utdanning med hjertet!
+              </h3>
+              <p>
+                Å velge utdanning kan være vanskelig, særlig når det er mye å velge mellom og mange fag du synes er spennende. 
+                Vi råder deg til å tenke deg godt om og velge det du selv synes er mest interessant. Ikke minst vil vi utfordre 
+                deg til å benytte muligheten til å dra på utveksling - og gjøre maks ut av studietiden!
+              </p>
+            </div>
+        <!-- En tom div - for å style plasseringen av tekst på siden -->
+            <div class="empty"></div>
+          </div>
+      <!-- Denne div'en inneholder footeren -->
+          <div class = "footer">  
+        <!-- Footeren inneholder informasjon om hvor vi har hentet tekst og annen info på siden fra, i tillegg til forfattere av siden -->
+            <footer>
+              <p>
+                All informasjon på denne siden er hentet fra 
+                <!-- Her er det en link til siden som er "kopiert", og hvor tekst og bilde er tatt fra. -->
+                <a class= "kildelink" href="https://www.oslomet.no/studier/studenthistorier/dette-er-oslomet" alt ="link til siden hvor teksten på siden er hentet fra">
+                  OsloMet: "Dette er OsloMet"
+                </a>.
+              </p>
+              <!-- Info -->
+              <p class="eksamen">
+                Laget til eksamen, høsten 2023 i faget DATA1200 ved OsloMet.
+              </p>
+            </footer>
+          </div>
+    </body>
+  </html> 
