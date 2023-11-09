@@ -241,8 +241,9 @@ nav img {
 
 .illustration-topical img {
   border-radius: 50%;
-  margin-bottom: 15px;
-  opacity: 0.9;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  cursor: crosshair;
 }
 
 /* Når man holder musepekeren over bildet så blir det speilvendt */
@@ -277,7 +278,7 @@ label {
   /* Posisjonen er satt slik at checkboksene dekker hele siden */
   position: relative;
   margin-bottom: 5px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
@@ -393,7 +394,7 @@ input:checked + label + .content-learning-outcomes {
 /* Styling når man holder musepekeren over boksene */
 .course-column:hover {
   box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
-  cursor: pointer;
+  cursor: help;
 }
 
 /* Bokser flytter seg under hverandre når skjermen blir mindre */
