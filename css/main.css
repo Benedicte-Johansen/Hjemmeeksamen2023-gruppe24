@@ -179,41 +179,48 @@ img {
 /* ------------ HEADING ------------ */
 
 
-/* Dette styler bakgrunnen bak sub-headingen på index.html */
-/* Padding er lagt til for å lage avstand mellom tekst og bildet */
+/**/
 
 .heading-container {
+  /* Hvor stor del av skjermen som dekkes av bakgrunnsbildet s*/
   height: 100vh;
   width: 100%;
+  /* Bakgrunnsbilde hentet fra 
+  https://images.pexels.com/photos/18988561/pexels-photo-18988561/free-photo-of-pink-paper-surface.jpeg */
   background-image: url(../img/background-1.webp);
   background-position: center;
   background-size: cover;
   position: relative;
 }
 
+/* utseende av h1-overskrift som ligger i heading-containeren */
 .heading-container h1 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 100;
   padding-top: 50px;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
+  /* Teksten kommer inn fra venstre med 1s forsinkelse */
   animation: moveright 1s linear 1;
   animation-delay: 1s;
   visibility: hidden;
+  /* Beholder teksten i bildet etter at animasjonen er ferdig */
   animation-fill-mode: forwards;
 }
 
 .heading-container p {
-  font-size: 30px;
+  font-size: 25px;
   animation: moveright 1s linear 1;
   animation-delay: 1s;
+  /* Når animasjonen begynner kan man ikke se teksten */
   visibility: hidden;
   animation-fill-mode: forwards;
   padding-top: 10px;
-  line-height: 1.4;
+  line-height: 1.3;
   color: black;
 }
 
 .main-heading {
+  margin-left: 40px;
   width: 90%;
   position: absolute;
   top: 50%;
@@ -312,12 +319,14 @@ Her finner man styling for elementer spesifikt for denne siden */
   width: auto;
   position: absolute;
   bottom: 0;
-  left: 800px;
+  left: 700px;
   align-items: right;
+  /* Asymmetrisk kant på bildet */
   border-radius: 50% 20% / 10% 40%;
 }
 
 .image-study img {
+  /* Asymmetrisk kant på bildene */
   border-radius: 50% 20% / 10% 40%;
 }
 
@@ -329,8 +338,8 @@ Her finner man styling for elementer spesifikt for denne siden */
     max-height: 100%;
   }
   .image-study img {
-    left:auto; /* reset left value */
-    right:3%;
+    left:auto; 
+    right: 3%;
   }
 }
 
@@ -398,7 +407,13 @@ Her finner man styling for elementer spesifikt for denne siden */
 }
 
 
+
+
+
 /* ----------CAMPUS---------- 
+
+
+
 Dette styler elementer som er spesifikke for denne siden */
 
 /* Boksene er stylet slik at den kan inneholde både tekst og bilder */
