@@ -185,9 +185,10 @@ img {
   /* Hvor stor del av skjermen som dekkes av bakgrunnsbildet s*/
   height: 100vh;
   width: 100%;
+  /* Bildet er gitt et overlay med gradient farge */
   /* Bakgrunnsbilde hentet fra 
   https://images.pexels.com/photos/18988561/pexels-photo-18988561/free-photo-of-pink-paper-surface.jpeg */
-  background-image: url(../img/background-1.webp);
+  background-image: linear-gradient(rgba(222, 205, 221, 0.7),rgba(224, 252, 255, 0.7)), url(../img/background-1.webp);
   background-position: center;
   background-size: cover;
   position: relative;
