@@ -12,23 +12,29 @@
 <!------------------ Header --------------------->
 
     <section class="header">
+      <!-- Linkene til de andre sidene og logoen, er plassert i en nav tag -->
       <nav>
+        <!-- Når man klikker på logoen åpnes oslomet.no i en fane -->
         <a class="oslomet-logo" href="https://www.oslomet.no/"
         target="_blank">
           <img src="./img/oslomet-logo-black.svg" alt="OsloMet sin logo"></a>
           <div class="nav-links">
+            <!-- Linkene er plassert i en uordnet liste, som listeelementer -->
             <ul>
               <li><a href="index.html">DETTE ER OSLOMET </a></li>
-              <li><a href="campus.html">VÅRE CAMPUS</a></li>
+              <li><a href="campus.html">VÅRE STUDIESTEDER</a></li>
               <li><a href="accessibility.html">ACCESSIBILITY</a></li>
             </ul>
           </div>
       </nav>
+      <!-- Overskrifen er plassert i en div -->
       <div class="text-box">
         <h1>
+          <!-- Det er lagt inn et linjebrekk mellom ordene slik at teksten kommer på to linjer -->
           DAPE1400 <br> 
           Programmering
         </h1>
+        <!-- En a-tag er laget som en knapp. Når du klikker på denne tas du til oslomets side om emnet -->
         <a class="emne-button"
         href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1400/2022/H%C3%98ST" 
         alt="Link til OsloMet infoside om Programmering"
@@ -37,6 +43,7 @@
         </a>
       </div>
     </section>
+    <!-- Link til side for den originale versjonen av bakgrunnsbildet -->
     <div class="original-image-programming">
       <!-- Det originale bildet vil åpnes i en ny fane -->
       <a class="original-image"
@@ -48,23 +55,29 @@
       </a>
     </div>
 
-    <!------------ Statistikk ------------->
 
+    <!------------ STATISTIKK ------------->
+
+
+    <!-- Informasjonen er lagt i bokser med bakgrunnsbilde -->
     <section class="statistics">
       <h1>
         Statistikk:
       </h1>
+      <!-- Link til kilden for det originale bildet -->
           <div class="original-image-programming">
             <!-- Det originale bildet vil åpnes i en ny fane -->
             <a class="original-image"
             href="https://pixabay.com/vectors/programmer-programming-code-work-1653351/"
             target="_blank">
-            <!-- Her er fotografen av bildet -->
+            <!-- Her er kilden til bildet -->
             <!-- Dette er en klikkbar link som tar deg til det originale bildet -->
               Illustrasjon under: Ukjen/hentet fra PixaBay.com
             </a>
           </div>
         </div>
+        <!-- Her ligger boksene med informasjon-->
+        <!-- Hvert bilde har et overlay av farge og tekst -->
         <section class="row">
           <div class="stat-col">
             <img src="./img/Bilde-5.webp" alt="Kode">
@@ -113,8 +126,10 @@
     </section>
  
       <!-------------   Beskrivelse --------------->
-      <!-- Dette var checkboksene i det gamle oppsettet -->
 
+
+      <!-- Dette er bokser med informasjon om emnet -->
+  
       <section class="course">
         <section class="row">
           <div class="course-column">
@@ -173,12 +188,13 @@
       </section>
 
       <!-------- Bilde ------->
-
+      <!-- Her er det lagt inn en illustrasjon av en programmerer -->
       <section>
         <div class="illustration-topical">
           <img src="./img/Bilde-10.webp" 
           alt="Illustrasjon av programmerer" style="width: 100%;">
         </div>
+        <!-- Link til det originale bildet -->
         <a class="original-image"
         href="https://pixabay.com/photos/manhattan-monitor-binary-3866140/ "
         target="_blank">
@@ -189,7 +205,7 @@
 
       <!-------- Checkbox med informasjon om læringsutbytte ------>
 
-            <!-- Dette er en checkboks -->
+            <!-- Dette er en checkbox -->
             <input type="checkbox" id="title-3" />
             <!-- Hvert 'id' og 'for' er gitt et unikt navn. Dette er nødvendig for at man skal kunne åpne checkboksen på riktig måte-->
             <label for="title-3">
@@ -262,6 +278,7 @@
                     <li>
                       Tabeller 
                         (
+                          <!-- Link til informasjon om Java arrays -->
                           <a class="arrays-button" href="https://www.w3schools.com/java/java_arrays.asp"
                           target="_blank" alt = "link til side med informasjon som java arrays">
                             ARRAYER
@@ -286,7 +303,7 @@
                   <p>
                     Studenten kjenner til:
                   </p>
-                  <!-- 'Unordered list' -->
+                  <!-- Uordnet liste -->
                   <ul>
                     <li>
                       grunnleggende prinsipper for oppbygging av programmer
