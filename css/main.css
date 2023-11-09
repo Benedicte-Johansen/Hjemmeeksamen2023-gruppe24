@@ -326,11 +326,13 @@ Her finner man styling for elementer spesifikt for denne siden */
   align-items: right;
   /* Asymmetrisk kant på bildet */
   border-radius: 50% 20% / 10% 40%;
+  opacity: 0.9;
 }
 
 .image-study img {
   /* Asymmetrisk kant på bildene */
   border-radius: 50% 20% / 10% 40%;
+  opacity: 0.9;
 }
 
 /* For en mindre skjermstørrelse */
