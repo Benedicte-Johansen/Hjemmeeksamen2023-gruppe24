@@ -528,12 +528,15 @@ style disse sammen*/
 
 
 
+
+
 /* ----------ACCESSIBILITY----------
 Dette styler alt som er spesifikt for denne siden  */
 
+
+
 /* Ettersom denne checkboksen inneholder flere bokser enn de to andre, 
 må den styles litt mer */ 
-
 .list-accessibility {
   margin: 50px;
 }
