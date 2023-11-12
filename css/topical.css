@@ -519,21 +519,64 @@ input:checked + label + .content-learning-outcomes {
   margin-top: 30px
 }
 
+/* Linkene til de andre sidene er også lagt i footeren, med samme stil som i headeren.
+De har imidlertid en annen farge  */
+.nav-links-footer {
+  flex: 1;
+  text-align: right;
+}
+
+/* Linkene er lagt i en uordnet liste som listeelementer */
+.nav-links-footer ul li {
+  /* Sørger for at linkene ikke blir bullet points */ 
+  list-style: none;
+  /* Legger listeelementene etter hverandre i horisontal linje */
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  color: rgb(127, 123, 123);
+}
+
+/* Hvordan linkene ser ut når man ikke har musepekeren over dem */
+.nav-links-footer ul li a{
+  color: rgb(127, 123, 123);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Looken til linkene med en linje under når man holder musepekeren over dem */
+.nav-links-footer ul li::after {
+  /* Slik at linjen flyter utover må den i utgangspunktet ikke synes */
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(127, 123, 123);
+  display: block;
+  margin: auto;
+  /* Tiden det tar for linjen under linkene til å fylle lengden av hver link */
+  transition: .5s;
+}
+
+/* Linjen fyller hele lengden av linkene */
+.nav-links-footer ul li:hover::after {
+  width: 100%;
+}
+
 /* Styler linken i footeren */
 .kildelink{
-  color: black;
+  color: rgb(87, 84, 84);
   text-decoration: none;
 }
 
 /* Når man holder musepekeren over linken */
 .kildelink:hover{
-  color: black;
+  color: rgb(87, 84, 84);
   text-decoration: underline;
 }
 
 /* Når man har klikket på linken */
 .kildelink:active{
-  color: black;
+  color: rgb(87, 84, 84);
   text-decoration: none;
 }
 
