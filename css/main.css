@@ -1,4 +1,7 @@
-/* Body */
+
+/* BODY */
+
+
 /* Dette styler all skrift og linjehøyde på nettsiden, med mindre annet er spesifisert i egen klasse  */
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -10,6 +13,7 @@ body {
   background-color: rgb(249, 224, 228);
 }
 
+/* Default margin og padding er 10px. Vi setter den derfor til 0 */
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +22,7 @@ body {
 /* Styling for mindre skjerm */
 @media (max-width: 700px) {
   body {
+    /* Hvis bakgrunnsbildet ikke kan vises vil siden likevel ha en bakgrunnsfarge */
     background-color: rgb(249, 224, 228);
   }
 }
@@ -53,7 +58,12 @@ img {
   height: auto;
 }
 
+
+
+
 /* ------------ BANNER ---------- */
+
+
 
 /* Dette styler banneret på alle sidene våre */
 
@@ -62,8 +72,8 @@ img {
    display: flex;
    flex-direction: row;
    position: fixed;
-   /* I relasjon til checkboksene på siden: Disse er ved default satt med verdi z-index: 1; 
-   For å unngå at checkboksene skal overlappe banneret når man scroller
+   /* I relasjon til checkboxene på siden: Disse er ved default satt med verdi z-index: 1; 
+   For å unngå at checkboxene skal overlappe banneret når man scroller
    har vi satt z-index: 1; for bannerene */
    z-index: 1;
    top: 0;
@@ -80,10 +90,12 @@ img {
    padding-left: 30px;
 }
 
+/* Hvor stor del av skjermen som tas opp av hvert element i banneret */
 .oslomet-logo {
  flex: 4;
 }
 
+/* Nedtrekksmenyen */
 .dropdown {
   flex: 1;
 }
@@ -95,17 +107,17 @@ img {
   font-size: 20px;
 }
 
+/* Styler størrelsen på OsloMet logoen */
 .banner-container img {
   width: 100px;
 }
 
 
 
-/* -------- DROPDOWN MENY -------- */
+/* -------- NEDTREKKSMENY -------- */
 
 
 /* Her styles alle nedtrekksmenyene på hele nettsiden vår */
-
 .dropdown-button{
   display: grid;
   /* Nedtrekksmenyen er stylet slik at den matcher fargen på banneret den ligger inne i */
@@ -131,14 +143,12 @@ img {
 }
 
 /* Ved default er inneholdet i nedtrekksmenyen gjemt (det trenger derfor ikke styles) */
-/* Menyen åpnes når man holder musepekeren over menyen (dette er også en default) */
-
+/* Menyen åpnes når man holder musepekeren over den (dette er også en default) */
 .dropdown-content {
   /* Her styles innholdet i nedtrekksmenyen */
   display: none;
   position: absolute;
   background-color: rgb(248, 218, 223); 
-  /* Dette sørger for at innholder er like bredt som knappen*/
   min-width: 100%;
   /* Dette gjør det mulig å scrolle i menyen på mindre skjermer */
   overflow: auto;
@@ -146,7 +156,9 @@ img {
   /* a i rgba sørger for at skyggen er mer blurry */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 20px;
+  /* Bredden på innholdet når det er åpent */
   width: 20rem;
+  /* Hvordan teksten ligger inne i boksen */
   text-align: right;
 }
 
@@ -158,7 +170,7 @@ img {
   display: block;
 }
 
-/* Endrer fargen når man fører musepekeren over hver av linkene */
+/* Endrer bakgrunnsfargen når man fører musepekeren over hver av linkene */
 .dropdown-content a:hover {
   background-color: rgb(230, 201, 205);
 }
@@ -169,8 +181,7 @@ img {
   display: block;
 }
 
-/* Endre bakgrunnsfargen på knappen når nedtrekksmenyens innhold vises*/
-/* Change the background color of the dropdown button when the dropdown content is shown */
+/* Endre bakgrunnsfargen på meny-knappen når nedtrekksmenyens innhold vises*/
 .dropdown:hover .dropdown-button {
   background-color: rgb(230, 201, 205);
 }
@@ -232,6 +243,7 @@ img {
   text-align: left;
 }
 
+/* For mindre skjerm */
 @keyframes moveright {
   0%{
     transform: translateX(-100px);
@@ -249,7 +261,7 @@ img {
 
 
 
-/* På campus.html og topical.html bruker vi checkbokser for å lage en nedtrekksmeny. 
+/* På campus.html og accessibility.html bruker vi checkboxer for å lage en nedtrekksmeny. 
 Disse er stylet likt på begge sidene */
 input {
   display: none;
@@ -336,7 +348,6 @@ Her finner man styling for elementer spesifikt for denne siden */
 }
 
 /* For en mindre skjermstørrelse */
-
 @media (min-width: 700px){
   .image-index {
     max-width: 100%;
@@ -352,7 +363,7 @@ Her finner man styling for elementer spesifikt for denne siden */
 .about-oslomet-container {
   display: grid;
   /* Her styles hvor stor del hvert element i gridet tar opp på siden */ 
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr;
   /* Mellomrom mellom hvert grid element */
   gap: 30px;
 }
@@ -526,6 +537,7 @@ må den styles litt mer */
 .list-accessibility {
   margin: 50px;
 }
+
 .accessibility-container,
 .accessibility-container-2 {
   /* Setter minimum høyde for elementene */
@@ -556,7 +568,7 @@ må den styles litt mer */
 .box {
   padding: 10px;
   background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
-  border: 1px solid rgb(141, 222, 230);
+  border: 1px solid rgb(230, 204, 209);
   /* Runder kantene på boksen */
   border-radius: 20px;
   margin-right: 10px;
@@ -635,8 +647,13 @@ må den styles litt mer */
 }
 
 
+
 /* ------------- FOOTER ---------------------- 
+
+
+
 Her styles footerene på alle sidene slik at siden får en sammenhengende look */
+
 
 .footer{
   text-align: center;

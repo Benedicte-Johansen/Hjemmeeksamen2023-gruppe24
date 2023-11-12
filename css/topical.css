@@ -113,7 +113,7 @@ nav img {
   }
 }
 
-/* Styler linken til full besrivelse av emnet slik at den ser ut som en knapp */
+/* Styler linken slik at den ser ut som en knapp */
 .emne-button {
   display: inline-block;
   text-decoration: none;
@@ -124,15 +124,17 @@ nav img {
   position: relative;
   cursor: pointer;
   margin-top: 50px;
+  /* Sørger for en smooth overgang når man 'tar vekk' musepekeren fra knappen*/
+  transition: 0.5s;
 }
 
 /* Styler hvordan knappen ser ut når du holder musepekeren over den */
 .emne-button:hover {
   border: 1px solid rgb(227, 196, 201);
   color: rgb(104, 103, 103);
-  font-weight: bold;
   background-color: rgb(227, 196, 201);
-  transition: 1s;
+  /* Smooth overgang når man fører musepekeren over knappen */
+  transition: 0.5s;
 }
 
 
