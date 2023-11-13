@@ -566,6 +566,14 @@ må den styles litt mer */
   margin-bottom: 10px;
 }
 
+/* Boksene plasseres under hverandre når skjermen er mindre */
+@media (max-width: 700px) {
+  .accessibility-container > div {
+    flex-basis: calc(50% - 35px);
+    margin-right: 250px;
+  }
+}
+
 /* Dette gjelder spesifikt div'ene som ligger inne i accessibility-containeren */
 .accessibility-container, .accessibility-container-2 > div > div {
   display: flex;
@@ -582,6 +590,7 @@ må den styles litt mer */
   border-radius: 20px;
   margin-right: 10px;
 }
+
 .img {
   /* Runder kantene på bildet */
   border-radius: 15px;
@@ -654,6 +663,7 @@ må den styles litt mer */
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 
 
 
