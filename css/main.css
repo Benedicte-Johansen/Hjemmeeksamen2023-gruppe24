@@ -31,7 +31,13 @@ body {
 @media (max-width: 700px) {
   .image-index {
      float: left;
+     /* Bildet blir gjemt når skjermen er mindre */
      display: none;
+  }
+
+  /* Når bildet forsvinner, forsvinner også linken til det originale bildet  */
+  .original-image-index {
+    display: none;
   }
 }
 
