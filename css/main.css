@@ -16,12 +16,6 @@ body {
   background-color: rgb(249, 224, 228);
 }
 
-/* Default margin og padding er 10px. Vi setter den derfor til 0 */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* Styling for mindre skjerm */
 @media (max-width: 700px) {
   body {
@@ -30,19 +24,12 @@ body {
   }
 }
 
-/* Sørger for at bildene scaler når man er i mindre skjermmodus*/
-@media (max-width: 700px) {
-  .image-index {
-     float: left;
-     /* Bildet blir gjemt når skjermen er mindre */
-     display: none;
-  }
-
-  /* Når bildet forsvinner, forsvinner også linken til det originale bildet  */
-  .original-image-index {
-    display: none;
-  }
+/* Default margin og padding er 10px. Vi setter den derfor til 0 */
+* {
+  margin: 0;
+  padding: 0;
 }
+
 
 /* Legg til marg på venstre side av headings og paragraph tags, med mindre annet er spesifisert i egen klasse */
 h1,  
@@ -360,7 +347,7 @@ Her finner man styling for elementer spesifikt for denne siden */
   opacity: 0.9;
 }
 
-/* For mindre skjermstørrelse */
+/* For annen skjermstørrelse */
 @media (min-width: 700px){
   .image-index {
     max-width: 100%;
@@ -369,6 +356,19 @@ Her finner man styling for elementer spesifikt for denne siden */
   .image-study img {
     left:auto; 
     right: 3%;
+  }
+}
+
+/* Sørger for at bildene scaler når man er i mindre skjermmodus*/
+@media (max-width: 700px) {
+  .image-index {
+     float: left;
+     /* Bildet blir gjemt når skjermen er mindre */
+     display: none;
+  }
+  /* Når bildet forsvinner, forsvinner også linken til det originale bildet  */
+  .original-image-index {
+    display: none;
   }
 }
 
