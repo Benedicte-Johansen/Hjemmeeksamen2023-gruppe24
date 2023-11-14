@@ -185,7 +185,10 @@ img {
 }
 
 
+
 /* ------------ HEADING ------------ */
+
+
 
 /* Styler heading-elementene på alle sidene våre */
 
@@ -196,7 +199,7 @@ img {
   /* Bildet er gitt et overlay med gradient farge */
   /* Bakgrunnsbilde hentet fra 
   https://images.pexels.com/photos/18988561/pexels-photo-18988561/free-photo-of-pink-paper-surface.jpeg */
-  background-image: linear-gradient(rgba(222, 205, 221, 0.7),rgba(224, 252, 255, 0.7)), url(../img/background-1.webp);
+  background-image: linear-gradient(rgba(248, 223, 239, 0.7),rgba(183, 242, 242, 0.7)), url(../img/background-1.webp);
   /* Plassering av bakgrunnsbildet */
   background-position: center;
   background-size: cover;
@@ -337,7 +340,7 @@ Her finner man styling for elementer spesifikt for denne siden */
 
 /* Dette er bildet som ligger inne i heading-containeren */
 .image-index{
-  height: 60%;
+  height: 90%;
   width: auto;
   position: absolute;
   bottom: 0;
