@@ -243,6 +243,13 @@ img {
   text-align: left; /* Teksten ligger til venstre */
 }
 
+/* For mindre skjermstørrelse */
+@media(max-width: 600px) {
+  .main-heading h1 p{
+    font-size: 20px;
+  }
+}
+
 /* Animasjonen hvor headingen kommer inn fra venstre */
 @keyframes moveright { /* @keyframes kontrollerer stegene for animasjonen */
   0%{ /* Hvor animasjonen ligger i skjermen til å begynne med */
@@ -254,6 +261,7 @@ img {
     visibility: visible;
   }
 }
+
 
 
 
