@@ -531,8 +531,9 @@ style disse sammen*/
     flex: 100%;
   }
 
-  .campus-info.adresse.adresse-universitetet{
-    margin: 10px;
+  .campus-info .adresse .adresse-universitetet{
+    margin: 20px;
+    padding: 20px;
     /* Legger til litt marg rundt teksten slik at innholdet i nedtrekksmenyen ser ut som den 
     ligger mer inne i boksen */
   }
