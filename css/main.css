@@ -234,7 +234,6 @@ img {
 
 /* Plassering av heading */
 .main-heading {
-  margin-left: 40px;
   width: 80%; /* Hvor stor prosentandel av skjermen headingen tar opp */
   position: absolute;
   top: 50%;
@@ -338,7 +337,7 @@ Her finner man styling for elementer spesifikt for denne siden */
 
 /* Dette er bildet som ligger inne i heading-containeren */
 .image-index{
-  height: 80%;
+  height: 60%;
   width: auto;
   position: absolute;
   bottom: 0;
@@ -422,7 +421,8 @@ Disse styles likt på alle sidene våre, og de er derfor gitt samme klasse  */
 
 /* Styler teksten som er en link til original bildet */
 .original-image,
-.original-image-header {
+.original-image-header,
+.original-image-campus {
   font-size: 12px;
   font-weight: lighter;
   /* for å unngå at det er en strek under teksten må det styles slik */
@@ -433,7 +433,8 @@ Disse styles likt på alle sidene våre, og de er derfor gitt samme klasse  */
 
 /* Dette styler hvordan bildelinken ser ut når du har musepekeren på den */
 .original-image:hover,
-.original-image-header:hover {
+.original-image-header:hover,
+.original-image-campus:hover {
   font-weight: bolder;
   cursor: pointer;
   /* For å unngå default innstilling hvor teksten blir lilla, må den styles slik */
@@ -445,7 +446,9 @@ Disse styles likt på alle sidene våre, og de er derfor gitt samme klasse  */
 .original-image:active,
 .original-image:visited,
 .original-image-header:active,
-.original-image-header:visited {
+.original-image-header:visited,
+.original-image-campus:active,
+.original-image-campus:visited {
   color: black;
   text-decoration: none;
 }
@@ -459,6 +462,58 @@ Disse styles likt på alle sidene våre, og de er derfor gitt samme klasse  */
 
 
 Dette styler elementer som er spesifikke for denne siden */
+
+
+/* Dette er bildet som ligger inne i heading-containeren */
+.image-campus{
+  height: 78%;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 800px;
+  align-items: right;
+  /* Asymmetrisk kant på bildet */
+  border-radius: 50% 70% 10% 30%;
+  opacity: 0.8;
+  background-color: rgba(234, 153, 168, 0.9); 
+  margin-left: 40px;
+}
+
+/* Flytt linken til høyre side av skjermen slik at en kommer under bildet */
+.original-image-campus {
+  float: right;
+  margin-right: 30px;
+}
+
+/* For annen skjermstørrelse */
+@media (min-width: 700px){
+  .image-campus {
+    max-width: 100%;
+    max-height: 100%;
+    }
+  }
+
+/* Sørger for at bildene scaler når man er i mindre skjermmodus*/
+@media (max-width: 700px) {
+  .image-campus {
+     float: left;
+     /* Bildet blir gjemt når skjermen er mindre */
+     display: none;
+  }
+  /* Når bildet forsvinner, forsvinner også linken til det originale bildet  */
+  .original-image-campus {
+    display: none;
+  }
+}
+
+/* Bilde-kilde og tekst under headingen er stylet i et grid */
+.about-oslomet-container {
+  display: grid;
+  /* Her styles hvor stor del hvert element i gridet tar opp på siden */ 
+  grid-template-columns: 2fr 3fr 2fr;
+  /* Mellomrom mellom hvert grid element */
+  gap: 30px;
+}
 
 /* Boksene er stylet slik at den kan inneholde både tekst og bilder */
 .grid-campus-boxes{
@@ -489,6 +544,15 @@ Dette styler elementer som er spesifikke for denne siden */
  line-height: 26px;
  padding-bottom: 15px;
 }
+
+/* Plassering av teksten inne i boksen */
+.campus-info,
+.adresse,
+.adresse-universitetet {
+  margin-left: 100px;
+  margin-right: 150px;
+}
+
 
 @media (max-width: 991px) {
   .grid-campus-boxes .tekst-i-boks .teksten{
@@ -537,6 +601,7 @@ style disse sammen*/
     vertical-align: middle;
     width: 100%;
     flex: 100%;
+    border-radius: 15%;
   }
 
   .campus-info .adresse .adresse-universitetet{
