@@ -235,7 +235,7 @@ img {
 /* Plassering av heading */
 .main-heading {
   margin-left: 40px;
-  width: 90%;
+  width: 80%; /* Hvor stor prosentandel av skjermen headingen tar opp */
   position: absolute;
   top: 50%;
   left: 50%;
