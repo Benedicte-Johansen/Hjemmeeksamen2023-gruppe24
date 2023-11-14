@@ -1,6 +1,9 @@
 
 /* BODY */
 
+/* DEN GJENNOMGÅENDE KODEN VÅR ER TIL EN VISS GRAD INSPIRERT AV KODE VI HAR FUNNET PÅ W3SCHOOLS.COM,
+        IMIDLERTID ER ALL KODE SKREVET OM AV OSS SLIK AT DEN PASSER VÅR SIDE  */ 
+
 
 /* Dette styler all skrift og linjehøyde på nettsiden, med mindre annet er spesifisert i egen klasse  */
 body {
@@ -71,7 +74,7 @@ img {
 
 
 
-/* Dette styler banneret på alle sidene våre */
+/* Dette styler banneret på alle sidene våre, bortsett fra topical.html */
 
 .banner-container {
    /* Innholdet i banneret er lagt i en flexbox */
@@ -120,10 +123,12 @@ img {
 
 
 
+
 /* -------- NEDTREKKSMENY -------- */
 
 
 /* Her styles alle nedtrekksmenyene på hele nettsiden vår */
+
 .dropdown-button{
   display: grid;
   /* Nedtrekksmenyen er stylet slik at den matcher fargen på banneret den ligger inne i */
@@ -195,17 +200,17 @@ img {
 
 /* ------------ HEADING ------------ */
 
-
-/**/
+/* Styler heading-elementene på alle sidene våre */
 
 .heading-container {
   /* Hvor stor del av skjermen som dekkes av bakgrunnsbildet s*/
-  height: 100vh;
-  width: 100%;
+  height: 100vh; /* vh = viewport height */
+  width: 100%; /* like stort som 'foreldre'-elementet (skjermen) */
   /* Bildet er gitt et overlay med gradient farge */
   /* Bakgrunnsbilde hentet fra 
   https://images.pexels.com/photos/18988561/pexels-photo-18988561/free-photo-of-pink-paper-surface.jpeg */
   background-image: linear-gradient(rgba(222, 205, 221, 0.7),rgba(224, 252, 255, 0.7)), url(../img/background-1.webp);
+  /* Plassering av bakgrunnsbildet */
   background-position: center;
   background-size: cover;
   position: relative;
@@ -219,43 +224,45 @@ img {
   margin-bottom: 10px;
   color: rgb(51, 49, 51);
   /* Teksten kommer inn fra venstre med 1s forsinkelse */
-  animation: moveright 1s linear 1;
-  animation-delay: 1s;
-  visibility: hidden;
+  animation: moveright 0.5s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden; /* Når siden er lastet er teksten i utgangspunktet gjemt */
   /* Beholder teksten i bildet etter at animasjonen er ferdig */
   animation-fill-mode: forwards;
 }
 
+/* Styler p-elementet inne i heading-containeren */
 .heading-container p {
   font-size: 25px;
   font-weight: bold;
-  animation: moveright 1s linear 1;
-  animation-delay: 1s;
+  animation: moveright 0.5s linear 1;
+  animation-delay: 0.5s;
   /* Når animasjonen begynner kan man ikke se teksten */
-  visibility: hidden;
-  animation-fill-mode: forwards;
+  visibility: hidden; /* Når siden er lastet er teksten i utgangspunktet gjemt */
+  animation-fill-mode: forwards; /* Beholder teksten i bildet etter at animasjonen er ferdig */
   padding-top: 10px;
   line-height: 1.3;
   color: rgb(51, 49, 51);
 }
 
+/* Plassering av heading */
 .main-heading {
   margin-left: 40px;
   width: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: left;
+  transform: translate(-50%,-50%); /* flytter headingen -50% av sin egen bredde til venstre, og -50% av egen høyde oppover  */
+  text-align: left; /* Teksten ligger til venstre */
 }
 
-/* For mindre skjerm */
-@keyframes moveright {
-  0%{
+/* Animasjonen hvor headingen kommer inn fra venstre */
+@keyframes moveright { /* @keyframes kontrollerer stegene for animasjonen */
+  0%{ /* Hvor animasjonen ligger i skjermen til å begynne med */
     transform: translateX(-100px);
-    visibility: visible;
+    visibility: visible; 
   }
-  100%{
+  100%{ /* Hvor animaasjonen ligger i skjermen til slutt  */
     transform: translateX(0);
     visibility: visible;
   }
@@ -269,6 +276,7 @@ img {
 
 /* På campus.html og accessibility.html bruker vi checkboxer for å lage en nedtrekksmeny. 
 Disse er stylet likt på begge sidene */
+/* Denne koden har vi gjenbrukt fra vår oblig-2 innlevering, men vi har gjort noen endringer */
 input {
   display: none;
 }
@@ -293,13 +301,12 @@ label {
   position: relative;
   margin-bottom: 5px;
   margin-top: 50px;
+  transition: 0.5px; /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
 }
 
-/* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere gul */
+/* Når man fører musepekeren over checkboksene forandres fargen til en litt mørkere rosa */
 label:hover {
   background: rgb(242, 189, 202);
-  /* Dette er lagt inn for å sørge for en smooth overgang i fargen */
-  transition: .5s;
 }
 
 /* Her styles '+'-tegnet i høyre hjørnet av hver checkboks */
@@ -320,21 +327,21 @@ input:checked + label::after {
   top: 5px;
 }
 
-/* Når boksen er lukket */
+/* Når boksen er lukket vises ikke noe av innholdet i boksen */
 input + label + .content {
   display: none;
 }
 
-/* Når boksen er åpen*/
+/* Når boksen er åpen vises innholdet i boksen */
 input:checked + label + .content {
   display: block;
 }
 
 
-/* ----------INDEX----------
+/* ---------- INDEX ----------
 Her finner man styling for elementer spesifikt for denne siden */
 
-
+/* Dette er bildet som ligger inne i heading-containeren */
 .image-index{
   height: 80%;
   width: auto;
@@ -353,7 +360,7 @@ Her finner man styling for elementer spesifikt for denne siden */
   opacity: 0.9;
 }
 
-/* For en mindre skjermstørrelse */
+/* For mindre skjermstørrelse */
 @media (min-width: 700px){
   .image-index {
     max-width: 100%;
@@ -365,7 +372,7 @@ Her finner man styling for elementer spesifikt for denne siden */
   }
 }
 
-/* Fotograf-kilde og tekst under bildet er stylet i et grid */
+/* Bilde-kilde og tekst under headingen er stylet i et grid */
 .about-oslomet-container {
   display: grid;
   /* Her styles hvor stor del hvert element i gridet tar opp på siden */ 
@@ -374,7 +381,38 @@ Her finner man styling for elementer spesifikt for denne siden */
   gap: 30px;
 }
 
-/* Styler teksten som er en link til original foto: "Foto: Benjamin A. Ward" */
+
+/* Dette styler gridet som inneholder statistikken om OsloMet */
+.statistics-grid-container {
+  border-radius: 3px;
+  display: grid;
+  column-gap: 30px;
+  /* Her styles hvilken andel hvert grid-element skal ta opp horisontalt på skjermen og 
+  wrappes når siden manipuleres */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Gridet er gitt den samme bakgrunnsfargen som de andre elementene på nettstedet vårt */
+  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
+  padding: 25px;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Her er det lagt inn en bord over hvert av grid-elementene */
+.amount-students,
+.amount-studyplaces,
+.amount-bachelor-studies,
+.amount-master-studies {
+  border-top: 1px solid black;
+}
+
+
+
+/* ------------- STYLING AV BILDELINKER ---------------
+Disse styles likt på alle sidene våre, og de er derfor gitt samme klasse  */
+
+
+/* Styler teksten som er en link til original bildet */
 .original-image,
 .original-image-header {
   font-size: 12px;
@@ -402,30 +440,6 @@ Her finner man styling for elementer spesifikt for denne siden */
 .original-image-header:visited {
   color: black;
   text-decoration: none;
-}
-
-/* Dette styler gridet som inneholder statistikken om OsloMet */
-.statistics-grid-container {
-  border-radius: 3px;
-  display: grid;
-  column-gap: 30px;
-  /* Her styles hvilken andel hvert grid-element skal ta opp horisontalt på skjermen og 
-  wrappes når siden manipuleres */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Gridet er gitt den samme bakgrunnsfargen som de andre elementene på nettstedet vårt */
-  background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
-  padding: 25px;
-  gap: 10px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-/* Her er det lagt inn en bord over hvert av grid-elementene */
-.amount-students,
-.amount-studyplaces,
-.amount-bachelor-studies,
-.amount-master-studies {
-  border-top: 1px solid black;
 }
 
 
@@ -557,6 +571,7 @@ må den styles litt mer */
   /* flex-direction: row; Dette er en default når man bruker flex */
 }
 
+/* Dette styler div'ene som ligger inne i accessibility-containeren */
 .accessibility-container > div {
   display: flex;
   /* Hver boks' andel av skjermen tar opp av skjermen */
@@ -570,18 +585,19 @@ må den styles litt mer */
 @media (max-width: 700px) {
   .accessibility-container > div {
     flex-basis: calc(50% - 35px);
+    /* Dette er en måte å få boksene til å ligge under checkboksen når den er åpen */
     margin-right: 250px;
   }
 }
 
-/* Dette gjelder spesifikt div'ene som ligger inne i accessibility-containeren */
+/* Dette gjelder spesifikt div'ene som ligger inne i div'ene som igjen ligger inne i accessibility-containeren */
 .accessibility-container, .accessibility-container-2 > div > div {
   display: flex;
   justify-content: space-around;
   /* flex-direction: row; dette er en default setting for flex */
 }
 
-/* Dette er hvordan alle boksene ser ut*/
+/* Dette er hvordan alle boksene ser ut */
 .box {
   padding: 10px;
   background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
@@ -592,11 +608,12 @@ må den styles litt mer */
 }
 
 .img {
-  /* Runder kantene på bildet */
+  /* Runder kantene på bildet inne i boksen */
   border-radius: 15px;
 }
 
-/* Styler id'et - det sørger for at boksen ikke blir for stor */
+/* Styler id'et - 
+det sørger for at boksen ikke blir for stor */
 #accessibility-container {
   width: 800px;
   /*Setter widthen til en fast bredde slik at bildene ikke scaler seg for små når man scaler ned siden*/
@@ -612,6 +629,7 @@ må den styles litt mer */
   margin: 1.66%;
 }
 
+/* Hver boks har fått sin egen klasse */
 .box-1,
 .box-2,
 .box-3,
@@ -625,7 +643,7 @@ må den styles litt mer */
 /* Dette er 'masken' som legger seg over hver av boksene når man holder musepekeren over den */
 .overlay {
   position: absolute;
-  /* Sørger for at den gule boksen ligger likt som boksen 'under'
+  /* Sørger for at den turkise 'masken' ligger likt som boksen 'under'
   (at den ikke flyter utover kantene) */
   top: 0;
   bottom: 0;
@@ -637,7 +655,7 @@ må den styles litt mer */
   opacity: 0;
   /* Vi plasserer denne her slik at vi transition også er der når man flytter musepekeren 
   Ikke bare ved hover-funksjonen */
-  transition: 1.5s ease;
+  transition: 1.5s ease; /* Sørger for en smooth overgang for 'masken' */
   background-color: rgb(141, 222, 230);
   border-radius: 20px;
 }
@@ -648,10 +666,11 @@ må den styles litt mer */
 .box-4:hover .overlay,
 .box-5:hover .overlay,
 .box-6:hover .overlay {
-  /* Overlay blir heldekkende når man fører musepekeren over boksen */
+  /* 'masken' blir heldekkende når man fører musepekeren over boksen */
   opacity: 1;
 }
 
+/* Styler teksten som ligger på overlayet */
 .text {
   font-size: 95%;
   position: absolute;

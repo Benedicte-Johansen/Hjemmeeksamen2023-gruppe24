@@ -1,13 +1,19 @@
+
 /* ----------- PÅ DENNE SIDEN HAR VI ET ANNET DESIGN EN DE ØVRIGE SIDENE VÅRE.
 VI HAR DERFOR ET EGET CSS-SHEET FOR DENNE ----------- */
 
 
-/* ------- Dette styler siden med en bakgrunnsfarge ------- */
+/* DEN GJENNOMGÅENDE KODEN VÅR ER TIL EN VISS GRAD INSPIRERT AV KODE VI HAR FUNNET PÅ W3SCHOOLS.COM,
+        IMIDLERTID ER ALL KODE SKREVET OM AV OSS SLIK AT DEN PASSER VÅR SIDE  */
+
+
+
+/* ------- Dette styler hele siden med en bakgrunnsfarge ------- */
 body {
   background-color: rgb(234, 218, 230);
 }
 
-/* Default margin på sider er 10px, vi setter dem derfor til 0 */
+/* Default margin og padding på sider er 10px, vi setter dem derfor til 0 */
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +29,7 @@ p {
 /* ---------- HEADER ------------ */
 
 .header {
-  /* Sørger for minimum høyde av elementet til 100% av viewport */
+  /* Sørger for minimum høyde av elementet i viewport */
   min-height: 100vh;
   width: 100%;
   /* Bakgrunnsbilde i header, med et farge overlay*/
@@ -369,9 +375,8 @@ li {
 /* ------- CHECKBOX --------- */
 
 
+/* Denne koden har vi gjenbrukt fra vår oblig-2 innlevering, men vi har gjort noen endringer */
 
-/* På campus.html og topical.html bruker vi checkbokser for å lage en nedtrekksmeny. 
-Disse er stylet likt på begge sidene */
 input {
   display: none;
 }
