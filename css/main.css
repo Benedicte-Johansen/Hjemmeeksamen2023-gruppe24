@@ -370,7 +370,7 @@ Her finner man styling for elementer spesifikt for denne siden */
 }
 
 /* Sørger for at bildene scaler når man er i mindre skjermmodus*/
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .image-index {
      float: left;
      /* Bildet blir gjemt når skjermen er mindre */
