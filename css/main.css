@@ -370,11 +370,13 @@ Her finner man styling for elementer spesifikt for denne siden */
 }
 
 /* Sørger for at bildene scaler når man er i mindre skjermmodus*/
-@media (max-width: 1000px) {
+@media (max-width: 1345px) {
   .image-index {
-     float: left;
-     /* Bildet blir gjemt når skjermen er mindre */
-     display: none;
+    position: fixed;
+    opacity: 0;
+     /* Bildet blir gjemt/gjennomsiktig når skjermen er mindre, dette fordi vi har valgt å
+     legge et bilde oppå bakgrunnsbilde og siden position er absolute vil det ikke scale 
+     med bakgrunnsbilde*/
   }
   /* Når bildet forsvinner, forsvinner også linken til det originale bildet  */
   .original-image-index {
