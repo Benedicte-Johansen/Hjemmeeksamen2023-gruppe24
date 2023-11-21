@@ -268,8 +268,8 @@ img {
 
 
 
-/* --------- CHECKBOXER ---------- */
 
+/* --------- CHECKBOXER ---------- */
 
 
 /* På campus.html og accessibility.html bruker vi checkboxer for å lage en nedtrekksmeny. 
@@ -278,6 +278,8 @@ Disse er stylet likt på begge sidene */
 input {
   display: none;
 }
+/*Våre sjekkbokser er i utgangspunktet en checkbox, det vi kaller checkboxer i kommentarene er egentlig label'et til chechboxene
+Derfor må den faktiske sjekkboksen skjules ved å sette input til display: none*/
 
 /* Styling for alle checkboksene */
 label {
@@ -295,7 +297,7 @@ label {
   background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
   background-size: cover;
   color: black;
-  /* Posisjonen er satt slik at checkboksene dekker hele siden */
+  /* Posisjonen er satt som relative slik at checkboksene dekker hele siden */
   position: relative;
   margin-bottom: 5px;
   margin-top: 50px;
