@@ -760,7 +760,6 @@ Her styles footerene på alle sidene slik at siden får en sammenhengende look *
   text-align: center;
   /*Vi ønsket å ha teksten i midten av footeren*/
   padding: 8px;
-  /* Fargen er kopiert fra OsloMet.no */ 
   background-image: linear-gradient(-90deg, rgb(230, 204, 209), rgb(141, 222, 230));
   color: black;
   margin-top: 30px
