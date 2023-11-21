@@ -1,9 +1,12 @@
 
-/* BODY */
+
 
 /* DEN GJENNOMGÅENDE KODEN VÅR ER TIL EN VISS GRAD INSPIRERT AV KODE VI HAR FUNNET PÅ W3SCHOOLS.COM,
         IMIDLERTID ER ALL KODE SKREVET OM AV OSS SLIK AT DEN PASSER VÅR SIDE  */ 
 
+
+/* BODY */
+/* Koden under setter en "default" styling for sidene våre til de spesifikke elementene, med mindre annet er spesifisert i egen klasse */
 
 /* Dette styler all skrift og linjehøyde på nettsiden, med mindre annet er spesifisert i egen klasse  */
 body {
