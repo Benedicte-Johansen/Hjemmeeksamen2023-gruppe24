@@ -160,7 +160,7 @@ img {
   text-align: right;
 }
 
-/* Linkene inne i nedtrekksmenyen */
+/* Styling av linkene inne i nedtrekksmenyen */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -174,7 +174,7 @@ img {
 }
 
 
-/* Når innholdet i nedtrekksmenyen vises */
+/* Dette styler hvordan innholdet i nedtrekksmenyen vises når man holder musepekeren over meny-knappen*/
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -213,7 +213,7 @@ img {
   padding-top: 50px;
   margin-bottom: 10px;
   color: rgb(51, 49, 51);
-  /* Teksten kommer inn fra venstre med 1s forsinkelse */
+  /* Teksten kommer inn fra venstre med 0.5s forsinkelse */
   animation: moveright 0.5s linear 1;
   animation-delay: 0.5s;
   visibility: hidden; /* Når siden er lastet er teksten i utgangspunktet gjemt */
