@@ -17,26 +17,34 @@
         IMIDLERTID ER ALL KODE SKREVET OM AV OSS SLIK AT DEN PASSER VÅR SIDE  -->
 
 
+
+
+
         <!------------- BANNER ------------->
 
 
-            <!-- Dette er banneret på toppen av siden -->
+            <!-- Vi har valgt å legge banner og navigasjonsmeny i en header tag. Dette ligger øverst på alle sidene våre -->
             <!-- Koden er plassert i div'er gjennomgående. Dette er for å style koden lettere -->
             <header class="banner-container">
                 <!-- Denne diven inneholder logoen som vises øverst på venstre side av nettsiden vår -->
               <div class="oslomet-logo">
                   <!-- Dette er en link til den kopierte logoen som er plassert i img-mappen -->
                   <!-- Bildet er gitt en alternativ tekst hvis den ikke kan vises på siden -->
-                  <!-- Når du klikker på logoen tas du til oslomet.no -->
+                  <!-- Når du klikker på logoen tas du til oslomet.no. Bruk av target="_blank" gjør at denne åpnes i en ny fane -->
                   <a class="oslomet-logo" href="https://www.oslomet.no/" target="_blank">
                     <img src="img/oslomet-logo-black.svg" alt="OsloMet sin logo">
                   </a>
               </div>
-                  <!-- Denne knappen er stylet slik at den gjøres om til den nettrekksmeny -->
-                  <!-- Nedtrekksmenyen inneholder linker til de øvrige sidene på nettstedet vårt -->
-        
-        <!------------- NEDTREKKSMENY ------------>
 
+        
+
+
+
+
+
+        <!------------- NEDTREKKSMENY ------------>
+          <!-- Denne knappen er stylet slik at den gjøres om til den nettrekksmeny -->
+          <!-- Nedtrekksmenyen inneholder linker til de øvrige sidene på nettstedet vårt -->
 
               <div class="dropdown">
                   <button class="dropdown-button">
@@ -44,7 +52,7 @@
                   </button>
                 <div class="dropdown-content">
                     <!-- Når man klikker på denne linken blir man tatt til infoside om faget Programmering -->
-                    <!-- Denne tagen gjør linken klikkbar -->
+                    <!-- Denne taggen gjør linken klikkbar -->
                   <a href="topical.html">
                     Infoside: DAPE1400 Programmering
                   </a>
@@ -60,6 +68,10 @@
             </div>
         </header>
 
+
+
+
+
       <!--------------- HEADING -------------->
 
 
@@ -69,9 +81,11 @@
               <div class="heading-container">
                 <div class="main-heading">
                   <div>
+                    <!-- Vi har lagt inn linjebrekk i teksten (br-tag), slik at teksten legger seg fint ved siden av bildet -->
                     <h1>
                       Dette er OsloMet <br>
                     </h1>
+                    <!-- Denne paragraph taggen fungerer som en slags sub-heading -->
                     <p>
                       Visste du at OsloMet er Norges <br>
                       tredje største universitet? <br>
@@ -80,12 +94,12 @@
                     </p>
                   </div>
                 </div>
-            <div class="content-index-image">
-              <img src="img/Dette er OsloMet.webp" class="image-index" alt="illustrasjon_av_student">
+                <div class="content-index-image">
+                  <img src="img/Dette er OsloMet.webp" class="image-index" alt="illustrasjon_av_student">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-          <div class="about-oslomet-container">
+            <div class="about-oslomet-container">
             <!-- Denne linker til det originale bildet -->
             <!-- "target=_blank" taggen sørger for at linken åpnes i en ny fane. -->
             <div class="original-image-studiestart">
