@@ -340,7 +340,7 @@ Her finner man styling for elementer spesifikt for denne siden */
 
 /* Dette er bildet som ligger inne i heading-containeren */
 .image-index{
-  height: 90%;
+  height: 80%;
   width: auto;
   position: absolute;
   bottom: 0;
