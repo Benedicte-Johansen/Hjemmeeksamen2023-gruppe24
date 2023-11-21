@@ -475,21 +475,12 @@ Dette styler elementer som er spesifikke for denne siden */
   margin-left: 40px;
 }
 
-/* Flytt linken til høyre side av skjermen slik at en kommer under bildet */
+/* Flytt linken til orginalversjon av image.campus til høyre side av skjermen slik at den kommer under bildet */
 .original-image-campus {
   float: right;
   margin-right: 30px;
 }
 
-/* For annen skjermstørrelse */
-@media (min-width: 700px){
-  .image-campus {
-    max-width: 100%;
-    max-height: 100%;
-    }
-  }
-
-/* Sørger for at bildene scaler når man er i mindre skjermmodus*/
 @media (max-width: 1450px) {
   .image-campus {
     position: fixed;
@@ -567,7 +558,7 @@ Dette styler elementer som er spesifikke for denne siden */
   /*Media queryer som scaler boksene sammen med nettsiden slik at bildet og teksen er ved siden av hverandre uansett.*/
 }
 
-/* Klassene under, .tekst-i-boks, .campusnavn & .kort-info i tillegg til bilde styling, styler nedtrekksmenyenes innhold
+/* Klassene under, .tekst-i-boks, .campusnavn & .kort-info i tillegg til bilde styling, styler "mappene"'s innhold
 når de er lukket */
 .tekst-i-boks{
   display: grid;
