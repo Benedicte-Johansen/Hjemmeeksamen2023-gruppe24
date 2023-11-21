@@ -235,10 +235,23 @@ img {
   color: rgb(51, 49, 51);
 }
 
+/* Animasjonen hvor headingen kommer inn fra venstre */
+@keyframes moveright { /* @keyframes kontrollerer stegene for animasjonen */
+  0%{ /* Hvor animasjonen ligger i skjermen til å begynne med */
+    transform: translateX(-100px);
+    visibility: visible; 
+  }
+  100%{ /* Hvor animaasjonen ligger i skjermen til slutt  */
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
 /* Plassering av heading */
 .main-heading {
   width: 80%; /* Hvor stor prosentandel av skjermen headingen tar opp */
   position: absolute;
+  /*Vi velger å style overskriften med en absolute posisjon slik at det legger seg fint oppå bakgrunnsbildet, ved siden av det andre bildet */
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%); /* flytter headingen -50% av sin egen bredde til venstre, og -50% av egen høyde oppover  */
@@ -249,18 +262,6 @@ img {
 @media(max-width: 600px) {
   .main-heading h1 p{
     font-size: 20px;
-  }
-}
-
-/* Animasjonen hvor headingen kommer inn fra venstre */
-@keyframes moveright { /* @keyframes kontrollerer stegene for animasjonen */
-  0%{ /* Hvor animasjonen ligger i skjermen til å begynne med */
-    transform: translateX(-100px);
-    visibility: visible; 
-  }
-  100%{ /* Hvor animaasjonen ligger i skjermen til slutt  */
-    transform: translateX(0);
-    visibility: visible;
   }
 }
 
